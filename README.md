@@ -245,6 +245,7 @@ Exemplos de requests e responses baseados no payload do pedido descrito anterior
 -----
 
 **Dado (Given)**  o status **Quando (When)**
+
     pedido for localizado no banco de dados.
 
     valorAprovado for menor que o valor total do pedido
@@ -262,6 +263,7 @@ Exemplos de requests e responses baseados no payload do pedido descrito anterior
 -----
 
 **Dado (Given)**  o status **Quando (When)**
+
     pedido for localizado no banco de dados.
 
     itensAprovados for menor que a quantidade de itens do pedido.
@@ -279,6 +281,7 @@ Exemplos de requests e responses baseados no payload do pedido descrito anterior
 -----
 
 **Dado (Given)**  o status **Quando (When)**
+
     pedido for localizado no banco de dados.
 
     valorAprovado for maior que o valor total do pedido
@@ -296,6 +299,7 @@ Exemplos de requests e responses baseados no payload do pedido descrito anterior
 -----
 
 **Dado (Given)**  o status **Quando (When)**
+
     pedido for localizado no banco de dados.
 
     itensAprovados for maior que a quantidade de itens do pedido.
