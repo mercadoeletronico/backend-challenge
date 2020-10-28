@@ -21,24 +21,19 @@ namespace Me.Api.Controllers
 
             var order = await context
                 .Orders
+                    .Include(x => x.Itens)
                     .AsNoTracking()
                     .FirstOrDefaultAsync(x => x.Pedido == status.Pedido);
 
             if (order != null)
             {
-                
+                status.Status.Add("CODIGO_PEDIDO_LOCALIZADO");
             }
-
-            try
+            else
             {
-                context.StatusPedidos.Add(status);
-                await context.SaveChangesAsync();
-                return Ok(new { status.Pedido, status.Status });
+                status.Status.Add("CODIGO_PEDIDO_INVALIDO");
             }
-            catch (Exception)
-            {
-                return BadRequest(new { message = "Não foi possível criar o Status do Pedido" });
-            }
+            return Ok(new { status.Status });
         }
     }
 }
