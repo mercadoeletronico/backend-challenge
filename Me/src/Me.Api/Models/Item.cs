@@ -17,6 +17,6 @@ namespace Me.Api.Models
 
         [Required(ErrorMessage = "Esse campo é obrigatório.")]
         [Range(1, int.MaxValue, ErrorMessage = "A quantidade deve ser maior que zero.")]
-        public int Quantidade { get; set; }
+        public int Qtd { get; set; }
     }
 }
