@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using System;
 using Me.Api.Data;
 using Me.Api.Models;
+
 
 namespace Me.Api.Controllers
 {
@@ -16,6 +18,16 @@ namespace Me.Api.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
+            var order = await context
+                .Orders
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(x => x.Pedido == status.Pedido);
+
+            if (order != null)
+            {
+                
+            }
 
             try
             {
