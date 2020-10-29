@@ -27,11 +27,11 @@ namespace Me.Api.Controllers
 
             if (order != null)
             {
-                status.Status.Add("CODIGO_PEDIDO_LOCALIZADO");
+                status.Status = "CODIGO_PEDIDO_LOCALIZADO";
             }
             else
             {
-                status.Status.Add("CODIGO_PEDIDO_INVALIDO");
+                status.Status = "CODIGO_PEDIDO_INVALIDO";
             }
             return Ok(new { status.Status });
         }

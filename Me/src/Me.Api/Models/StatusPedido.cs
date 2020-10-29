@@ -10,7 +10,7 @@ namespace Me.Api.Models
 
         [Required(ErrorMessage = "Esse campo é obrigatório.")]
         [MaxLength(500, ErrorMessage = "Esse campo deve conter no máximo")]
-        public List<string> Status { get; set; }
+        public string Status { get; set; }
 
         [Required(ErrorMessage = "Esse campo é obrigatório.")]
         public int ItensAprovados { get; set; }
