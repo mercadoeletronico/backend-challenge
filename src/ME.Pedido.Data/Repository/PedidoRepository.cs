@@ -19,23 +19,40 @@ namespace ME.Pedido.Data.Repository
             _context = context;
         }
 
-        public IUnitOfWork UnitOfWork => _context;
-
-        public void Adicionar(Domain.Pedido pedido)
+        
+        public Domain.Pedido Adicionar(Domain.Pedido pedido)
         {
-            _context.Pedidos.Add(pedido);
-            _context.SaveChanges();
+            if (!VerificarSePedidoExiste(pedido.PedidoID))
+            {
+                _context.Pedidos.Add(pedido);
+                _context.SaveChanges();
+                return pedido;
+            }
+
+            return null;
+        }
+
+        public Domain.Pedido Alterar(Domain.Pedido pedido)
+        {
+            if (VerificarSePedidoExiste(pedido.PedidoID))
+            {
+                Remover(pedido);
+                Adicionar(pedido);
+                return pedido;
+            }
+
+            return null;
         }
 
         public void AlterarStatus(Domain.Pedido pedido)
         {
             var p = _context.Pedidos.Include(u => u.PedidoItems)
-                .Single(i => i.PedidoID == pedido.PedidoID); ;
+                .FirstOrDefaultAsync(i => i.PedidoID == pedido.PedidoID).Result;
             p.Status = pedido.Status;
+            _context.SaveChanges();
 
-            _context.Commit();
         }
-        
+
         public async Task<Domain.Pedido>? ObterPedidoPorId(string pedidoId)
         {
             return await _context.Pedidos.Include(u => u.PedidoItems)
@@ -49,18 +66,28 @@ namespace ME.Pedido.Data.Repository
                 .ToListAsync();
         }
 
-        public void Remover(Domain.Pedido pedido)
+        public int Remover(Domain.Pedido pedido)
         {
-            _context.Remove(_context.Pedidos.Single(a => a.PedidoID == pedido.PedidoID));
-            _context.SaveChanges();
+            if (VerificarSePedidoExiste(pedido.PedidoID)){
+                var p = _context.Pedidos.Include(u => u.PedidoItems).Single(a => a.PedidoID == pedido.PedidoID);
+                foreach (var i in p.PedidoItems)
+                {
+                    var r = _context.Remove(i);
+                    //_context.SaveChanges();
+                }
+                _context.Remove(p);
+                return _context.SaveChanges();
+            }
+
+            return 0;
         }
-        public async Task<bool> VerificarSePedidoExisteAsync(string pedidoId)
+        public bool VerificarSePedidoExiste(string pedidoId)
         {
             try
             {
-                var p = await _context.Pedidos
-                    .FirstOrDefaultAsync(i => i.PedidoID == pedidoId);
-                return true;
+                var p = _context.Pedidos
+                    .FirstOrDefaultAsync(i => i.PedidoID == pedidoId).Result;
+                return p != null;
 
             }
             catch (Exception e)

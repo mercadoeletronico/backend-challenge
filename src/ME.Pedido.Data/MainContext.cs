@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ME.Pedido.Data
 {
-    public class MainContext : DbContext, IUnitOfWork
+    public class MainContext : DbContext
     {
         public MainContext(DbContextOptions<MainContext> options)
             : base(options)
@@ -19,11 +19,11 @@ namespace ME.Pedido.Data
         public DbSet<PedidoItem> PedidoItems { get; set; }
 
 
-        public async Task<bool> Commit()
-        {
-            var sucesso = await base.SaveChangesAsync() > 0;
-            return sucesso;
-        }
+        //public async Task<bool> Commit()
+        //{
+        //    var sucesso = await base.SaveChangesAsync() > 0;
+        //    return sucesso;
+        //}
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{

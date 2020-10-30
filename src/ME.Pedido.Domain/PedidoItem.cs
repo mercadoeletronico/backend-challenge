@@ -14,7 +14,7 @@ namespace ME.Pedido.Domain
         public int qtd { get; set; }
 
         public string PedidoID { get; set; }
-        //public Pedido Pedido { get; set; }
+        
 
         protected PedidoItem()
         {
@@ -37,9 +37,10 @@ namespace ME.Pedido.Domain
 
         public override bool IsValid()
         {
+            if (string.IsNullOrWhiteSpace(PedidoID)) return false;
             if (string.IsNullOrWhiteSpace(descricao)) return false;
             if (precoUnitario < 0) return false;
-            if (qtd < 1) return false;
+            if (qtd <= 0) return false;
             return true;
         }
     }

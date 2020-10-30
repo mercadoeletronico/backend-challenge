@@ -8,12 +8,13 @@ namespace ME.Pedido.Domain
 {
     public interface IPedidoRepository : IRepository<Pedido>
     {
-        Task<bool> VerificarSePedidoExisteAsync(string pedidoId);
+        bool VerificarSePedidoExiste(string pedidoId);
         Task<Pedido>? ObterPedidoPorId(string pedidoId);
         Task<List<Pedido>> ObterTodos();
-        void Adicionar(Pedido pedido);
+        Pedido Adicionar(Pedido pedido);
+        Pedido Alterar(Pedido pedido);
         void AlterarStatus(Pedido pedido);
-        void Remover(Pedido pedido);
+        int Remover(Pedido pedido);
 
     }
 }

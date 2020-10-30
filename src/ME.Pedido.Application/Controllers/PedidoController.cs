@@ -6,7 +6,6 @@ using ME.Pedido.Application.DTO;
 using ME.Pedido.Domain;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ME.Pedido.Application.Controllers
 {
@@ -36,22 +35,56 @@ namespace ME.Pedido.Application.Controllers
 
         // POST api/<PedidoController>
         [HttpPost]
-        public void Post(PedidoPayload value)
+        public IActionResult Post(PedidoPayload value)
         {
-            _Repo.Adicionar(value.ToDomainPedido());
+            var domainPedido = value.ToDomainPedido();
+            if (domainPedido.IsValid())
+            {
+                if (_Repo.VerificarSePedidoExiste(value.pedido))
+                {
+                    return StatusCode(409, new { pedido = value.pedido, mensagem = "Pedido já existe." });
+                }
+
+                _Repo.Adicionar(domainPedido);
+                return StatusCode(201, new { pedido = value.pedido, mensagem = "Cadastrado com sucesso"});
+            }
+            return StatusCode(400, new { pedido = value.pedido, mensagem = "Pedido Inválido" });
         }
 
         [HttpPut]
-        public void Put(PedidoPayload value)
+        public IActionResult Put(PedidoPayload value)
         {
-            _Repo.AlterarStatus(value.ToDomainPedido());
+            var domainPedido = value.ToDomainPedido();
+            if (domainPedido.IsValid())
+            {
+                if (!_Repo.VerificarSePedidoExiste(value.pedido))
+                {
+                    return StatusCode(404, new { pedido = value.pedido, mensagem = "Pedido não encontrado." });
+                }
+                _Repo.Alterar(value.ToDomainPedido());
+                return StatusCode(200, new { pedido = value.pedido, mensagem = "Status Alterado com sucesso" });
+            }
+            return StatusCode(400, new { pedido = value.pedido, mensagem = "Pedido Inválido" });
         }
 
         // DELETE api/<PedidoController>/5
         [HttpDelete]
-        public void Delete(PedidoPayload value)
+        public IActionResult Delete(PedidoPayload value)
         {
-            _Repo.Remover(value.ToDomainPedido());
+            var domainPedido = value.ToDomainPedido();
+            if (domainPedido.IsValid())
+            {
+                if (!_Repo.VerificarSePedidoExiste(value.pedido))
+                {
+                    return StatusCode(404, new { pedido = value.pedido, mensagem = "Pedido não encontrado." });
+                }
+
+                _Repo.Remover(value.ToDomainPedido());
+                return StatusCode(200, new { pedido = value.pedido, mensagem = "Removido com sucesso" });
+            }
+            return StatusCode(400, new { pedido = value.pedido, mensagem = "Pedido Inválido" });
+
+            
         }
     }
 }

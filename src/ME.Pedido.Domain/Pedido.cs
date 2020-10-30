@@ -36,14 +36,23 @@ namespace ME.Pedido.Domain
 
         public StatusPedidoResponse AvaliarPedido(int itensAprovados, decimal valorAprovado)
         {
-            var valorTotal = CalcularValorPedido();
-            var quantidadeTotal = CalcularQuantidade();
             var res = new StatusPedidoResponse
             {
                 pedido = PedidoID,
                 status = new List<string>()
             };
+            
+            if (itensAprovados == 0 && valorAprovado == 0)
+            {
+                Status = "REPROVADO";
+                res.status.Add("REPROVADO");
+                return res;
+            }
+            
+            var valorTotal = CalcularValorPedido();
+            var quantidadeTotal = CalcularQuantidade();
 
+            Status = "APROVADO";
             if (quantidadeTotal == itensAprovados && valorTotal == valorAprovado)
             {
                 res.status.Add("APROVADO");
@@ -76,6 +85,10 @@ namespace ME.Pedido.Domain
         {
             if (string.IsNullOrWhiteSpace(PedidoID)) return false;
             if (PedidoItems.Count == 0) return false;
+            foreach (var pedidoItem in PedidoItems)
+            {
+                if (!pedidoItem.IsValid()) return false;
+            }
             return true;
         }
 
