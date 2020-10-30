@@ -20,7 +20,7 @@ Clonar o repositório e abrir a solution no visual studio 2019.
 
 E rodar a aplicação apertando F5 ou clicando no botão:
 
-![image-20201030181002830](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030181002830.png) ou ![image-20201030181035033](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030181035033.png)
+![image-20201030181002830](png\image-20201030181002830.png) ou ![image-20201030181035033](png\image-20201030181035033.png)
 
 O Endpoint configurado para rodar no IIS Express é a "http://localhost:7922/api"
 
@@ -32,11 +32,11 @@ Sem o IIS o Endpoint é "http://localhost:5000/api"
 
 Foram desenvolvidos 14 testes unitários para validar o projeto domínio. Os testes foram escolhidos de acordo com a especificação de negócio de mudança de status e a integridade da entidade Pedido.
 
-![image-20201030175533948](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030175533948.png)
+![image-20201030175533948](png\image-20201030175533948.png)
 
 Para rodar os testes, dentro do Visual Studio, clique em testes e depois "Run all tests"
 
-![image-20201030182421594](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030182421594.png)
+![image-20201030182421594](png\image-20201030182421594.png)
 
 
 
@@ -46,17 +46,13 @@ Para testar a API com o insomnia, importe o arquivo "Insomnia_2020-10-30.json" q
 
 Para isso, basta clicar nas áreas destacadas na imagem
 
-![image-20201030182029497](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030182029497.png)
+![image-20201030182029497](png\image-20201030182029497.png)
 
 
 
 Requests disponíveis no Workspace do Insomnia.
 
-![image-20201030180050843](C:\Users\PH\AppData\Roaming\Typora\typora-user-images\image-20201030180050843.png)
-
-
-
-
+![image-20201030180050843](png\image-20201030180050843.png)
 
 
 
