@@ -1,0 +1,17 @@
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Data.deps.json
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Data.dll
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.csprojAssemblyReference.cache
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.AssemblyInfoInputs.cache
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.AssemblyInfo.cs
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Data.runtimeconfig.json
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Data.runtimeconfig.dev.json
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.genruntimeconfig.cache
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Data.pdb
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Core.dll
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Domain.dll
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Pedido.Domain.pdb
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\bin\Debug\netcoreapp3.1\ME.Core.pdb
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.csproj.CoreCompileInputs.cache
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.csproj.CopyComplete
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.dll
+D:\dev\ME\backend-challenge\src\ME.Pedido.Data\obj\Debug\netcoreapp3.1\ME.Pedido.Data.pdb

@@ -1,0 +1,275 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Application\\ME.Pedido.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj",
+        "projectName": "ME.Core",
+        "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj",
+        "packagesPath": "C:\\Users\\PH\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Application\\ME.Pedido.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Application\\ME.Pedido.Application.csproj",
+        "projectName": "ME.Pedido.Application",
+        "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Application\\ME.Pedido.Application.csproj",
+        "packagesPath": "C:\\Users\\PH\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj": {
+                "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj"
+              },
+              "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\ME.Pedido.Data.csproj": {
+                "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\ME.Pedido.Data.csproj"
+              },
+              "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj": {
+                "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\ME.Pedido.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\ME.Pedido.Data.csproj",
+        "projectName": "ME.Pedido.Data",
+        "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\ME.Pedido.Data.csproj",
+        "packagesPath": "C:\\Users\\PH\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj": {
+                "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj",
+        "projectName": "ME.Pedido.Domain",
+        "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\ME.Pedido.Domain.csproj",
+        "packagesPath": "C:\\Users\\PH\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Pedido.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\PH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj": {
+                "projectPath": "D:\\dev\\ME\\backend-challenge\\src\\ME.Core\\ME.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

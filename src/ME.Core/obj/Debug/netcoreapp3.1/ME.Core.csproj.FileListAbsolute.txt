@@ -1,0 +1,9 @@
+D:\dev\ME\backend-challenge\src\ME.Core\bin\Debug\netcoreapp3.1\ME.Core.deps.json
+D:\dev\ME\backend-challenge\src\ME.Core\bin\Debug\netcoreapp3.1\ME.Core.dll
+D:\dev\ME\backend-challenge\src\ME.Core\bin\Debug\netcoreapp3.1\ME.Core.pdb
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.csprojAssemblyReference.cache
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.AssemblyInfoInputs.cache
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.AssemblyInfo.cs
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.csproj.CoreCompileInputs.cache
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.dll
+D:\dev\ME\backend-challenge\src\ME.Core\obj\Debug\netcoreapp3.1\ME.Core.pdb
