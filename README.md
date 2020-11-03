@@ -76,6 +76,8 @@ E terá o seguinte response, baseado nas regras detalhadas a seguir:
 }
 ```
 
+O status não precisa ser persistido em banco de dados, basta retornar na API.
+
 Exemplos de requests e responses baseados no payload do pedido descrito anteriormente:
 
 #### #1
