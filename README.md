@@ -4,14 +4,6 @@
 
 Bem-vindo(a) ao nosso teste para desenvolvedores(as) back-end.
 
-## :clipboard: Instruções
-
-1. Faça o fork e clone esse repositório.
-2. Trabalhe no que foi solicitado.
-3. Crie um arquivo chamado `instructions.md` com todas as informações necessárias para executar sua aplicação.
-4. Faça um pull request com o seu código e qualquer outro artefato que você julgue necessário, ou se preferir, envie um link direto para o seu repositório, se for privado lembre-se de dar o acesso necessário.
-5. Notifique por e-mail a pessoa responsável por seu processo seletivo no Mercado Eletrônico.
-
 ## :dart: O que vamos avaliar? O que buscamos?
 
 Queremos entender como você modela um problema e o transforma em código, como você estrutura, como você testa. Enviar uma aplicação funcionando é o ideal, mas mesmo que não esteja 100 % envie o código para que possamos analisar até onde você chegou. 
@@ -327,3 +319,12 @@ Observe que:
 1. O valor total do pedido é composto pela somatória do valor calculado de cada item (precoUnitario * qtd).
 
 2. A quantidade total de itens do pedido é composta pela somatória da qtd de cada item.
+
+## :rocket: Entrega
+
+Crie um arquivo chamado `instructions.md` com todas as informações necessárias para executar sua aplicação.
+
+Para enviar seu código, você pode:
+
+* Enviar a URL do seu repositório para a pessoa responsável pelo seu processo seletivo dentro do ME.
+* Fazer um fork deste repositório, criar uma branch com o seu nome, enviar um pull request e nos notificar.
