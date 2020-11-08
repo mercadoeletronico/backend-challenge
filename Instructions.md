@@ -46,6 +46,24 @@ Sendo assim todas as entidades possuem as seguintes características:
 * Propriedades "IsValid" e "ValidationResult" que devem ser implementadas 
 ..* Onde ValidationResult é uma estrutura de dados da API FluentValidation.
 * Propriedade ID que recebe um GUID no momento que o objeto for construído.
-* Override de Equal garante que a entidade poderá ser comparada com outra através do ID ainda que suas referências sejam diferentes.
+* Override de Equals garante que a entidade poderá ser comparada com outra através do ID ainda que suas referências sejam diferentes.
 * Override de GetHashCode que torna-se obrigatório uma vez a o método Equals foi sobre escrito.
 
+<img src="images\pedido_aggregate.png" alt="Entity"> 
+
+A pasta PedidoAggregate contém as entidades relacionadas para atender os requisitos do desafio. 
+A pasta Validators contém regras de validação com FluentValidation, algumas regras simples foram criadas apenas para demonstrar sua utilização. 
+As regras são validadas no construtor de cada entidade e o resultado da validação armazenado na propriedade ValidationResult
+A propriedade IsValid contém  uma regra simples, caso não hajam mensagem IsValid será "true".
+
+<img src="images\entidade_pedido.png" alt="Entidade Pedido"> 
+
+## :dart: Testes 
+
+<img src="images\testes.png" alt="Testes"> 
+
+Foram criados dois projetos de testes utilizando-se Xunit, um projeto para testes de unidade e outro para testes de integração.
+Neste caso os testes de unidade basicamente testam as validações das entidades.
+Já os testes de integração estão divididos em testes relacionados a operações CRUD, arquivo DatabaseTest.cs. E testes relacionados a regra de negócio para mudança de status dos pedidos, arquivo SpecificationTests.cs 
+
+<img src="images\testes_executados.png" alt="Testes Executados">  
