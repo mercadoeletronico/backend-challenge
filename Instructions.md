@@ -6,7 +6,7 @@ Explicação da solução apresentada!
 
 ## :white_check_mark: Visão Geral
 
-Embora a solução do problema apresentado fosse muito simples, a idéia neste projeto foi demonstrar como pode ser a arquitetura e modelagem de uma aplicação com alta complexidade devido ao alto consumo de seus endpoints e que sofrem mudanças constantemente. 
+Embora a solução do problema apresentado fosse muito simples, a idéia neste projeto foi demonstrar como pode ser a arquitetura e modelagem de uma aplicação com alta complexidade devido ao alto consumo de seus endpoints, além disso, um código bem estruturado e com suas camadas bem delimitadas facilita a manutenção e ampliação. 
 
 Por isso, a arquitetura escolhida foi "Ports and Adapters", inspirada na "Arquitetura Hexagonal". 
 Conforme o post: [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça"). 
