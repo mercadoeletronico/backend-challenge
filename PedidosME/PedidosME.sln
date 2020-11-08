@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosME", "PedidosME\PedidosME.csproj", "{297C9B04-BEDB-4F44-B7D7-081790437A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{DF759865-3C07-4F44-968A-F0A2BE7E9B62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{927629D2-0332-47A1-926A-B1C25AD03F9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{41BA367D-3786-45E1-95D9-B1014B163B60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosME.Domain", "PedidosME.Domain\PedidosME.Domain.csproj", "{30B39858-F766-4975-83B7-29CB8E4DB681}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilities", "Utilities", "{3D90CADD-1107-4BBC-88F4-B79E73E57B30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoEletronico.Utilities", "MercadoEletronico.Utilites\MercadoEletronico.Utilities.csproj", "{3F56A056-2F89-4ACB-A877-183540F70A8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{C56CD3FB-2631-470D-829B-656D3D1D990D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoEletronico.UnityTests", "MercadoEletronico.UnityTests\MercadoEletronico.UnityTests.csproj", "{40C0E94F-37CC-449A-A004-2DD704F0B692}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosME.Data", "PedidosME.Data\PedidosME.Data.csproj", "{19210AE0-FCB6-41D7-A57E-78E9A1C1438D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosME.IntegrationTests", "PedidosME.IntegrationTests\PedidosME.IntegrationTests.csproj", "{680198CA-D58C-4ED3-8672-F6FA10AD61C7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PedidosME.DependencyInjection", "PedidosME.DependencyInjection\PedidosME.DependencyInjection.csproj", "{42FF3E2E-68A6-4A59-9EF4-F756EACBF422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PedidosME.BusServices", "PedidosME.EmailServices\PedidosME.BusServices.csproj", "{0D40839F-F1F5-44C2-9294-92BA9DCA9F81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{297C9B04-BEDB-4F44-B7D7-081790437A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297C9B04-BEDB-4F44-B7D7-081790437A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297C9B04-BEDB-4F44-B7D7-081790437A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297C9B04-BEDB-4F44-B7D7-081790437A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B39858-F766-4975-83B7-29CB8E4DB681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B39858-F766-4975-83B7-29CB8E4DB681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B39858-F766-4975-83B7-29CB8E4DB681}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B39858-F766-4975-83B7-29CB8E4DB681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F56A056-2F89-4ACB-A877-183540F70A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F56A056-2F89-4ACB-A877-183540F70A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F56A056-2F89-4ACB-A877-183540F70A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F56A056-2F89-4ACB-A877-183540F70A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C0E94F-37CC-449A-A004-2DD704F0B692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C0E94F-37CC-449A-A004-2DD704F0B692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C0E94F-37CC-449A-A004-2DD704F0B692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C0E94F-37CC-449A-A004-2DD704F0B692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19210AE0-FCB6-41D7-A57E-78E9A1C1438D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19210AE0-FCB6-41D7-A57E-78E9A1C1438D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19210AE0-FCB6-41D7-A57E-78E9A1C1438D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19210AE0-FCB6-41D7-A57E-78E9A1C1438D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680198CA-D58C-4ED3-8672-F6FA10AD61C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680198CA-D58C-4ED3-8672-F6FA10AD61C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680198CA-D58C-4ED3-8672-F6FA10AD61C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680198CA-D58C-4ED3-8672-F6FA10AD61C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42FF3E2E-68A6-4A59-9EF4-F756EACBF422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42FF3E2E-68A6-4A59-9EF4-F756EACBF422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42FF3E2E-68A6-4A59-9EF4-F756EACBF422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42FF3E2E-68A6-4A59-9EF4-F756EACBF422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D40839F-F1F5-44C2-9294-92BA9DCA9F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D40839F-F1F5-44C2-9294-92BA9DCA9F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D40839F-F1F5-44C2-9294-92BA9DCA9F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D40839F-F1F5-44C2-9294-92BA9DCA9F81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{297C9B04-BEDB-4F44-B7D7-081790437A4A} = {DF759865-3C07-4F44-968A-F0A2BE7E9B62}
+		{30B39858-F766-4975-83B7-29CB8E4DB681} = {41BA367D-3786-45E1-95D9-B1014B163B60}
+		{3F56A056-2F89-4ACB-A877-183540F70A8B} = {3D90CADD-1107-4BBC-88F4-B79E73E57B30}
+		{40C0E94F-37CC-449A-A004-2DD704F0B692} = {C56CD3FB-2631-470D-829B-656D3D1D990D}
+		{19210AE0-FCB6-41D7-A57E-78E9A1C1438D} = {927629D2-0332-47A1-926A-B1C25AD03F9D}
+		{680198CA-D58C-4ED3-8672-F6FA10AD61C7} = {C56CD3FB-2631-470D-829B-656D3D1D990D}
+		{42FF3E2E-68A6-4A59-9EF4-F756EACBF422} = {927629D2-0332-47A1-926A-B1C25AD03F9D}
+		{0D40839F-F1F5-44C2-9294-92BA9DCA9F81} = {927629D2-0332-47A1-926A-B1C25AD03F9D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C31097AE-2498-4329-AFEC-6A04CE65FD0D}
+	EndGlobalSection
+EndGlobal

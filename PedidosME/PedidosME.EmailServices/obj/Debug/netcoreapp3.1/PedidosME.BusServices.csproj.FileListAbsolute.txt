@@ -1,0 +1,12 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\bin\Debug\netcoreapp3.1\PedidosME.BusServices.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\bin\Debug\netcoreapp3.1\PedidosME.BusServices.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\bin\Debug\netcoreapp3.1\PedidosME.BusServices.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.csprojAssemblyReference.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.csproj.CopyComplete
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.EmailServices\obj\Debug\netcoreapp3.1\PedidosME.BusServices.pdb

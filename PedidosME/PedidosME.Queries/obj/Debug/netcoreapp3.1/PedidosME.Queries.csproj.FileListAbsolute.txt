@@ -1,0 +1,9 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\bin\Debug\netcoreapp3.1\PedidosME.Queries.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\bin\Debug\netcoreapp3.1\PedidosME.Queries.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\bin\Debug\netcoreapp3.1\PedidosME.Queries.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.csprojAssemblyReference.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Queries\obj\Debug\netcoreapp3.1\PedidosME.Queries.pdb

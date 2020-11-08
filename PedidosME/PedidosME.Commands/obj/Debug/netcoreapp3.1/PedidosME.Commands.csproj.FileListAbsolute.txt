@@ -1,0 +1,9 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\bin\Debug\netcoreapp3.1\PedidosME.Commands.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\bin\Debug\netcoreapp3.1\PedidosME.Commands.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\bin\Debug\netcoreapp3.1\PedidosME.Commands.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.csprojAssemblyReference.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Commands\obj\Debug\netcoreapp3.1\PedidosME.Commands.pdb

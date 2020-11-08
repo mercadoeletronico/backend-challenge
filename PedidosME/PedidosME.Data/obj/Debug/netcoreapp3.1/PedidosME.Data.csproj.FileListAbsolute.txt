@@ -1,0 +1,14 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\PedidosME.Data.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\PedidosME.Data.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\PedidosME.Data.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\PedidosME.Domain.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\PedidosME.Domain.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.csprojAssemblyReference.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.csproj.CopyComplete
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Data\obj\Debug\netcoreapp3.1\PedidosME.Data.pdb

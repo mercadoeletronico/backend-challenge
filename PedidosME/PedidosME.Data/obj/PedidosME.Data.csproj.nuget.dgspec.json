@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj": {}
+  },
+  "projects": {
+    "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\MercadoEletronico.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\MercadoEletronico.Utilities.csproj",
+        "projectName": "MercadoEletronico.Utilities",
+        "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\MercadoEletronico.Utilities.csproj",
+        "packagesPath": "C:\\Users\\ric_v\\.nuget\\packages\\",
+        "outputPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ric_v\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj",
+        "projectName": "PedidosME.Data",
+        "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj",
+        "packagesPath": "C:\\Users\\ric_v\\.nuget\\packages\\",
+        "outputPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ric_v\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj": {
+                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj",
+        "projectName": "PedidosME.Domain",
+        "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj",
+        "packagesPath": "C:\\Users\\ric_v\\.nuget\\packages\\",
+        "outputPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ric_v\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\MercadoEletronico.Utilities.csproj": {
+                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites\\MercadoEletronico.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.2.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

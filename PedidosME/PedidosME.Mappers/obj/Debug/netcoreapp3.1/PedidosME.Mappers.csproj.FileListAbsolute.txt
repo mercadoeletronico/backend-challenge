@@ -1,0 +1,14 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\PedidosME.Mappers.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\PedidosME.Mappers.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.csprojAssemblyReference.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\PedidosME.Mappers.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\PedidosME.Domain.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\PedidosME.Domain.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilities.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.csproj.CopyComplete
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME.Mappers\obj\Debug\netcoreapp3.1\PedidosME.Mappers.pdb
