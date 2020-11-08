@@ -23,6 +23,27 @@ __Através deste diagrama podemos identificar as responsábilidades de cada cama
 3. **Infra**: É uma camada de suporte, responsável por agrupar features que o domínio consome de forma a separar melhor responsábilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsábilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
 4. **Utilities**: É também uma camada de suporte porém mais leve, responsável por agrupar funcionalidades que qualquer uma das outras camadas possa vir a utilizar, porém deve haver cuidado para que soluções de Infra não acabem migrando para essa camada, o que causaria um forte acoplamento das demais camadas com questões de Infra.
 
+## :zap: Patterns e APIs utilizados 
+
+* Interface Segregation Principle: Os métodos e comportamentos que precisam ser acessados por outros projetos são expostos através de Interfaces bem definidas com escopo limitado. 
+
+* Repository Pattern: Regras de negócio que dependem e precisam ser persistidas foram encapsuladas dentro da interface IPedidoRepository.cs esta interface é implementada no projeto de Infra específico para acesso a dados. 
+
+* Depnedency Injection: O projeto MercadoEletronico.Utilities.DependencyInjection possui uma classe capaz de ser plugada na startup.cs para de modo a configurar o ServiceCllection para resolver todas as dependências.
+
+* Serilog: Serilog está configurado para funcionar em todas as camadas por meio de injeção de dependência. 
+
+* Observer e Observable Pattern: pro meio do Mediatr, as WebRequests recebidas na API são lançadas para o manipulador de eventos dentro da camada de negócio mantendo o acoplamento baixo e com alta responsividade, inclusive permitindo mais de um manipulador para a mesma request. Também apenas para demonstração foi criado um evento ao consultar um pedido. Nas imagens a seguir podemos ver a implementação do evento. 
+
+<img src="images\pedido_event.png" alt="Evento de Pedido"> 
+
+<img src="images\event_publishing.png" alt="Evento Publicado"> 
+
+<img src="images\event_handling.png" alt="Evento Manipulado"> 
+
+O resultado final é apresentado no console do Kestrel, quando um pedido é consultado.
+
+<img src="images\bus_message.png" alt="Bus"> 
 
 ## :zap: Detalhes da solução
 
