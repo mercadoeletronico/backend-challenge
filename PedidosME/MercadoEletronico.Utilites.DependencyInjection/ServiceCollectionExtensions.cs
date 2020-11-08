@@ -9,7 +9,6 @@ using PedidosME.Data.DataContext;
 using PedidosME.Data.Repositories;
 using PedidosME.Domain.DTOs.Mappers;
 using PedidosME.Domain.Entities.PedidoAggregate;
-using PedidosME.Domain.Handlers;
 using PedidosME.Domain.Services;
 using System;
 

@@ -1492,6 +1492,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "MercadoEletronico.Utilites.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.9"
+        },
+        "compile": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        }
+      },
       "MercadoEletronico.Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5764,6 +5777,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "MercadoEletronico.Utilites.Data/1.0.0": {
+      "type": "project",
+      "path": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj",
+      "msbuildProject": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj"
+    },
     "MercadoEletronico.Utilities/1.0.0": {
       "type": "project",
       "path": "../MercadoEletronico.Utilites/MercadoEletronico.Utilities.csproj",
@@ -5777,6 +5795,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "MercadoEletronico.Utilites.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.9",
       "PedidosME.Domain >= 1.0.0"
@@ -5812,6 +5831,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites.Data\\MercadoEletronico.Utilites.Data.csproj": {
+              "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites.Data\\MercadoEletronico.Utilites.Data.csproj"
+            },
             "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj": {
               "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj"
             }

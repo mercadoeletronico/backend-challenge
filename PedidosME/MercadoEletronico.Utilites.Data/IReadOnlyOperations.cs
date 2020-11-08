@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronico.Utilities.Data
 {
-    public interface IReadOnlyOperations<TEntity> : IDisposable  
+    public interface IReadOnlyOperations<TEntity> : IDisposable
     {
         Task<TEntity> GetByKeysAsync(CancellationToken cancellationToken, params object[] keys);
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null,

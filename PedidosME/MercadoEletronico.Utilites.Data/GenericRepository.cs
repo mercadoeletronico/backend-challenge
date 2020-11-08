@@ -15,7 +15,7 @@ namespace MercadoEletronico.Utilities.Data
         private readonly DbContext dbContext;
         private readonly DbSet<TEntity> dbSet;
 
-    
+
 
         public GenericRepository(DbContext dbContext)
         {
@@ -75,6 +75,6 @@ namespace MercadoEletronico.Utilities.Data
             this.dbContext.Dispose();
         }
 
-        
+
     }
 }

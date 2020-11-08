@@ -1876,6 +1876,39 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "MercadoEletronico.Utilites.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.9"
+        },
+        "compile": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        }
+      },
+      "MercadoEletronico.Utilites.DependencyInjection/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "MercadoEletronico.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.9",
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.9",
+          "PedidosME.BusServices": "1.0.0",
+          "PedidosME.Data": "1.0.0",
+          "PedidosME.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MercadoEletronico.Utilites.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MercadoEletronico.Utilites.DependencyInjection.dll": {}
+        }
+      },
       "MercadoEletronico.Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1906,6 +1939,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "MercadoEletronico.Utilites.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "PedidosME.Domain": "1.0.0"
@@ -6732,6 +6766,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "MercadoEletronico.Utilites.Data/1.0.0": {
+      "type": "project",
+      "path": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj",
+      "msbuildProject": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj"
+    },
+    "MercadoEletronico.Utilites.DependencyInjection/1.0.0": {
+      "type": "project",
+      "path": "../MercadoEletronico.Utilites.DependencyInjection/MercadoEletronico.Utilites.DependencyInjection.csproj",
+      "msbuildProject": "../MercadoEletronico.Utilites.DependencyInjection/MercadoEletronico.Utilites.DependencyInjection.csproj"
+    },
     "MercadoEletronico.Utilities/1.0.0": {
       "type": "project",
       "path": "../MercadoEletronico.Utilites/MercadoEletronico.Utilities.csproj",
@@ -6757,10 +6801,9 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 9.0.0",
+      "MercadoEletronico.Utilites.DependencyInjection >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.9",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.9",
-      "PedidosME.BusServices >= 1.0.0",
-      "PedidosME.Data >= 1.0.0",
       "Serilog >= 2.10.0",
       "Serilog.AspNetCore >= 3.4.0",
       "Serilog.Sinks.Console >= 3.1.1",
@@ -6799,11 +6842,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj": {
-              "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj"
-            },
-            "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj": {
-              "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj"
+            "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites.DependencyInjection\\MercadoEletronico.Utilites.DependencyInjection.csproj": {
+              "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\MercadoEletronico.Utilites.DependencyInjection\\MercadoEletronico.Utilites.DependencyInjection.csproj"
             }
           }
         }

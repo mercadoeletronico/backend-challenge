@@ -26,10 +26,9 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "MercadoEletronico.Utilites.DependencyInjection": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.9",
-          "PedidosME.BusServices": "1.0.0",
-          "PedidosME.Data": "1.0.0",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "3.4.0",
           "Serilog.Sinks.Console": "3.1.1",
@@ -1762,6 +1761,35 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "MercadoEletronico.Utilites.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.9"
+        },
+        "runtime": {
+          "MercadoEletronico.Utilites.Data.dll": {}
+        },
+        "compile": {
+          "MercadoEletronico.Utilites.Data.dll": {}
+        }
+      },
+      "MercadoEletronico.Utilites.DependencyInjection/1.0.0": {
+        "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
+          "MercadoEletronico.Utilities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.9",
+          "Microsoft.EntityFrameworkCore.InMemory": "3.1.9",
+          "PedidosME.BusServices": "1.0.0",
+          "PedidosME.Data": "1.0.0",
+          "PedidosME.Domain": "1.0.0"
+        },
+        "runtime": {
+          "MercadoEletronico.Utilites.DependencyInjection.dll": {}
+        },
+        "compile": {
+          "MercadoEletronico.Utilites.DependencyInjection.dll": {}
+        }
+      },
       "MercadoEletronico.Utilities/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "3.1.9"
@@ -1786,6 +1814,7 @@
       },
       "PedidosME.Data/1.0.0": {
         "dependencies": {
+          "MercadoEletronico.Utilites.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "PedidosME.Domain": "1.0.0"
@@ -4328,6 +4357,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "MercadoEletronico.Utilites.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MercadoEletronico.Utilites.DependencyInjection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "MercadoEletronico.Utilities/1.0.0": {
       "type": "project",

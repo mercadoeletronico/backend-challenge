@@ -18,8 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PedidosME.Data\PedidosME.Data.csproj" />
-    <ProjectReference Include="..\PedidosME.EmailServices\PedidosME.BusServices.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Utilites.DependencyInjection\MercadoEletronico.Utilites.DependencyInjection.csproj" />
   </ItemGroup>
 
 

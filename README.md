@@ -12,9 +12,16 @@ Por isso, a arquitetura escolhida foi "Ports and Adapters", inspirada na "Arquit
 Conforme o post: [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça"). 
 Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas *(Domain Services e Application Services)* por meio de "Adaptadores" *(interfaces)* e implementadas por "Portas". Da mesma fora componentes externos, tratados geralmente como sendo de "Infraestrutura" também podem ser plugados nessas camadas. 
 
-## :dart: Camadas da Aplicação
+## :cake: Camadas da Aplicação
 
-<img src="Solution Layers.png" alt="Layers">
+<img src="Solution Layers.png" alt="Layers"> 
+
+__Através deste diagrama podemos identificar as responsábilidades de cada camada.__ 
+
+1. **WebAPI**: é a camada mais externa da aplicação, responsável por realizar o carregamento da aplicação como um todo e por isso além de mapear, receber e redirecionar as  Web Requests essa camada também é responsável por orquestrar a configuração de todo o ambiente da aplicação e dar vazão a exceções ocorridas. 
+2. **Domain**: é a camada mais interna da aplicação, responsável por modelar as entidades e garantir exatidão das regras de negócio, esta camada também orquestra a persistência dos dados, sendo assim expõe uma interface com os métodos necessários para realizar a persistência ou consulta de dados persistidos no banco. Esta interface é implementada pela camada de Acesso a dados.
+3. **Infra**: É uma camada de suporte, responsável por agrupar features que o domínio consome de forma a separar melhor responsábilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsábilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
+4. **Utilities**: É também uma camada de suporte porém mais leve, responsável por agrupar funcionalidades que qualquer uma das outras camadas possa vir a utilizar, porém deve haver cuidado para que soluções de Infra não acabem migrando para essa camada, o que causaria um forte acoplamento das demais camadas com questões de Infra.
 
 ## :computer: Tecnologias
 

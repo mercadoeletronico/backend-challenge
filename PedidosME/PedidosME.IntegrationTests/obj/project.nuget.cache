@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/1e+mXk8M/adZaaPkOPWCY94aeG0NqjyVlEsDs9KcZarstQJr4yuWegyc01DprSI7Eh3pvAXPPTPDwA+csGzXg==",
+  "dgSpecHash": "qnJiUVvOtReofJJM9H6uetjLEdmhjysTrtolitYsmMzlloszPTpJYfwcuC44keYybalfpYva7s2rxp5D4t/pOg==",
   "success": true,
   "projectFilePath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.IntegrationTests\\PedidosME.IntegrationTests.csproj",
   "expectedPackageFiles": [

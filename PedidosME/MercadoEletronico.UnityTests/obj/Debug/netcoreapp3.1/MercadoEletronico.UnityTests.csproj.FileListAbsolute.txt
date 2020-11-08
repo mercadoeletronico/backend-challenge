@@ -6,7 +6,9 @@ D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTes
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.runtimeconfig.dev.json
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\MediatR.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
@@ -116,5 +118,3 @@ D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTes
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\obj\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\obj\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.pdb
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\obj\Debug\netcoreapp3.1\MercadoEletronico.UnityTests.genruntimeconfig.cache
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\MediatR.dll
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.UnityTests\bin\Debug\netcoreapp3.1\AutoMapper.dll
