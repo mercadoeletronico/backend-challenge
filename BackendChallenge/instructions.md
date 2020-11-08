@@ -1,7 +1,7 @@
 
 ### :pencil: Instruções
 
-#### #1 Pré-requisitor
+#### #1 Pré-requisitos
 
 * .NET Core 3.1 SDK or later
 
