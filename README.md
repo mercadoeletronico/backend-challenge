@@ -6,10 +6,12 @@ Explicação da solução apresentada!
 
 ## :white_check_mark: Visão Geral
 
-Embora a solução do problema apresentado fosse muito simples, a idéia neste projeto foi apresentar como pode ser a arquitetura e modelagem de uma aplicação com alta complexidade devido ao alto consumo de seus endpoints e com suas camadas bem definidas e distribuídas de forma que a substituição de dependências da mesma não venha a causar grande impacto na demais camadas. 
+Embora a solução do problema apresentado fosse muito simples, a idéia neste projeto foi apresentar como pode ser a arquitetura e modelagem de uma aplicação com alta complexidade devido ao alto consumo de seus endpoints e com suas camadas bem definidas distribuídas de forma que a substituição de dependências da mesma não venha a causar grande impacto na demais camadas. 
 
-Por isso, a arquitetura escolhida foi "Ports and Adapters", mais conhecida como "Arquitetura Hexagonal" dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas: (Domain Services e Application Services)
-Inspirada no post [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça").
+Por isso, a arquitetura escolhida foi "Ports and Adapters", inspirada na "Arquitetura Hexagonal". 
+Conforme o post: [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça"). 
+Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas *(Domain Services e Application Services)* por meio de "Adaptadores" *(interfaces)* e implementadas por "Portas". Da mesma fora componentes externos, tratados geralmente como sendo de "Infraestrutura" também podem ser plugados nessas camadas. 
+
 
 
 ## :dart: O que vamos avaliar? O que buscamos?
