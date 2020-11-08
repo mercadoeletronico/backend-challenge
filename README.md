@@ -12,13 +12,9 @@ Por isso, a arquitetura escolhida foi "Ports and Adapters", inspirada na "Arquit
 Conforme o post: [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça"). 
 Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas *(Domain Services e Application Services)* por meio de "Adaptadores" *(interfaces)* e implementadas por "Portas". Da mesma fora componentes externos, tratados geralmente como sendo de "Infraestrutura" também podem ser plugados nessas camadas. 
 
+## :dart: Camadas da Aplicação
 
-
-## :dart: O que vamos avaliar? O que buscamos?
-
-Queremos entender como você modela um problema e o transforma em código, como você estrutura, como você testa. Enviar uma aplicação funcionando é o ideal, mas mesmo que não esteja 100 % envie o código para que possamos analisar até onde você chegou. 
-
-O problema que vamos apresentar não tem uma lógica complexa, mas implemente seu código pensando em um sistema extensível e de alta concorrência no uso, é muito importante que você aplique SOLID em tudo que fizer.
+<img src="Solution Layers.png" alt="Layers">
 
 ## :computer: Tecnologias
 

@@ -134,90 +134,6 @@
         }
       }
     },
-    "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\PedidosME.DependencyInjection.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\PedidosME.DependencyInjection.csproj",
-        "projectName": "PedidosME.DependencyInjection",
-        "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\PedidosME.DependencyInjection.csproj",
-        "packagesPath": "C:\\Users\\ric_v\\.nuget\\packages\\",
-        "outputPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\ric_v\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netcoreapp3.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netcoreapp3.1": {
-            "projectReferences": {
-              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj": {
-                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj"
-              },
-              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj": {
-                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "dependencies": {
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.1.0, )"
-            },
-            "MediatR.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[3.1.9, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Domain\\PedidosME.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -379,8 +295,8 @@
               "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj": {
                 "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.Data\\PedidosME.Data.csproj"
               },
-              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\PedidosME.DependencyInjection.csproj": {
-                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.DependencyInjection\\PedidosME.DependencyInjection.csproj"
+              "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj": {
+                "projectPath": "D:\\Docs\\estudo\\dotnetcore\\backend-challenge\\PedidosME\\PedidosME.EmailServices\\PedidosME.BusServices.csproj"
               }
             }
           }
@@ -394,6 +310,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"

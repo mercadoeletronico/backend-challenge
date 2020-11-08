@@ -82,12 +82,10 @@ D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcor
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.DependencyInjection.dll
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.DependencyInjection.pdb
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.BusServices.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.BusServices.pdb
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\obj\Debug\netcoreapp3.1\PedidosME.csproj.CoreCompileInputs.cache
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\obj\Debug\netcoreapp3.1\PedidosME.MvcApplicationPartsAssemblyInfo.cs
 D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\obj\Debug\netcoreapp3.1\PedidosME.MvcApplicationPartsAssemblyInfo.cache
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.BusServices.dll
-D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\PedidosME\bin\Debug\netcoreapp3.1\PedidosME.BusServices.pdb
