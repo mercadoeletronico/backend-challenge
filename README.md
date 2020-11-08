@@ -32,7 +32,7 @@ Você deve construir uma API que terá dois endpoints:
 
 Sua aplicação deve expor em `http://localhost:{porta}/api/pedido` uma API RESTful. (GET, POST, PUT, DELETE)
 
-O conteúdo de um Pedido possui o seguinte payload:
+O conteúdo de um Pedido possui o seguinte payload: 
 
 ```json
 {

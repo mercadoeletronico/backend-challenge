@@ -4,104 +4,92 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+**/*.rsuser
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-*.userprefs
+**/*.userprefs
 
 # Mono auto generated files
-mono_crash.*
+**/mono_crash.*
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
-[Ll]ogs/
+**/[Dd]ebug/
+**/[Dd]ebugPublic/
+**/[Rr]elease/
+**/[Rr]eleases/
+**/x64/
+**/x86/
+**/[Ww][Ii][Nn]32/
+**/[Aa][Rr][Mm]/
+**/[Aa][Rr][Mm]64/
+**/bld/
+**/[Bb]in/
+**/[Oo]bj/
+**/[Ll]og/
+**/[Ll]ogs/
 
 # Visual Studio 2015/2017 cache/options directory
-.vs/
+**/.vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
 # Visual Studio 2017 auto generated files
-Generated\ Files/
+**/Generated\ Files/
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+**/[Tt]est[Rr]esult*/
+**/[Bb]uild[Ll]og.*
 
 # NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
+**/*.VisualState.xml
+**/TestResult.xml
+**/nunit-*.xml
 
 # Build Results of an ATL Project
-[Dd]ebugPS/
-[Rr]eleasePS/
-dlldata.c
+**/[Dd]ebugPS/
+**/[Rr]eleasePS/
+**/dlldata.c
 
-# Benchmark Results
-BenchmarkDotNet.Artifacts/
 
-# .NET Core
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# StyleCop
-StyleCopReport.xml
 
 # Files built by Visual Studio
-*_i.c
-*_p.c
-*_h.h
-*.ilk
-*.meta
-*.obj
-*.iobj
-*.pch
-*.pdb
-*.ipdb
-*.pgc
-*.pgd
-*.rsp
-*.sbr
-*.tlb
-*.tli
-*.tlh
-*.tmp
-*.tmp_proj
-*_wpftmp.csproj
-*.log
-*.vspscc
-*.vssscc
-.builds
-*.pidb
-*.svclog
-*.scc
+**/*_i.c
+**/*_p.c
+**/*_h.h
+**/*.ilk
+**/*.meta
+**/*.obj
+**/*.iobj
+**/*.pch
+**/*.pdb
+**/*.ipdb
+**/*.pgc
+**/*.pgd
+**/*.rsp
+**/*.sbr
+**/*.tlb
+**/*.tli
+**/*.tlh
+**/*.tmp
+**/*.tmp_proj
+**/*_wpftmp.csproj
+**/*.log
+**/*.vspscc
+**/*.vssscc
+**/.builds
+**/*.pidb
+**/*.svclog
+**/*.scc
 
 
 # NuGet Packages
-*.nupkg
+**/*.nupkg
 # NuGet Symbol Packages
-*.snupkg
+**/*.snupkg
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
@@ -109,5 +97,36 @@ StyleCopReport.xml
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
-*.nuget.props
-*.nuget.targets
+**/*.nuget.props
+**/*.nuget.targets
+PedidosME/MercadoEletronico.Utilites.Data/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.Data.AssemblyInfo.cs
+PedidosME/MercadoEletronico.Utilites.Data/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.Data.assets.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.AssemblyInfo.cs
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.assets.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.assets.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.exe
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.assets.cache
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.csprojAssemblyReference.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.assets.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.csprojAssemblyReference.cache
+PedidosME/MercadoEletronico.Utilites.Data/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.Data.AssemblyInfo.cs
+PedidosME/MercadoEletronico.Utilites.Data/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.Data.assets.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.AssemblyInfo.cs
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.assets.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.assets.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.exe
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.assets.cache
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.csprojAssemblyReference.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.assets.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.csprojAssemblyReference.cache
+PedidosME/MercadoEletronico.UnityTests/obj/Debug/netcoreapp3.1/MercadoEletronico.UnityTests.csprojAssemblyReference.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.csprojAssemblyReference.cache
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.csprojAssemblyReference.cache
+PedidosME/PedidosME.Domain/obj/Debug/netcoreapp3.1/PedidosME.Domain.csprojAssemblyReference.cache
+PedidosME/PedidosME.EmailServices/obj/Debug/netcoreapp3.1/PedidosME.BusServices.csprojAssemblyReference.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.csprojAssemblyReference.cache

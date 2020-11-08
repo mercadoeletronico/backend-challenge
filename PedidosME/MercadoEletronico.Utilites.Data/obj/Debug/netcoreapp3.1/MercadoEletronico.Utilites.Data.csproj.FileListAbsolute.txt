@@ -1,0 +1,8 @@
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.deps.json
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\bin\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.pdb
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\obj\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.AssemblyInfoInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\obj\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.AssemblyInfo.cs
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\obj\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.csproj.CoreCompileInputs.cache
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\obj\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.dll
+D:\Docs\estudo\dotnetcore\backend-challenge\PedidosME\MercadoEletronico.Utilites.Data\obj\Debug\netcoreapp3.1\MercadoEletronico.Utilites.Data.pdb

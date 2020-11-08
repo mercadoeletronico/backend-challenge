@@ -1,16 +1,9 @@
 ﻿using MediatR;
-using MercadoEletronico.Utilities.Data;
-using MercadoEletronico.Utilities.Enums;
-using Microsoft.Extensions.Logging;
 using PedidosME.Domain.DTOs;
 using PedidosME.Domain.Entities.PedidoAggregate;
 using PedidosME.Domain.Entities.Specifications;
 using PedidosME.Domain.Events;
 using PedidosME.Domain.PedidoAggregate.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

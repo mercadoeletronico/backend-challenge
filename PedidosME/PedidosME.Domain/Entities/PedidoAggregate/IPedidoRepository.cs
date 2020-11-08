@@ -1,8 +1,5 @@
-﻿using MercadoEletronico.Utilities.Data;
+﻿
 using PedidosME.Domain.PedidoAggregate.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

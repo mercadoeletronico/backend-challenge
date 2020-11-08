@@ -2495,6 +2495,19 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "MercadoEletronico.Utilites.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.9"
+        },
+        "compile": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MercadoEletronico.Utilites.Data.dll": {}
+        }
+      },
       "MercadoEletronico.Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2525,6 +2538,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "MercadoEletronico.Utilites.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.9",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.9",
           "PedidosME.Domain": "1.0.0"
@@ -8232,6 +8246,11 @@
         "xunit.runner.visualstudio.2.4.0.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "MercadoEletronico.Utilites.Data/1.0.0": {
+      "type": "project",
+      "path": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj",
+      "msbuildProject": "../MercadoEletronico.Utilites.Data/MercadoEletronico.Utilites.Data.csproj"
     },
     "MercadoEletronico.Utilities/1.0.0": {
       "type": "project",

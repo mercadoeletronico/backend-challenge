@@ -1,9 +1,5 @@
 ﻿using MercadoEletronico.Utilities.Data;
 using Microsoft.EntityFrameworkCore;
-using PedidosME.Data.DataContext;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PedidosME.Data.Repositories
 {
