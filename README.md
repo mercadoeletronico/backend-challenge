@@ -2,7 +2,7 @@
 
 # Back-end Challenge
 
-Bem-vindo(a) ao nosso teste para desenvolvedores(as) back-end.
+Explicação da solução apresentada!.
 
 ## :clipboard: Instruções
 
