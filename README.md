@@ -15,6 +15,7 @@ Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é 
 ## :cake: Camadas da Aplicação
 
 <img src="Solution Layers.png" alt="Layers"> 
+
 __Através deste diagrama podemos identificar as responsábilidades de cada camada.__ 
 
 1. **WebAPI**: é a camada mais externa da aplicação, responsável por realizar o carregamento da aplicação como um todo e por isso além de mapear, receber e redirecionar as  Web Requests essa camada também é responsável por orquestrar a configuração de todo o ambiente da aplicação e dar vazão a exceções ocorridas. 
