@@ -102,3 +102,6 @@ Já os testes de integração estão divididos em testes relacionados a operaç�
 <img src="images\testes_executados.png" alt="Testes Executados">  
 
 ## :pray: Agradecimento 
+
+Agradeço a oportunidade de demonstrar um pouco do meu conhecimento neste projeto. 
+Fico feliz e estou a disposição para debater esta solução!
