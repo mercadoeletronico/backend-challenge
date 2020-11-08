@@ -19,7 +19,15 @@ namespace PedidosME.Handlers
         }
         public async Task Handle(PedidoConsultadoEvent notification, CancellationToken cancellationToken)
         {
-            await busServices.Send($"Pedido {notification.Pedido.Codigo} foi consultado.", cancellationToken);
+            if (notification.Pedido == null)
+            {
+                await busServices.Send($"Pedido não encontrado.", cancellationToken);
+            }
+            else
+            {
+                await busServices.Send($"Pedido {notification.Pedido.Codigo} foi consultado.", cancellationToken);
+            }
+            
         }
     }
 }
