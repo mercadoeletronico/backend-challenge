@@ -1,4 +1,4 @@
-<img src="me.svg" width="200" alt="ME">
+<img src=images\me.svg" width="200" alt="ME">
 
 # Back-end Challenge
 
@@ -14,7 +14,7 @@ Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é 
 
 ## :cake: Camadas da Aplicação
 
-<img src="Solution Layers.png" alt="Layers"> 
+<img src="images\Solution Layers.png" alt="Layers"> 
 
 __Através deste diagrama podemos identificar as responsábilidades de cada camada.__ 
 
@@ -23,15 +23,10 @@ __Através deste diagrama podemos identificar as responsábilidades de cada cama
 3. **Infra**: É uma camada de suporte, responsável por agrupar features que o domínio consome de forma a separar melhor responsábilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsábilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
 4. **Utilities**: É também uma camada de suporte porém mais leve, responsável por agrupar funcionalidades que qualquer uma das outras camadas possa vir a utilizar, porém deve haver cuidado para que soluções de Infra não acabem migrando para essa camada, o que causaria um forte acoplamento das demais camadas com questões de Infra.
 
-## :computer: Tecnologias
 
-1. Nossa stack de desenvolvimento é predominantemente C# e Java, então nossa sugestão é que você utilize .NET Core para C# ou Spring para Java.
-2. Teste seu código, crie Unit tests e/ou Integration tests.
-3. A aplicação deve ser self contained, use um database em memória, por exemplo o H2 no caso do Spring. 
+## :zap: Detalhes da solução
 
-## :zap: O Desafio
-
-Você deve construir uma API que terá dois endpoints:
+<img src="images\folders.png" alt="Pastas"> 
 
 ###	Endpoint – Pedido
 
