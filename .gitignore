@@ -123,3 +123,10 @@ PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.assets.cache
 PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.csprojAssemblyReference.cache
 PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.assets.cache
 PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.csprojAssemblyReference.cache
+PedidosME/MercadoEletronico.UnityTests/obj/Debug/netcoreapp3.1/MercadoEletronico.UnityTests.csprojAssemblyReference.cache
+PedidosME/MercadoEletronico.Utilites.DependencyInjection/obj/Debug/netcoreapp3.1/MercadoEletronico.Utilites.DependencyInjection.csprojAssemblyReference.cache
+PedidosME/PedidosME/obj/Debug/netcoreapp3.1/PedidosME.csprojAssemblyReference.cache
+PedidosME/PedidosME.Data/obj/Debug/netcoreapp3.1/PedidosME.Data.csprojAssemblyReference.cache
+PedidosME/PedidosME.Domain/obj/Debug/netcoreapp3.1/PedidosME.Domain.csprojAssemblyReference.cache
+PedidosME/PedidosME.EmailServices/obj/Debug/netcoreapp3.1/PedidosME.BusServices.csprojAssemblyReference.cache
+PedidosME/PedidosME.IntegrationTests/obj/Debug/netcoreapp3.1/PedidosME.IntegrationTests.csprojAssemblyReference.cache
