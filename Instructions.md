@@ -12,19 +12,19 @@ Por isso, a arquitetura escolhida foi "Ports and Adapters", inspirada na "Arquit
 Conforme o post: [DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/ "Herberto Graça"). 
 Dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas *(Domain Services e Application Services)* por meio de "Adaptadores" *(interfaces)* e implementadas por "Portas". Da mesma fora componentes externos, tratados geralmente como sendo de "Infraestrutura" também podem ser plugados nessas camadas. 
 
-## :cake: Camadas da Aplicação
+## :cake: Camadas da Aplicação PedidosME
 
 <img src="images\Solution Layers.png" alt="Layers"> 
 
-__Através deste diagrama podemos identificar as responsábilidades de cada camada.__ 
+__Através deste diagrama podemos identificar as responsabilidades de cada camada.__ 
 
 1. **WebAPI**: é a camada mais externa da aplicação, responsável por realizar o carregamento da aplicação como um todo e por isso além de mapear, receber e redirecionar as  Web Requests essa camada também é responsável por orquestrar a configuração de todo o ambiente da aplicação e dar vazão a exceções ocorridas. 
 2. **Domain**: é a camada mais interna da aplicação, responsável por modelar as entidades e garantir exatidão das regras de negócio, esta camada também orquestra a persistência dos dados, sendo assim expõe uma interface com os métodos necessários para realizar a persistência ou consulta de dados persistidos no banco. Esta interface é implementada pela camada de Acesso a dados.
-3. **Infra**: É uma camada de suporte, responsável por agrupar features que o domínio consome de forma a separar melhor responsábilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsábilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
+3. **Infra**: É uma camada de suporte, responsável por agrupar *features* que o domínio consome de forma a separar melhor responsabilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsabilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
 4. **Utilities**: É também uma camada de suporte porém mais leve, responsável por agrupar funcionalidades que qualquer uma das outras camadas possa vir a utilizar, porém deve haver cuidado para que soluções de Infra não acabem migrando para essa camada, o que causaria um forte acoplamento das demais camadas com questões de Infra.
 
 ## :exclamation: Instruções para execução
-* Mantenha o projeto PedidosME como Startup Project, o Swagger foi incluido e etá configurado no launchsettings.json.
+* Mantenha o projeto PedidosME como Startup Project, o Swagger foi incluido e esta configurado no launchsettings.json.
 * O banco de dados utilizado foi InMemmory e o mesmo já é carregado com alguns dados semeados. Os dados semeados estão no Projeto: PedidosME.Data, classe SeedExtensions 
 
 <img src="images\seedExtensions.png" alt="Seed"> 
@@ -39,7 +39,7 @@ Existem três pedidos previamente criados, o pedido "123456" possui característ
 
 * Repository Pattern: Regras de negócio que dependem e precisam ser persistidas foram encapsuladas dentro da interface IPedidoRepository.cs esta interface é implementada no projeto de Infra específico para acesso a dados. 
 
-* Depnedency Injection: O projeto MercadoEletronico.Utilities.DependencyInjection possui uma classe capaz de ser plugada na startup.cs para de modo a configurar o ServiceCllection para resolver todas as dependências.
+* Depnedency Injection: O projeto MercadoEletronico.Utilities.DependencyInjection possui uma classe capaz de ser plugada na startup.cs para configurar o ServiceCllection e resolver todas as dependências.
 
 * Serilog: Serilog está configurado para funcionar em todas as camadas por meio de injeção de dependência. 
 
@@ -54,6 +54,8 @@ Existem três pedidos previamente criados, o pedido "123456" possui característ
 O resultado final é apresentado no console do Kestrel, quando um pedido é consultado.
 
 <img src="images\bus_message.png" alt="Bus"> 
+
+* SpecificationPattern: Para atender o requisito de mudança de status do desafio uma classe de Specification foi criada dentro do Aggregate de Pedido. A classe StatusPedido especifica por meio de *predicados* quis características um pedido deve atender para ser considerado de um determinado status.
 
 ## :zap: Detalhes da solução
 
