@@ -2,15 +2,15 @@
 
 # Back-end Challenge
 
-Explicação da solução apresentada!.
+Explicação da solução apresentada!
 
-## :clipboard: Instruções
+## :white_check_mark: Visão Geral
 
-1. Faça o fork e clone esse repositório.
-2. Trabalhe no que foi solicitado.
-3. Crie um arquivo chamado `instructions.md` com todas as informações necessárias para executar sua aplicação.
-4. Faça um pull request com o seu código e qualquer outro artefato que você julgue necessário, ou se preferir, envie um link direto para o seu repositório, se for privado lembre-se de dar o acesso necessário.
-5. Notifique por e-mail a pessoa responsável por seu processo seletivo no Mercado Eletrônico.
+Embora a solução do problema apresentado fosse muito simples, a idéia neste projeto foi apresentar como pode ser a arquitetura e modelagem de uma aplicação com alta complexidade devido ao alto consumo de seus endpoints e com suas camadas bem definidas e distribuídas de forma que a substituição de dependências da mesma não venha a causar grande impacto na demais camadas. 
+
+Por isso, a arquitetura escolhida foi "Ports and Adapters", mais conhecida como "Arquitetura Hexagonal" dessa forma possuímos no  núcleo da aplicação o nosso Domínio e o mesmo é propagado para camadas mais externas: (Domain Services e Application Services)
+Inspirada no post [https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/](DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together) de Herberto Graça.
+
 
 ## :dart: O que vamos avaliar? O que buscamos?
 
