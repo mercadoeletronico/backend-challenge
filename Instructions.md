@@ -56,7 +56,7 @@ A pasta Validators contém regras de validação com FluentValidation, algumas r
 As regras são validadas no construtor de cada entidade e o resultado da validação armazenado na propriedade ValidationResult
 A propriedade IsValid contém  uma regra simples, caso não hajam mensagem IsValid será "true".
 
-<img src="images\entidade_pedido.png" alt="Entidade Pedido"> 
+<img src="images\Entidade_Pedido.png" alt="Entidade Pedido"> 
 
 ## :dart: Testes 
 
