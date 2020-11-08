@@ -23,7 +23,17 @@ __Através deste diagrama podemos identificar as responsábilidades de cada cama
 3. **Infra**: É uma camada de suporte, responsável por agrupar features que o domínio consome de forma a separar melhor responsábilidades. Assim o domínio pode se manter mais leve e focado no negócio e delegar responsábilidades para infra, tais como: acesso a dados, enfileiramento de requisições e outros.
 4. **Utilities**: É também uma camada de suporte porém mais leve, responsável por agrupar funcionalidades que qualquer uma das outras camadas possa vir a utilizar, porém deve haver cuidado para que soluções de Infra não acabem migrando para essa camada, o que causaria um forte acoplamento das demais camadas com questões de Infra.
 
+## :exclamation: Instruções para execução
+* Mantenha o projeto PedidosME como Startup Project, o Swagger foi incluido e etá configurado no launchsettings.json.
+* O banco de dados utilizado foi InMemmory e o mesmo já é carregado com alguns dados semeados. Os dados semeados estão no Projeto: PedidosME.Data, classe SeedExtensions 
+
+<img src="images\seedExtensions.png" alt="Seed"> 
+
+Existem três pedidos previamente criados, o pedido "123456" possui características semelhantes aos casos de teste apresentado no desafio para mudança de status.
+
 ## :zap: Patterns e APIs utilizados 
+
+* Asynchronous Programming: Todas as WebRequests são assíncronas e transmitem o CancellationToken até as camadas mais internas permitindo que solicitações long running seja canceladas, garantindo melhor performance ao servidor.
 
 * Interface Segregation Principle: Os métodos e comportamentos que precisam ser acessados por outros projetos são expostos através de Interfaces bem definidas com escopo limitado. 
 
@@ -88,3 +98,5 @@ Neste caso os testes de unidade basicamente testam as validações das entidades
 Já os testes de integração estão divididos em testes relacionados a operações CRUD, arquivo DatabaseTest.cs. E testes relacionados a regra de negócio para mudança de status dos pedidos, arquivo SpecificationTests.cs 
 
 <img src="images\testes_executados.png" alt="Testes Executados">  
+
+## :pray: Agradecimento 
