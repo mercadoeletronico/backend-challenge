@@ -77,7 +77,7 @@ Na pasta Core foi criada a Entidade Base que deve deve ser implementada pelas de
 Pode-se notar nesta entidade que é uma classe abstrata, as demais entidades, no caso Pedido e PedidoItem implementam esta classe. 
 Sendo assim todas as entidades possuem as seguintes características:
 * Propriedades "IsValid" e "ValidationResult" que devem ser implementadas 
-..* Onde ValidationResult é uma estrutura de dados da API FluentValidation.
+  * Onde ValidationResult é uma estrutura de dados da API FluentValidation.
 * Propriedade ID que recebe um GUID no momento que o objeto for construído.
 * Override de Equals garante que a entidade poderá ser comparada com outra através do ID ainda que suas referências sejam diferentes.
 * Override de GetHashCode que torna-se obrigatório uma vez a o método Equals foi sobre escrito.
