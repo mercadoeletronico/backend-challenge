@@ -4,7 +4,6 @@ using System.Threading;
 using System.Threading.Tasks;
 
 using BackendChallenge.Application.Extensions;
-using BackendChallenge.Application.Validators;
 using BackendChallenge.Entities;
 using BackendChallenge.Ports.Adapters.Database;
 using BackendChallenge.Ports.Application.BusinessRules;
@@ -17,39 +16,35 @@ namespace BackendChallenge.Application.UseCases
     {
         private readonly IDataStoreUnitOfWork _unitOfWork;
 
-        public AlterarStatusDoPedidoHandler(IDataStoreUnitOfWork unitOfWork)
+        private readonly IEnumerable<IRule> _rules;
+
+        public AlterarStatusDoPedidoHandler(IDataStoreUnitOfWork unitOfWork, IEnumerable<IRule> rules)
         {
             _unitOfWork = unitOfWork;
+
+            _rules = rules;
         }
 
         public async Task<StatusDoPedido> Handle(AlterarStatusDoPedido request, CancellationToken cancellationToken)
         {
-            OrderStatus orderStatus = AlterarStatusDoPedido.ConvertTo(request);
-
             Order order = _unitOfWork.Orders.Get().FirstOrDefault(f => f.Number == request.Pedido);
 
-            IEnumerable<IRule> rules = new List<IRule>()
+            if (order != null)
             {
-                new InvalidOrderNumberRule(orderStatus),
-                new DisapprovedOrderRule(orderStatus),
-                new ApprovedOrderRule(order, orderStatus),
-                new ApprovedOrderWithLargerQuantityRule(order, orderStatus),
-                new ApprovedOrderWithHigherValueRule(order, orderStatus),
-                new ApprovedOrderWithSmallerQuantityRule(order, orderStatus),
-                new ApprovedOrderWithLowerValueRule(order, orderStatus)
-            };
+                order.OrderStatus = AlterarStatusDoPedido.ConvertTo(request);
+            }
 
             return await Task.FromResult(new StatusDoPedido
             {
                 Pedido = request.Pedido.AsNumberOrZero().ToString(),
-                Status = ValidateRules(rules).ToList()
+                Status = ValidateRules(order).ToList()
             });
 
-            static IEnumerable<string> ValidateRules(IEnumerable<IRule> rules)
+            IEnumerable<string> ValidateRules(Order order)
             {
-                foreach (var rule in rules)
+                foreach (var rule in _rules)
                 {
-                    var message = rule.Validate();
+                    var message = rule.Validate(order);
 
                     if (!string.IsNullOrWhiteSpace(message))
                     {

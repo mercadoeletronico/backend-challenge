@@ -11,6 +11,7 @@ namespace BackendChallenge.Entities
 
         public Status? Status { get; set; }
 
+        public OrderStatus? OrderStatus { get; set; }
 
         public virtual ICollection<OrderItem> Items { get; set; } = new HashSet<OrderItem>();
 

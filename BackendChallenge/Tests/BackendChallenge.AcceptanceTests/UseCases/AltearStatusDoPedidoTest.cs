@@ -25,7 +25,7 @@ namespace BackendChallenge.AcceptanceTests.UseCases
 
         [DataTestMethod]
         [DataRow("{ 'status':'APROVADO', 'itensAprovados': 3, 'valorAprovado': 20, 'pedido':'123456-N' }")]
-        public async Task Quando_Codigo_Peido_Nao_Numerico_Deve_Retornar_Codigo_Pedido_Invalido(string json)
+        public async Task Quando_Codigo_Pedido_Nao_Numerico_Deve_Retornar_Codigo_Pedido_Invalido(string json)
         {
             // Arrange
             var command = JsonConvert.DeserializeObject<AlterarStatusDoPedido>(json);

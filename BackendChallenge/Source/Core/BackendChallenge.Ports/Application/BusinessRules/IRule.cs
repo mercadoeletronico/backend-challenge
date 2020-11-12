@@ -1,7 +1,9 @@
-﻿namespace BackendChallenge.Ports.Application.BusinessRules
+﻿using BackendChallenge.Entities;
+
+namespace BackendChallenge.Ports.Application.BusinessRules
 {
     public interface IRule
     {
-        string Validate();
+        string Validate(Order order);
     }
 }
