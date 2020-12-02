@@ -1,11 +1,13 @@
 package com.mercadoeletronico.backendchallenge.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import com.mercadoeletronico.backendchallenge.entity.Orders;
+import com.mercadoeletronico.backendchallenge.entity.Order;
 
-public interface OrderRepository extends JpaRepository<Orders, Integer>{
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long>{
 
-	Orders findByPedido(String pedido);
+	Order findByPedido(String pedido);
 		
 }

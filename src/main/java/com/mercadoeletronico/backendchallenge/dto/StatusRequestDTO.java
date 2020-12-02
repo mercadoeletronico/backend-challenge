@@ -8,7 +8,7 @@ import lombok.Setter;
 public class StatusRequestDTO {
 	
 	private String status;
-	private Integer itensAprovados;
+	private Long itensAprovados;
 	private Double valorAprovado;
 	private String pedido;
 

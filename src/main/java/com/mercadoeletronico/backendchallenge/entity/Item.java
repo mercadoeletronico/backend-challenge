@@ -5,7 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.Table;
+
+import org.springframework.transaction.annotation.Transactional;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -20,21 +24,32 @@ import lombok.ToString;
 //@Builder
 @ToString
 @NoArgsConstructor
-@Table(name="TB_ITEM")
-public class Itens {
+@Transactional
+@Table(name="itens")
+public class Item {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
 	@JsonIgnore
-	@Column(name = "ID")
-	private Integer id;
-	@Column(name = "DESCRICAO")
+	private Long id;
+	
+	@Lob
 	private String descricao;
-	@Column(name = "PRECO_UNITARIO")
+	
 	private Double precoUnitario;
-	@Column(name = "QTD")
-	private Integer qtd;
+	
+	private Long qtd;
+	
+	@JoinColumn(name="pedidoId")
 	@JsonIgnore
-	@Column(name = "PEDIDO_ID")
-	private Integer pedidoId;
+	private Long pedidoId;
+	
+	public Item (String descricao, Double precoUnitario, Long qtd, Long pedidoId) {
+		this.descricao = descricao;
+		this.precoUnitario = precoUnitario;
+		this.qtd = qtd;
+		this.pedidoId = pedidoId;
+	}
+	
 }

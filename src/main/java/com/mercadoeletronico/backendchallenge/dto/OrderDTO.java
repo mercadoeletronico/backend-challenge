@@ -2,7 +2,7 @@ package com.mercadoeletronico.backendchallenge.dto;
 
 import java.util.List;
 
-import com.mercadoeletronico.backendchallenge.entity.Itens;
+import com.mercadoeletronico.backendchallenge.entity.Item;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -12,5 +12,5 @@ import lombok.Setter;
 public class OrderDTO {
 
 	private String pedido;
-	private List<Itens> itens;
+	private List<Item> itens;
 }
