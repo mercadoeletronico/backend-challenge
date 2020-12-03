@@ -9,5 +9,5 @@ public class ItensDTO {
 
 	private String descricao;
 	private Double precoUnitario;
-	private Integer qtd;
+	private Long qtd;
 }
