@@ -1,0 +1,10 @@
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\bin\Debug\netcoreapp3.1\Configuration\MESettings.DEV.json
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\bin\Debug\netcoreapp3.1\ME.Api.Settings.deps.json
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\bin\Debug\netcoreapp3.1\ME.Api.Settings.dll
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\bin\Debug\netcoreapp3.1\ME.Api.Settings.pdb
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.csprojAssemblyReference.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.AssemblyInfoInputs.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.AssemblyInfo.cs
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.csproj.CoreCompileInputs.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.dll
+C:\Users\saulo\source\repos\ME\src\ME.Api.Settings\obj\Debug\netcoreapp3.1\ME.Api.Settings.pdb

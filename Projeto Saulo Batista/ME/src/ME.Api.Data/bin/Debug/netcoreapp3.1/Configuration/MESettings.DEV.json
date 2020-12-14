@@ -1,0 +1,10 @@
+{
+  "configs": [
+    {
+      "projeto": 0,
+      "host": "http://localhost:5604",
+      "connectionString": "Data Source=api.db",
+      "DataBase": 2  
+    }
+  ]
+} 

@@ -1,0 +1,13 @@
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\Configuration\MESettings.DEV.json
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\ME.Api.Models.deps.json
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\ME.Api.Models.dll
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\ME.Api.Models.pdb
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\ME.Api.Settings.dll
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\bin\Debug\netcoreapp3.1\ME.Api.Settings.pdb
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.csprojAssemblyReference.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.AssemblyInfoInputs.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.AssemblyInfo.cs
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.csproj.CoreCompileInputs.cache
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.csproj.CopyComplete
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.dll
+C:\Users\saulo\source\repos\ME\src\ME.Api.Models\obj\Debug\netcoreapp3.1\ME.Api.Models.pdb

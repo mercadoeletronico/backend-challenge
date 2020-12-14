@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NEyNLLix4fuc0pQrJP6Pn4BHv/E43Rfs5aHVplyIhsPTciHzX29L5XDiYGwthev3ocbIQmEWsBF0jRhu2+xkQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\saulo\\source\\repos\\ME\\src\\ME.Api.Settings\\ME.Api.Settings.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\saulo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
