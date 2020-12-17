@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\Inputs\AuthenticateUserCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterDiseaseCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterDiseasePrescriptionCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterExamLabCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterK2Command.cs" />
+    <Compile Remove="Commands\Inputs\RegisterMgCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterPrescriptionCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterQualtilCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterUserCommand.cs" />
+    <Compile Remove="Commands\Inputs\RegisterVitamindCommand .cs" />
+    <Compile Remove="Commands\Results\RegisterDiseaseCommandResult.cs" />
+    <Compile Remove="Commands\Results\RegisterDiseasePrescriptionCommandResult.cs" />
+    <Compile Remove="Commands\Results\RegisterExamLabCommandResult.cs" />
+    <Compile Remove="Commands\Results\RegisterPrescriptionCommandResult.cs" />
+    <Compile Remove="Commands\Results\RegisterPrescriptionDetailCommandResult.cs" />
+    <Compile Remove="Commands\Results\RegisterUserCommandResult.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\App.Shared\App.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "App.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/App.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/App.Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "App.Shared/1.0.0": {
+      "type": "project",
+      "path": "../App.Shared/App.Shared.csproj",
+      "msbuildProject": "../App.Shared/App.Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "App.Shared >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Carlos Rogerio\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Git\\AspNet\\Core\\Backend\\BackendSolution\\App.Domain\\App.Domain.csproj",
+      "projectName": "App.Domain",
+      "projectPath": "E:\\Git\\AspNet\\Core\\Backend\\BackendSolution\\App.Domain\\App.Domain.csproj",
+      "packagesPath": "C:\\Users\\Carlos Rogerio\\.nuget\\packages\\",
+      "outputPath": "E:\\Git\\AspNet\\Core\\Backend\\BackendSolution\\App.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Carlos Rogerio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {
+            "E:\\Git\\AspNet\\Core\\Backend\\BackendSolution\\App.Shared\\App.Shared.csproj": {
+              "projectPath": "E:\\Git\\AspNet\\Core\\Backend\\BackendSolution\\App.Shared\\App.Shared.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

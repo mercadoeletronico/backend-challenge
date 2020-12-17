@@ -1,0 +1,12 @@
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\bin\Debug\netcoreapp3.1\App.Domain.deps.json
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\bin\Debug\netcoreapp3.1\App.Domain.dll
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\bin\Debug\netcoreapp3.1\App.Domain.pdb
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\bin\Debug\netcoreapp3.1\App.Shared.dll
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\bin\Debug\netcoreapp3.1\App.Shared.pdb
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.csprojAssemblyReference.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.AssemblyInfoInputs.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.AssemblyInfo.cs
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.csproj.CoreCompileInputs.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.csproj.CopyComplete
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.dll
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Domain\obj\Debug\netcoreapp3.1\App.Domain.pdb

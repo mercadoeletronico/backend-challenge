@@ -1,0 +1,9 @@
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\bin\Debug\netcoreapp3.1\App.Shared.deps.json
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\bin\Debug\netcoreapp3.1\App.Shared.dll
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\bin\Debug\netcoreapp3.1\App.Shared.pdb
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.csprojAssemblyReference.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.AssemblyInfoInputs.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.AssemblyInfo.cs
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.csproj.CoreCompileInputs.cache
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.dll
+E:\Git\AspNet\Core\Backend\BackendSolution\App.Shared\obj\Debug\netcoreapp3.1\App.Shared.pdb
