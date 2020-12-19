@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-@Tag(name = "Pedido")
+@Tag(name = "Status Pedido")
 @RestController
 @RequestMapping("/status")
 public class StatusController {
