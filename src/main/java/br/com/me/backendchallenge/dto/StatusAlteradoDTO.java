@@ -7,6 +7,6 @@ import java.util.List;
 
 @Value
 public class StatusAlteradoDTO {
-    Long pedido;
+    String pedido;
     List<Status> status;
 }

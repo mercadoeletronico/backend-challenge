@@ -4,12 +4,14 @@ import br.com.me.backendchallenge.domain.Pedido;
 import br.com.me.backendchallenge.dto.PedidoDTO;
 import br.com.me.backendchallenge.service.PedidoService;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.List;
 
+@Tag(name = "Pedido")
 @RestController
 @RequestMapping("/pedidos")
 public class PedidoController {
@@ -25,7 +27,7 @@ public class PedidoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Pedido> get(@PathVariable("id") Long id) {
+    public ResponseEntity<Pedido> get(@PathVariable("id") String id) {
         final var pedido = this.pedidoService.findById(id);
         if (pedido.isPresent()) {
             return ResponseEntity.of(pedido);
@@ -43,7 +45,7 @@ public class PedidoController {
     }
 
     @PutMapping("/{id}")
-    public void update(@PathVariable("id") Long id, @RequestBody PedidoDTO pedido) {
+    public void update(@PathVariable("id") String id, @RequestBody PedidoDTO pedido) {
         this.pedidoService.update(id, pedido);
     }
 

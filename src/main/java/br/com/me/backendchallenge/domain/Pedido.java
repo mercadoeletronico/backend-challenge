@@ -25,7 +25,7 @@ public class Pedido {
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @JsonProperty("pedido")
-    private Long id;
+    private String id;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> itens = new ArrayList<>();

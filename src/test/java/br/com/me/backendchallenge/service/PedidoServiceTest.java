@@ -26,7 +26,7 @@ class PedidoServiceTest {
 
     @Test
     void deveRetornarStatusCodigoPedidoInvalido() {
-        var pedido = 1L;
+        var pedido = "1";
         Mockito.when(pedidoRepository.findById(pedido)).thenReturn(Optional.empty());
 
         var statusAlterarDTO = new StatusAlterarDTO();

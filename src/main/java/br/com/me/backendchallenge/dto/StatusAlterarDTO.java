@@ -14,5 +14,5 @@ public class StatusAlterarDTO {
     private Status status;
     private Long itensAprovados;
     private BigDecimal valorAprovado;
-    private Long pedido;
+    private String pedido;
 }

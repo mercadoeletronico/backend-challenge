@@ -36,22 +36,22 @@ public class PedidoService {
         return new StatusAlteradoDTO(novoStatus.getPedido(), status);
     }
 
-    public Long add(PedidoDTO dto) {
+    public String add(PedidoDTO dto) {
         var pedido = new Pedido();
         pedido.setCriadoEm(new Date());
         dto.getItens().forEach(pedido::addItem);
         return pedidoRepository.save(pedido).getId();
     }
 
-    public Optional<Pedido> findById(Long id) {
+    public Optional<Pedido> findById(String id) {
         return pedidoRepository.findById(id);
     }
 
-    public void deleteById(Long pedidoId) {
+    public void deleteById(String pedidoId) {
         pedidoRepository.deleteById(pedidoId);
     }
 
-    public void update(Long id, PedidoDTO dto) {
+    public void update(String id, PedidoDTO dto) {
         final var pedidoOpt = pedidoRepository.findById(id);
         if (pedidoOpt.isPresent()) {
             final var pedido = pedidoOpt.get();
