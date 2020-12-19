@@ -30,7 +30,7 @@ public class Pedido {
     @JsonIgnore
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     @OrderBy(value = "criadoEm")
-    private List<StatusPedido> statusList;
+    private List<StatusPedido> statusList = new ArrayList<>();
 
     @JsonIgnore
     @ManyToOne
@@ -63,14 +63,14 @@ public class Pedido {
         return status;
     }
 
-    public List<Status> comparar(StatusAlterarDTO novoStatus) {
+    private List<Status> comparar(StatusAlterarDTO novoStatus) {
         var retorno = new ArrayList<Status>();
         if (Status.REPROVADO == novoStatus.getStatus()) {
             return List.of(Status.REPROVADO);
         }
         testValorAprovado(novoStatus.getValorAprovado()).ifPresent(retorno::add);
         testQtdAprovada(novoStatus.getItensAprovados()).ifPresent(retorno::add);
-        if (retorno.size() == 0) {
+        if (retorno.isEmpty()) {
             return List.of(Status.APROVADO);
         }
         return retorno;
