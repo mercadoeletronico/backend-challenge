@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -19,10 +20,16 @@ public class StatusPedido {
     private Long id;
 
     @JsonIgnore
-    @OneToOne
+    @ManyToOne
     private Pedido pedido;
 
     private Status status;
     private Long itensAprovados;
     private BigDecimal valorAprovado;
+    private Date criadoEm;
+    private Date finalizadoEm;
+
+    public void finalizar() {
+        this.finalizadoEm = new Date();
+    }
 }
