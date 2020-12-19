@@ -26,10 +26,12 @@ public class PedidoService {
     }
 
     public StatusAlteradoDTO alterarStatus(StatusAlterarDTO novoStatus) {
-        final var pedido = this.pedidoRepository.findById(novoStatus.getPedido());
+        final var pedidoOpt = this.pedidoRepository.findById(novoStatus.getPedido());
         final List<Status> status;
-        if (pedido.isPresent()) {
-            status = pedido.get().alterarStatus(novoStatus);
+        if (pedidoOpt.isPresent()) {
+            final var pedido = pedidoOpt.get();
+            status = pedido.alterarStatus(novoStatus);
+            this.pedidoRepository.save(pedido);
         } else {
             status = List.of(Status.CODIGO_PEDIDO_INVALIDO);
         }

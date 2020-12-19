@@ -23,6 +23,7 @@ public class StatusPedido {
     @ManyToOne
     private Pedido pedido;
 
+    @Enumerated(value = EnumType.STRING)
     private Status status;
     private Long itensAprovados;
     private BigDecimal valorAprovado;
