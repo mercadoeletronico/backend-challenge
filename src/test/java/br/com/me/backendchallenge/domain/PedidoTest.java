@@ -1,5 +1,6 @@
 package br.com.me.backendchallenge.domain;
 
+import br.com.me.backendchallenge.dto.ItemDTO;
 import br.com.me.backendchallenge.dto.StatusAlterarDTO;
 import br.com.me.backendchallenge.enums.Status;
 import org.assertj.core.api.Assertions;
@@ -17,13 +18,18 @@ class PedidoTest {
     @BeforeEach
     void setUp() {
         pedido = new Pedido();
-        pedido.getItens().add(new Item(null, null, null, BigDecimal.valueOf(2L), 5L));
-        pedido.getItens().add(new Item(null, null, null, BigDecimal.valueOf(2L), 5L));
+        pedido.addItem(new ItemDTO(null, null, BigDecimal.valueOf(2L), 5L));
+        pedido.addItem(new ItemDTO(null, null, BigDecimal.valueOf(2L), 5L));
     }
 
 
     StatusAlterarDTO novaAlteracao(Status status, Long qtd, BigDecimal valor) {
         return new StatusAlterarDTO(status, qtd, valor, null);
+    }
+
+    @Test
+    void deveConterDoisItens() {
+        Assertions.assertThat(this.pedido.getItens()).hasSize(2);
     }
 
     @Test

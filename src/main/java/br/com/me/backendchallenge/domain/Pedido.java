@@ -1,8 +1,10 @@
 package br.com.me.backendchallenge.domain;
 
+import br.com.me.backendchallenge.dto.ItemDTO;
 import br.com.me.backendchallenge.dto.StatusAlterarDTO;
 import br.com.me.backendchallenge.enums.Status;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.JoinFormula;
@@ -22,9 +24,10 @@ public class Pedido {
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("pedido")
     private Long id;
 
-    @OneToMany(mappedBy = "pedido")
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> itens = new ArrayList<>();
 
     @JsonIgnore
@@ -106,5 +109,18 @@ public class Pedido {
         return this.itens.stream()
                 .map(i -> i.getPrecoUnitario().multiply(BigDecimal.valueOf(i.getQtd())))
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    public void addItem(ItemDTO itemDTO) {
+        var item = new Item();
+        addItem(item, itemDTO);
+    }
+
+    public void addItem(Item item, ItemDTO itemDTO) {
+        item.setPedido(this);
+        item.setDescricao(itemDTO.getDescricao());
+        item.setQtd(itemDTO.getQtd());
+        item.setPrecoUnitario(itemDTO.getPrecoUnitario());
+        this.itens.add(item);
     }
 }

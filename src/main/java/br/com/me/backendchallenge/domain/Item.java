@@ -1,9 +1,7 @@
 package br.com.me.backendchallenge.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -13,8 +11,6 @@ import java.math.BigDecimal;
 @Setter
 @Entity
 @Table(name = "TB_ITEM")
-@AllArgsConstructor
-@NoArgsConstructor
 public class Item {
     @Id
     @Column(name = "ID")
