@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 @Tag(name = "Pedido")
 @RestController
 @RequestMapping("/status")
@@ -22,8 +24,8 @@ public class StatusController {
     }
 
     @PostMapping
-    public ResponseEntity<StatusAlteradoDTO> updateStatus(@RequestBody StatusAlterarDTO statusAlterarDTO) {
+    public ResponseEntity<StatusAlteradoDTO> alterarStatus(@Valid @RequestBody StatusAlterarDTO statusAlterarDTO) {
         return ResponseEntity.ok(this.pedidoService.alterarStatus(statusAlterarDTO));
     }
 
-} 
+}

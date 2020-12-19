@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 
 @SpringBootTest
-class PedidoServiceITTest {
+class PedidoServiceIntegrationTest {
 
     @Autowired
     private PedidoService pedidoService;
