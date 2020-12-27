@@ -4,8 +4,8 @@
 - Microsoft .Net Core SDK 3.1.XXX instalado 
 
 ### Passo-a-Passo
-
 - Baixar o código;
+- A solution está localizado em src/API;
 - Realizar o build para baixar os pacotes do nuget;
 - Executar os testes(integração e unitários);
 - Clicar com o botão direto no projeto API e selecionar a opção "Set as Startup Project"
