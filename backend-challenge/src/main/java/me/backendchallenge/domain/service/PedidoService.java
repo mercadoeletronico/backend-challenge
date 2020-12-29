@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import me.backendchallenge.domain.exception.PedidoNaoEncontradoException;
+import me.backendchallenge.domain.exception.PriceOrQuantityNonPositiveException;
 import me.backendchallenge.domain.model.Item;
 import me.backendchallenge.domain.model.Pedido;
 import me.backendchallenge.domain.repository.PedidoRepository;
@@ -27,6 +28,11 @@ public class PedidoService {
 	}
 
 	public Pedido salvarPedido(Pedido pedido) {
+		for (Item item : pedido.getItens()) {
+			if ((item.getPrecoUnitario() < 1) || (item.getQtd() < 1))
+				throw new PriceOrQuantityNonPositiveException("Preço ou quantidade não positivo");
+		}
+
 		pedido.getItens().forEach(item -> item.setPedido(pedido));
 		return pedidoRepository.save(pedido);
 	}
@@ -35,19 +41,22 @@ public class PedidoService {
 		Pedido pedidoSalvo = findOrFail(id);
 
 		pedidoSalvo.setPedido(pedido.getPedido());
-		
+
 		pedido.getItens().forEach(item -> item.setPedido(pedido));
-		
+
 		pedidoSalvo.getItens().clear();
-		
+
 		if (pedido.getItens().size() > 0) {
 			Pedido novoPedido = new Pedido(pedidoSalvo);
 			for (Item item : pedido.getItens()) {
+				if ((item.getPrecoUnitario() < 1) || (item.getQtd() < 1))
+					throw new PriceOrQuantityNonPositiveException("Preço ou quantidade não positivo");
+
 				novoPedido = pedidoSalvo.addItem(item);
 			}
 			pedidoSalvo = new Pedido(novoPedido);
 		}
-		
+
 		return pedidoRepository.save(pedidoSalvo);
 	}
 
