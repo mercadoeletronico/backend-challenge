@@ -2,6 +2,7 @@ package me.backendchallenge.domain.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import me.backendchallenge.domain.exception.PedidoNaoEncontradoException;
@@ -15,6 +16,7 @@ public class PedidoService {
 
 	private PedidoRepository pedidoRepository;
 
+	@Autowired
 	public PedidoService(PedidoRepository pedidoRepository) {
 		this.pedidoRepository = pedidoRepository;
 	}
