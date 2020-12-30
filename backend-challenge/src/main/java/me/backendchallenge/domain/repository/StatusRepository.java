@@ -9,5 +9,5 @@ import me.backendchallenge.domain.model.Pedido;
 
 @Repository
 public interface StatusRepository extends JpaRepository<Pedido, Long> {
-	public List<Pedido> findByPedido(String pedido);
+	public Pedido findByPedido(String pedido);
 }

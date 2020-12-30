@@ -27,7 +27,7 @@ public class StatusService {
 		Pedido pedido;
 		List<StatusEnum> listStatus = new ArrayList<>();
 		try {
-			pedido = FindOrFail(statusRequest.getPedido());
+			pedido = findOrFail(statusRequest.getPedido());
 
 		} catch (PedidoNaoEncontradoException e) {
 
@@ -68,33 +68,32 @@ public class StatusService {
 		return new StatusResponse(statusRequest.getPedido(), listStatus);
 	}
 
-	private Pedido FindOrFail(String pedido) {
-		List<Pedido> pedidos = statusRepository.findByPedido(pedido);
+	private Pedido findOrFail(String pedido) {
+		Pedido pedidoEncontrado = statusRepository.findByPedido(pedido);
 
-		if (pedidos.size() > 0)
-			return pedidos.get(0);
+		if (pedidoEncontrado == null)
+			throw new PedidoNaoEncontradoException("Pedido não localizado");
 
-		throw new PedidoNaoEncontradoException("Pedido não encontrado");
-
+		return pedidoEncontrado;
 	}
-	
+
 	private StatusEnum verificarQuantidadeStatus(Integer quantidadeRequest, Integer quantidadePedido) {
 		if (quantidadeRequest > quantidadePedido)
 			return StatusEnum.APROVADO_QTD_A_MAIOR;
-		
+
 		if (quantidadeRequest < quantidadePedido)
 			return StatusEnum.APROVADO_QTD_A_MENOR;
-		
+
 		return StatusEnum.APROVADO;
 	}
-	
+
 	private StatusEnum verificarValorStatus(Double valorRequest, Double valorPedido) {
 		if (valorRequest > valorPedido)
 			return StatusEnum.APROVADO_VALOR_A_MAIOR;
-		
+
 		if (valorRequest < valorPedido)
 			return StatusEnum.APROVADO_VALOR_A_MENOR;
-		
+
 		return StatusEnum.APROVADO;
 	}
 

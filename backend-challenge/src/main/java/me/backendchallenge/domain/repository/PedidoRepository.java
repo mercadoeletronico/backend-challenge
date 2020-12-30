@@ -7,5 +7,7 @@ import me.backendchallenge.domain.model.Pedido;
 
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long> {
-
+	Pedido findByPedido(String pedido);
+	
+	Boolean existsByPedido(String pedido);
 }

@@ -35,9 +35,9 @@ public class PedidoController {
 		return pedidoService.listar();
 	}
 
-	@GetMapping("/{id}")
-	public ResponseEntity<Pedido> buscar(@PathVariable(name = "id") Long id) {
-		return ResponseEntity.ok(pedidoService.obterPedido(id));
+	@GetMapping("/{pedido}")
+	public ResponseEntity<Pedido> buscar(@PathVariable(name = "pedido") String pedido) {
+		return ResponseEntity.ok(pedidoService.obterPedido(pedido));
 	}
 
 	@PostMapping
@@ -47,14 +47,14 @@ public class PedidoController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(pedidoSalvo);
 	}
 
-	@PutMapping("/{id}")
-	public ResponseEntity<Pedido> atualizar(@PathVariable Long id, @RequestBody Pedido pedido) {
-		return ResponseEntity.ok(pedidoService.atualizarPedido(id, pedido));
+	@PutMapping("/{pedido}")
+	public ResponseEntity<Pedido> atualizar(@PathVariable(name = "pedido") String codigoPedido, @RequestBody Pedido pedido) {
+		return ResponseEntity.ok(pedidoService.atualizarPedido(codigoPedido, pedido));
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/{pedido}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void delete(@PathVariable Long id) {
-		pedidoService.removerPedido(id);
+	public void delete(@PathVariable String pedido) {
+		pedidoService.removerPedido(pedido);
 	}
 }
