@@ -11,6 +11,7 @@ public class PedidoUtils {
 	public static final Long ID_PEDIDO_SEM_ITEM = 1231L;
 
 	public static final String CODIGO_PEDIDO_VALIDO = "123456";
+	public static final String CODIGO_PEDIDO_INVALIDO = "123456-N";
 	public static final String CODIGO_PEDIDO_SEM_ITEM = "12345688";
 
 	public static Pedido buildPedidoValido() {
@@ -33,7 +34,7 @@ public class PedidoUtils {
 
 		return pedido;
 	}
-	
+
 	public static Pedido buildPedidoQuantidadeNaoPositiva() {
 		Pedido pedido = new Pedido();
 		pedido.setId(ID_PEDIDO_VALIDO);
@@ -45,7 +46,7 @@ public class PedidoUtils {
 
 		return pedido;
 	}
-	
+
 	public static Pedido buildPedidoValorNaoPositivo() {
 		Pedido pedido = new Pedido();
 		pedido.setId(ID_PEDIDO_VALIDO);
@@ -74,7 +75,7 @@ public class PedidoUtils {
 
 		return itens;
 	}
-	
+
 	public static List<Item> buildItensQuantidadeNaoPositiva(Pedido pedido) {
 		List<Item> itens = new ArrayList<>();
 		Item item = new Item();
@@ -91,7 +92,7 @@ public class PedidoUtils {
 
 		return itens;
 	}
-	
+
 	public static List<Item> buildItensValorNaoPositivo(Pedido pedido) {
 		List<Item> itens = new ArrayList<>();
 		Item item = new Item();

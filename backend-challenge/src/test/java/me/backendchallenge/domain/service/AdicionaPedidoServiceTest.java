@@ -1,20 +1,15 @@
 package me.backendchallenge.domain.service;
 
-import static org.hamcrest.CoreMatchers.any;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
 
 import me.backendchallenge.utils.PedidoUtils;
 import me.backendchallenge.domain.exception.PedidoExistenteException;
-import me.backendchallenge.domain.exception.PedidoNaoEncontradoException;
 import me.backendchallenge.domain.exception.PriceOrQuantityNonPositiveException;
 import me.backendchallenge.domain.model.Pedido;
 import me.backendchallenge.domain.repository.PedidoRepository;
@@ -70,14 +65,14 @@ class AdicionaPedidoServiceTest {
 
 		assertThrows(PriceOrQuantityNonPositiveException.class, () -> pedidoService.salvarPedido(pedido));
 	}
-	
+
 	@Test
 	void adicionarPedidoCodigoExistente() {
 		Pedido pedido = PedidoUtils.buildPedidoValido();
 		Pedido pedidoRepetido = PedidoUtils.buildPedidoValido();
-		
+
 		when(pedidoRepository.existsByPedido(pedido.getPedido())).thenReturn(true);
-						
+
 		assertThrows(PedidoExistenteException.class, () -> pedidoService.salvarPedido(pedidoRepetido));
 	}
 

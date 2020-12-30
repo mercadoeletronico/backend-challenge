@@ -1,6 +1,7 @@
 package me.backendchallenge.domain.service;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -9,11 +10,12 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import me.backendchallenge.domain.exception.PedidoNaoEncontradoException;
+import me.backendchallenge.domain.exception.PriceOrQuantityNonPositiveException;
 import me.backendchallenge.domain.model.Pedido;
 import me.backendchallenge.domain.repository.PedidoRepository;
 import me.backendchallenge.utils.PedidoUtils;
 
-class RemovePedidoServiceTest {
+class ConsultaPedidoServiceTest {
 
 	private PedidoService pedidoService;
 
@@ -25,28 +27,25 @@ class RemovePedidoServiceTest {
 		MockitoAnnotations.openMocks(this);
 		pedidoService = new PedidoService(pedidoRepository);
 	}
-
+	
 	@Test
-	void removePedidoValido() {
+	void consultaPedidoValido() {
 		Pedido pedido = PedidoUtils.buildPedidoValido();
-
-		when(pedidoRepository.save(pedido)).thenReturn(pedido);
+		
 		when(pedidoRepository.findByPedido(pedido.getPedido())).thenReturn(pedido);
-
-		Pedido pedidoSalvo = pedidoService.salvarPedido(pedido);
-		pedidoService.removerPedido(pedidoSalvo.getPedido());
+		pedido = pedidoService.obterPedido(PedidoUtils.CODIGO_PEDIDO_VALIDO);
+		assertEquals(pedido.getPedido(), PedidoUtils.CODIGO_PEDIDO_VALIDO);
 	}
-
+	
 	@Test
-	void removePedidoInvalido() {
+	void consultaPedidoInvalido() {
 		Pedido pedido = PedidoUtils.buildPedidoValido();
-
-		when(pedidoRepository.save(pedido)).thenReturn(pedido);
-		when(pedidoRepository.findByPedido(pedido.getPedido())).thenReturn(pedido);
-
-		Pedido pedidoSalvo = pedidoService.salvarPedido(pedido);
-		assertThrows(PedidoNaoEncontradoException.class,
-				() -> pedidoService.removerPedido(PedidoUtils.CODIGO_PEDIDO_SEM_ITEM));
+		
+		when(pedidoRepository.existsByPedido(pedido.getPedido())).thenReturn(false);
+		
+		assertEquals(pedido.getPedido(), PedidoUtils.CODIGO_PEDIDO_VALIDO);
+		
+		assertThrows(PedidoNaoEncontradoException.class, () -> pedidoService.obterPedido(PedidoUtils.CODIGO_PEDIDO_VALIDO));
 	}
 
 }
