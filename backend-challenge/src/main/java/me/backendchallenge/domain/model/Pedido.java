@@ -28,9 +28,9 @@ public class Pedido {
 	private List<Item> itens = new ArrayList<>();
 
 	public Pedido() {
-		
+
 	}
-	
+
 	public Pedido(Pedido pedido) {
 		this.id = pedido.id;
 		this.pedido = pedido.pedido;
