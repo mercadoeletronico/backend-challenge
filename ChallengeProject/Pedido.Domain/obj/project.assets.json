@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DomainValidation/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net453/DomainValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net453/DomainValidation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DomainValidation/1.0.0": {
+      "sha512": "u6NxTpdHj2pCA0Kh9FfgJh9XZJA6NsEKu/kvjzRLT3Exn+ik88UOZOWNsczt8rXZFgZ50dzUZ0Vq2tHXtJR/mQ==",
+      "type": "package",
+      "path": "domainvalidation/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "domainvalidation.1.0.0.nupkg.sha512",
+        "domainvalidation.nuspec",
+        "lib/net35/DomainValidation.dll",
+        "lib/net40/DomainValidation.dll",
+        "lib/net45/DomainValidation.dll",
+        "lib/net451/DomainValidation.dll",
+        "lib/net453/DomainValidation.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "DomainValidation >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\A1923415.CEABR\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\a1923415\\Documents\\Projetos\\Net Core\\Challenge\\ChallengeProject\\Pedido.Domain\\Pedido.Domain.csproj",
+      "projectName": "Pedido.Domain",
+      "projectPath": "C:\\Users\\a1923415\\Documents\\Projetos\\Net Core\\Challenge\\ChallengeProject\\Pedido.Domain\\Pedido.Domain.csproj",
+      "packagesPath": "C:\\Users\\A1923415.CEABR\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\a1923415\\Documents\\Projetos\\Net Core\\Challenge\\ChallengeProject\\Pedido.Domain\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\A1923415.CEABR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "DomainValidation": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DomainValidation 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "DomainValidation",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

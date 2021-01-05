@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pedido.Application</name>
+    </assembly>
+    <members>
+        <!-- Badly formed XML comment ignored for member "M:Pedido.Application.Controllers.PedidosController.GetAllPedidos" -->
+        <!-- Badly formed XML comment ignored for member "M:Pedido.Application.Controllers.PedidosController.GetPedidos(System.Int64)" -->
+        <!-- Badly formed XML comment ignored for member "M:Pedido.Application.Controllers.PedidosController.PostPedido(Pedido.Domain.Models.Pedido)" -->
+        <!-- Badly formed XML comment ignored for member "M:Pedido.Application.Controllers.PedidosController.PutPedido(Pedido.Domain.Models.Pedido)" -->
+        <!-- Badly formed XML comment ignored for member "M:Pedido.Application.Controllers.PedidosController.DeletePedido(Pedido.Domain.Models.Pedido)" -->
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\bin\Debug\netcoreapp3.1\Pedido.Infra.deps.json
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\bin\Debug\netcoreapp3.1\Pedido.Infra.dll
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\bin\Debug\netcoreapp3.1\Pedido.Infra.pdb
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\bin\Debug\netcoreapp3.1\Pedido.Domain.dll
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\bin\Debug\netcoreapp3.1\Pedido.Domain.pdb
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.csprojAssemblyReference.cache
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.AssemblyInfoInputs.cache
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.AssemblyInfo.cs
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.csproj.CopyComplete
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.dll
+C:\Users\a1923415\Documents\Projetos\Net Core\Challenge\ChallengeProject\Pedido.Infra\obj\Debug\netcoreapp3.1\Pedido.Infra.pdb

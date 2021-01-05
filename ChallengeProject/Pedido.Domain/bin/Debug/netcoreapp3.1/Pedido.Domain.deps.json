@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Pedido.Domain/1.0.0": {
+        "dependencies": {
+          "DomainValidation": "1.0.0"
+        },
+        "runtime": {
+          "Pedido.Domain.dll": {}
+        }
+      },
+      "DomainValidation/1.0.0": {
+        "runtime": {
+          "lib/net453/DomainValidation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Pedido.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DomainValidation/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-u6NxTpdHj2pCA0Kh9FfgJh9XZJA6NsEKu/kvjzRLT3Exn+ik88UOZOWNsczt8rXZFgZ50dzUZ0Vq2tHXtJR/mQ==",
+      "path": "domainvalidation/1.0.0",
+      "hashPath": "domainvalidation.1.0.0.nupkg.sha512"
+    }
+  }
+}
