@@ -107,7 +107,7 @@ public class OrderService {
                 }
                 var price = order.getItems()
                     .stream()
-                    .map(ProductDTO::getPrice)
+                    .map(product -> product.getPrice() * product.getQuantity())
                     .reduce(Integer::sum)
                     .orElse(0);
                 var quantity = order.getItems()

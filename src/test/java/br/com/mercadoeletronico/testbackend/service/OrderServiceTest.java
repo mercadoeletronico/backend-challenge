@@ -216,7 +216,7 @@ class OrderServiceTest {
                             ).price(
                                 orderDTO.getItems()
                                     .stream()
-                                    .map(ProductDTO::getPrice)
+                                    .map(product -> product.getPrice() * product.getQuantity())
                                     .reduce(Integer::sum)
                                     .orElse(0)
                             ).build()
