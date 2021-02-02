@@ -1,0 +1,6 @@
+
+spring:
+    r2dbc:
+        url: mem:testdb;DB_CLOSE_DELAY=-1;mode=mysql;
+        username: sa
+        password: ${API_R2DBC_PASSWORD:}
