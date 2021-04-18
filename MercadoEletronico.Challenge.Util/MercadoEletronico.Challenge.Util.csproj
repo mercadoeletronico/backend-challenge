@@ -4,8 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Interfaces\Data Access\IRepository.cs~RF8aaaa07.TMP" />
-  </ItemGroup>
-
 </Project>

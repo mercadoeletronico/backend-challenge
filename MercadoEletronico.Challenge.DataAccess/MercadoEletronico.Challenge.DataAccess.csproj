@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Services\MercadoEletronico.Challenge.Domain.Services.csproj" />
+  </ItemGroup>
+
 </Project>
