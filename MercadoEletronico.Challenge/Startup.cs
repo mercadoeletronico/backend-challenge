@@ -1,16 +1,12 @@
+using MercadoEletronico.Challenge.Application.Extensions;
+using MercadoEletronico.Challenge.DataAccess.Extensions;
+using MercadoEletronico.Challenge.Domain.Services.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge
 {
@@ -23,18 +19,25 @@ namespace MercadoEletronico.Challenge
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllers();
+            RegisterProjectLayers(services);
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MercadoEletronico.Challenge", Version = "v1" });
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        private static void RegisterProjectLayers(IServiceCollection services)
+        {
+            services.AddDomainLayer();
+            services.AddApplicationLayer();
+            services.AddDataAccessLayer();
+        }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

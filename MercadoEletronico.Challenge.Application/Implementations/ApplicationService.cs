@@ -4,23 +4,21 @@ using MercadoEletronico.Challenge.Util;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Application.Implementations
 {
     public abstract class ApplicationService<T> : IApplicationService<T> where T : class
     {
+        private readonly IDomainService<T> _domainService;
         private readonly ILogger<ApplicationService<T>> _logger;
 
-        public ApplicationService(ILogger<ApplicationService<T>> logger)
+        public ApplicationService(
+            IDomainService<T> domainService,
+            ILogger<ApplicationService<T>> logger)
         {
             _logger = logger;
-        }
-
-        private readonly IDomainService<T> _domainService;
-
-        public ApplicationService(IDomainService<T> domainService)
-        {
             _domainService = domainService;
         }
 
@@ -49,7 +47,7 @@ namespace MercadoEletronico.Challenge.Application.Implementations
             return await Catch(() => _domainService.GetAllAsync());
         }
 
-        public async Task<Result<IEnumerable<T>>> GetByExpressionAsync(Func<T, bool> expression)
+        public async Task<Result<IEnumerable<T>>> GetByExpressionAsync(Expression<Func<T, bool>> expression)
         {
             return await Catch(() => _domainService.GetByExpressionAsync(expression));
         }
@@ -77,6 +75,7 @@ namespace MercadoEletronico.Challenge.Application.Implementations
 
                 if (@object is null) 
                 {
+                    _logger.LogWarning("Information requested not found");
                     return new Result<U>(ResultStatus.NoContent);
                 }
 

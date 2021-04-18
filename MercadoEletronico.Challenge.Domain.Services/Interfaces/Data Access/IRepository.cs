@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access
@@ -11,7 +12,7 @@ namespace MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access
         Task UpdateAsync(T obj);
         Task UpdateRangeAsync(IEnumerable<T> objs);
         Task<T> GetByIdAsync(string id);
-        Task<IEnumerable<T>> GetByExpressionAsync(Func<T, bool> expression);
+        Task<IEnumerable<T>> GetByExpressionAsync(Expression<Func<T, bool>> expression);
         Task<IEnumerable<T>> GetAllAsync();
         Task DeleteAsync(T obj);
         Task DeleteByIdAsync(string id);

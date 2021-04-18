@@ -1,5 +1,4 @@
-﻿using MercadoEletronico.Challenge.Domain.Models.Entities.Value_Objects;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace MercadoEletronico.Challenge.Domain.Models.Entities
 {
@@ -11,6 +10,7 @@ namespace MercadoEletronico.Challenge.Domain.Models.Entities
         }
 
         public string Id { get; set; }
+
         public List<PedidoItem> Itens { get; set; }
     }
 }

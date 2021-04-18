@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace MercadoEletronico.Challenge.Util
 {
@@ -25,7 +26,7 @@ namespace MercadoEletronico.Challenge.Util
 
         public Result(ResultStatus status, IEnumerable<string> messages) : this(status)
         {
-            if (!(messages is null))
+            if (messages is not null)
             {
                 Notifications = messages.ToList();
             }

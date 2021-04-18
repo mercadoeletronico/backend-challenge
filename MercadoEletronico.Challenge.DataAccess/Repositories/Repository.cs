@@ -1,7 +1,9 @@
 ﻿using MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,49 +11,64 @@ namespace MercadoEletronico.Challenge.DataAccess.Repositories
 {
     public abstract class Repository<T> : IRepository<T> where T : class
     {
-        public Task AddAsync(T obj)
+        private readonly DatabaseContext _context;
+
+        public Repository(DatabaseContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task AddRangeAsync(IEnumerable<T> objs)
+        public async Task AddAsync(T @object)
         {
-            throw new NotImplementedException();
+            _context.Add(@object);
+            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(T obj)
+        public async Task AddRangeAsync(IEnumerable<T> objects)
         {
-            throw new NotImplementedException();
+            _context.AddRange(objects);
+            await _context.SaveChangesAsync();
         }
 
-        public Task DeleteByIdAsync(string id)
+        public async Task DeleteAsync(T @object)
         {
-            throw new NotImplementedException();
+            _context.Remove(@object);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<T>> GetAllAsync()
+        public async Task DeleteByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            var entity = await GetByIdAsync(id);
+            _context.Set<T>().Remove(entity);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<T>> GetByExpressionAsync(Func<T, bool> expression)
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public Task<T> GetByIdAsync(string id)
+        public async Task<IEnumerable<T>> GetByExpressionAsync(Expression<Func<T, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().Where(expression).ToListAsync();
         }
 
-        public Task UpdateAsync(T obj)
+        public async Task<T> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            return await _context.Set<T>().FindAsync(id);
         }
 
-        public Task UpdateRangeAsync(IEnumerable<T> objs)
+        public async Task UpdateAsync(T @object)
         {
-            throw new NotImplementedException();
+            _context.Update(@object);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateRangeAsync(IEnumerable<T> objects)
+        {
+            _context.UpdateRange(objects);
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using MercadoEletronico.Challenge.Util;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Application.Interfaces
@@ -12,7 +13,7 @@ namespace MercadoEletronico.Challenge.Application.Interfaces
         Task<Result> UpdateAsync(T @object);
         Task<Result> UpdateRangeAsync(IEnumerable<T> objects);
         Task<Result<T>> GetByIdAsync(string id);
-        Task<Result<IEnumerable<T>>> GetByExpressionAsync(Func<T, bool> expression);
+        Task<Result<IEnumerable<T>>> GetByExpressionAsync(Expression<Func<T, bool>> expression);
         Task<Result<IEnumerable<T>>> GetAllAsync();
         Task<Result> DeleteAsync(T @object);
         Task<Result> DeleteByIdAsync(string id);

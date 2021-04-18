@@ -2,6 +2,7 @@
 using MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Domain.Services.Implementations
@@ -40,7 +41,7 @@ namespace MercadoEletronico.Challenge.Domain.Services.Implementations
             return await _repository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<T>> GetByExpressionAsync(Func<T, bool> expression)
+        public async Task<IEnumerable<T>> GetByExpressionAsync(Expression<Func<T, bool>> expression)
         {
             return await _repository.GetByExpressionAsync(expression);
         }
