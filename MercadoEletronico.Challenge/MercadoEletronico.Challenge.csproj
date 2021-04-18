@@ -9,6 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Application\MercadoEletronico.Challenge.Application.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Challenge.DataAccess\MercadoEletronico.Challenge.DataAccess.csproj" />
     <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Models\MercadoEletronico.Challenge.Domain.Models.csproj" />
   </ItemGroup>
 

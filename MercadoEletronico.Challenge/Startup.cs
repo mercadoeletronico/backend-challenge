@@ -21,7 +21,6 @@ namespace MercadoEletronico.Challenge
 
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             RegisterProjectLayers(services);
 

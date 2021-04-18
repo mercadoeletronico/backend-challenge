@@ -1,8 +1,7 @@
 ﻿namespace MercadoEletronico.Challenge.Domain.Models.Entities
 {
-    public class PedidoItem
+    public class PedidoItem : Entity
     {
-        public string Id { get; set; }
         public string Descricao { get; set; }
         public decimal PrecoUnitario { get; set; }
         public uint Qtd { get; set; }

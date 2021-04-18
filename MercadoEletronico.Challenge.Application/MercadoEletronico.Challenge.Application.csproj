@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Models\MercadoEletronico.Challenge.Domain.Models.csproj" />
     <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Services\MercadoEletronico.Challenge.Domain.Services.csproj" />
     <ProjectReference Include="..\MercadoEletronico.Challenge.Util\MercadoEletronico.Challenge.Util.csproj" />
   </ItemGroup>

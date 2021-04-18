@@ -1,4 +1,5 @@
-﻿using MercadoEletronico.Challenge.Domain.Models.Entities;
+﻿using MercadoEletronico.Challenge.DataAccess.Mapping;
+using MercadoEletronico.Challenge.Domain.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace MercadoEletronico.Challenge.DataAccess
@@ -11,6 +12,13 @@ namespace MercadoEletronico.Challenge.DataAccess
         }
 
         public DbSet<Pedido> Pedidos { get; set; }
-        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<PedidoItem> PedidoItem { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new PedidoItemMapping());
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

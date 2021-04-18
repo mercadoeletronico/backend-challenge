@@ -2,14 +2,12 @@
 
 namespace MercadoEletronico.Challenge.Domain.Models.Entities
 {
-    public class Pedido
+    public class Pedido : Entity
     {
         public Pedido()
         {
             Itens = new List<PedidoItem>();
         }
-
-        public string Id { get; set; }
 
         public List<PedidoItem> Itens { get; set; }
     }

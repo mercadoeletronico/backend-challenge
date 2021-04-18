@@ -1,37 +1,42 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MercadoEletronico.Challenge.Application.Interfaces;
+using MercadoEletronico.Challenge.Domain.Models.Entities;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PedidoController : ControllerBase
+    public class PedidoController : MercadoEletronicoControllerBase
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IPedidoApplicationService _pedidoAppService;
+
+        public PedidoController(IPedidoApplicationService pedidoAppService)
         {
-            //var lista = new List<PedidoReques>
-            return Ok();
+            _pedidoAppService = pedidoAppService;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+            => StructuredResponse(await _pedidoAppService.GetAllAsync());
 
         [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
+        public async Task<IActionResult> Get(string id) 
+            => StructuredResponse(await _pedidoAppService.GetByIdAsync(id));
+        
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
+        public async Task<IActionResult> Post([FromBody] Pedido pedido)
+            => StructuredResponse(await _pedidoAppService.AddAsync(pedido));
 
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> Put(string id, [FromBody] Pedido pedido)
         {
+            pedido.Id = id;
+            return StructuredResponse(await _pedidoAppService.UpdateAsync(pedido));
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        public async Task<IActionResult> Delete(string id)
+            => StructuredResponse(await _pedidoAppService.DeleteByIdAsync(id));
     }
 }

@@ -8,4 +8,12 @@
     <None Remove="Interfaces\Data Access\IRepository.cs~RF8aaaa07.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Models\MercadoEletronico.Challenge.Domain.Models.csproj" />
+  </ItemGroup>
+
 </Project>

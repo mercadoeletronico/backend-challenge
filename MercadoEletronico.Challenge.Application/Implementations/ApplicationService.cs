@@ -75,8 +75,9 @@ namespace MercadoEletronico.Challenge.Application.Implementations
 
                 if (@object is null) 
                 {
-                    _logger.LogWarning("Information requested not found");
-                    return new Result<U>(ResultStatus.NoContent);
+                    var message = "Information requested not found";
+                    _logger.LogWarning(message);
+                    return new Result<U>(ResultStatus.NotFound, message);
                 }
 
                 return new Result<U>(ResultStatus.Success, @object);

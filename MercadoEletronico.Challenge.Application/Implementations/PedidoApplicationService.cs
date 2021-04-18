@@ -1,4 +1,5 @@
-﻿using MercadoEletronico.Challenge.Domain.Models.Entities;
+﻿using MercadoEletronico.Challenge.Application.Interfaces;
+using MercadoEletronico.Challenge.Domain.Models.Entities;
 using MercadoEletronico.Challenge.Domain.Services.Interfaces;
 using Microsoft.Extensions.Logging;
 
