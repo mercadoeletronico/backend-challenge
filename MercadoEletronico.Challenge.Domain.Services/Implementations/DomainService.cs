@@ -9,7 +9,7 @@ namespace MercadoEletronico.Challenge.Domain.Services.Implementations
 {
     public abstract class DomainService<T> : IDomainService<T> where T : class
     {
-        private readonly IRepository<T> _repository;
+        protected readonly IRepository<T> _repository;
 
         public DomainService(IRepository<T> repository)
         {

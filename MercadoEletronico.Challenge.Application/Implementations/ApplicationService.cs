@@ -1,6 +1,7 @@
 ﻿using MercadoEletronico.Challenge.Application.Interfaces;
 using MercadoEletronico.Challenge.Domain.Services.Interfaces;
 using MercadoEletronico.Challenge.Util;
+using MercadoEletronico.Challenge.Util.Extensions;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ namespace MercadoEletronico.Challenge.Application.Implementations
 {
     public abstract class ApplicationService<T> : IApplicationService<T> where T : class
     {
-        private readonly IDomainService<T> _domainService;
+        protected readonly IDomainService<T> _domainService;
         private readonly ILogger<ApplicationService<T>> _logger;
 
         public ApplicationService(
@@ -73,7 +74,7 @@ namespace MercadoEletronico.Challenge.Application.Implementations
             {
                 var @object = await func();
 
-                if (@object is null) 
+                if (@object is null)
                 {
                     var message = "Information requested not found";
                     _logger.LogWarning(message);
@@ -83,11 +84,11 @@ namespace MercadoEletronico.Challenge.Application.Implementations
                 return new Result<U>(ResultStatus.Success, @object);
 
             }
-            catch (Exception ex)   
+            catch (Exception ex)
             {
                 _logger.LogError(ex, "Something went wrong");
 
-                var status = GetResultStatus(ex);
+                var status = ex.GetResultStatus();
 
                 return new Result<U>(status, ex.Message);
             }
@@ -103,22 +104,10 @@ namespace MercadoEletronico.Challenge.Application.Implementations
             }
             catch (Exception ex)
             {
-                ResultStatus status = GetResultStatus(ex);
+                ResultStatus status = ex.GetResultStatus();
 
                 return new Result(status, ex.Message);
             }
-        }
-
-        private static ResultStatus GetResultStatus(Exception ex)
-        {
-            var status = ex switch
-            {
-                // TODO: fazer teste unitario
-                ArgumentException _ => ResultStatus.BadRequest,
-                KeyNotFoundException _ => ResultStatus.NotFound,
-                _ => ResultStatus.InternalError,
-            };
-            return status;
         }
     }
 }

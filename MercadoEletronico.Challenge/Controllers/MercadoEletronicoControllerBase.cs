@@ -5,56 +5,40 @@ namespace MercadoEletronico.Challenge.Controllers
 {
     public class MercadoEletronicoControllerBase : ControllerBase
     {
+        private const string NullErrorMessage = "Something went wrong, please check logs for details";
+
         protected IActionResult StructuredResponse<T>(Result<T> result) 
         {
             if (result is null)
             {
-                return StatusCode(500, "Something went wrong, please check logs for details");
+                return StatusCode(500, NullErrorMessage);
             }
 
-            switch (result.Status) 
+            return result.Status switch
             {
-                case ResultStatus.Success:
-                    return Ok(result.Content);
-
-                case ResultStatus.NoContent:
-                    return NoContent();
-
-                case ResultStatus.BadRequest:
-                    return BadRequest(result.Notifications);
-
-                case ResultStatus.Unauthorized:
-                    return Unauthorized();
-
-                default:
-                    return StatusCode(500, result.Notifications);
-            }
+                ResultStatus.Success => Ok(result.Content),
+                ResultStatus.NoContent => NoContent(),
+                ResultStatus.BadRequest => BadRequest(result.Notifications),
+                ResultStatus.Unauthorized => Unauthorized(),
+                _ => StatusCode(500, result.Notifications),
+            };
         }
 
         protected IActionResult StructuredResponse(Result result)
         {
             if (result is null)
             {
-                return StatusCode(500, "Something went wrong, please check logs for details");
+                return StatusCode(500, NullErrorMessage);
             }
 
-            switch (result.Status)
+            return result.Status switch
             {
-                case ResultStatus.Success:
-                    return Ok();
-
-                case ResultStatus.NoContent:
-                    return NoContent();
-
-                case ResultStatus.BadRequest:
-                    return BadRequest(result.Notifications);
-
-                case ResultStatus.Unauthorized:
-                    return Unauthorized();
-
-                default:
-                    return StatusCode(500, result.Notifications);
-            }
+                ResultStatus.Success => Ok(),
+                ResultStatus.NoContent => NoContent(),
+                ResultStatus.BadRequest => BadRequest(result.Notifications),
+                ResultStatus.Unauthorized => Unauthorized(),
+                _ => StatusCode(500, result.Notifications),
+            };
         }
     }
 }
