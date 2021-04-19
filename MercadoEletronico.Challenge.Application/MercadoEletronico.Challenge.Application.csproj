@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Models\MercadoEletronico.Challenge.Domain.Models.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Domain.Services\MercadoEletronico.Challenge.Domain.Services.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Challenge.Util\MercadoEletronico.Challenge.Util.csproj" />
+  </ItemGroup>
+
+</Project>
