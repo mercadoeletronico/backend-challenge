@@ -25,4 +25,8 @@
     <ProjectReference Include="..\MercadoEletronico.Challenge.Util\MercadoEletronico.Challenge.Util.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MercadoEletronico.Challenge.Domain.Services\" />
+  </ItemGroup>
+
 </Project>
