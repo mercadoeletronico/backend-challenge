@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Domain.Commands;
 using Domain.Notifications;
 

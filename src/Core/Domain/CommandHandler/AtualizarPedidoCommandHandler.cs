@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Domain.Commands;
 using Domain.Notifications;
@@ -21,9 +22,9 @@ namespace Domain.CommandHandler
             if (this._pedidoCommandRepository.HasNotifications)
             {
                 this._notificationPool.AddNotifications(this._pedidoCommandRepository.Notifications);
-                return "";
+                return String.Empty;
             }
-            return "";
+            return String.Empty;
         }
     }
 }

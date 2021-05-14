@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Enum;
 using Domain.Notifications;
@@ -46,7 +45,7 @@ namespace Domain.Queries
                 Pedido = pedido,
                 Status = new List<string>()
             };
-            if (pedidoResponse == null)
+            if (pedidoResponse == null || pedidoResponse.NumeroPedido != pedido)
             {
                 statusMensagem.Status.Add(StatusPedidoEnum.CodigoPedidoInvalido.ToDescriptionString());
                 return statusMensagem;

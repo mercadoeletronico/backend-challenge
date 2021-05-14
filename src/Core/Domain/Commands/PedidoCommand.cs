@@ -19,9 +19,9 @@ namespace Domain.Commands
 
 
 
-        public PedidoCommand(string numeroPedido, IEnumerable<PedidoItens> pedidoItens, NotificationPool notificationPool)
+        public PedidoCommand(string numeroPedido, IEnumerable<PedidoItens> pedidoItens)
         {
-            _notificationPool = notificationPool;
+            _notificationPool = new NotificationPool();
             NumeroPedido = numeroPedido;
             PedidoItens = pedidoItens;
         }

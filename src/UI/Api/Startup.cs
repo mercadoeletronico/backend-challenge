@@ -1,4 +1,3 @@
-using Api.Models.Request;
 using Domain.CommandHandler;
 using Domain.Commands;
 using Domain.Notifications;
@@ -33,10 +32,12 @@ namespace Api
             services.AddTransient<CommandHandler<PedidoCommand, bool>, CadastrarPedidoCommandHandler>();
             services.AddTransient<CommandHandler<PedidoCommand, string>, AtualizarPedidoCommandHandler>();
 
+            //Scoped = cada solicitação(novo scopo) ele cria um novo 
             services.AddScoped<IPedidoQueryRepository, PedidoQueryRepository>();
             services.AddScoped<IPedidoQuery, PedidoQuey>();
-            //transiente para ser diferente em cada solicitação dele
+            //transiente = sera injetado todo vez por request
             services.AddTransient<IPedidoCommandRepository, PedidoCommandRepository>();
+            
             // "BANCO DE DADOS" em memoria
             services.AddSingleton<Banco>();
 

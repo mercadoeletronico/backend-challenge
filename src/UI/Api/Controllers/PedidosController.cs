@@ -32,7 +32,7 @@ namespace Api.Controllers
         [HttpPost("pedido")]
         public async Task<IActionResult> CadastrarPedido([FromBody] PedidosRequest request)
         {
-            var pedido = await this._cadastrarPedidoCommandHandler.Handle(new PedidoCommand(request.Pedido, CadastrarPedidoItemMapper.Map(request), _notiificationPool));
+            var pedido = await this._cadastrarPedidoCommandHandler.Handle(new PedidoCommand(request.Pedido, CadastrarPedidoItemMapper.Map(request)));
 
             if (_cadastrarPedidoCommandHandler.HasNotifications)
             {
@@ -44,14 +44,14 @@ namespace Api.Controllers
         [HttpPut("pedido")]
         public async Task<IActionResult> AtualizarPedido([FromBody] PedidosRequest request)
         {
-            var pedido = await this._atualizarPedidoCommandHandler.Handle(new PedidoCommand(request.Pedido, CadastrarPedidoItemMapper.Map(request), _notiificationPool));
+            var pedido = await this._atualizarPedidoCommandHandler.Handle(new PedidoCommand(request.Pedido, CadastrarPedidoItemMapper.Map(request)));
 
             if (_atualizarPedidoCommandHandler.HasNotifications)
             {
                 return StatusCode((int)HttpStatusCode.BadRequest, _atualizarPedidoCommandHandler.Notifications);
             }
 
-            return StatusCode((int)HttpStatusCode.Created);
+            return StatusCode((int)HttpStatusCode.OK);
         }
         [HttpGet("pedido")]
         public async Task<IActionResult> ListarPedido()
@@ -64,6 +64,7 @@ namespace Api.Controllers
 
             return StatusCode((int)HttpStatusCode.OK, pedido);
         }
+        
         [HttpDelete("pedido")]
         public async Task<IActionResult> RemoverPedido([FromQuery] string numeroPedido)
         {

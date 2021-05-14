@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Api.Models.Request;
-using Domain.Commands;
 using Domain.Entities;
 
 namespace Api.Mapper
