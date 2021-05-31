@@ -22,7 +22,7 @@ namespace ME.PurchaseOrder.Domain.Models
                 return new List<string>() { ErrorCode.Disapproved.GetDescription() };
 
             var totalItems = Items?.Sum(x => x.Quantity) ?? 0;
-            var totalPrice = Items?.Sum(x => x.UnitPrice) ?? 0;
+            var totalPrice = Items?.Sum(x => x.UnitPrice * x.Quantity) ?? 0;
             var status = new List<string>();
 
             if (totalPrice != approvedPrice)
