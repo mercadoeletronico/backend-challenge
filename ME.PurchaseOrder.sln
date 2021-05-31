@@ -13,6 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME.PurchaseOrder.Infra", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ME.PurchaseOrder.Domain", "ME.PurchaseOrder.Domain\ME.PurchaseOrder.Domain.csproj", "{BB4E1BE2-CB7F-46E1-887E-FB917FDB8FA7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38034169-72F8-4532-8D77-7569509C4051}"
+	ProjectSection(SolutionItems) = preProject
+		instructions.md = instructions.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

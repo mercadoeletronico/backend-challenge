@@ -19,6 +19,11 @@ namespace ME.PurchaseOrder.API.Controllers
             _orderService = orderService;
         }
 
+        /// <summary>
+        /// Aprova ou reprova o pedido conforme valores informados.
+        /// </summary>
+        /// <param name="pedido"><sealso cref="UpdateOrderStatusRequest"></param>
+        /// <returns></returns>
         [HttpPost("")]
         [ProducesResponseType(typeof(BaseResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> Update(UpdateOrderStatusRequest request)

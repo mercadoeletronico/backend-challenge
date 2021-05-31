@@ -21,6 +21,10 @@ namespace ME.PurchaseOrder.API.Controllers
             _orderService = orderService;
         }
 
+        /// <summary>
+        /// Retorna todos os pedidos.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("")]
         [ProducesResponseType(typeof(OrderResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetAll()
@@ -31,6 +35,11 @@ namespace ME.PurchaseOrder.API.Controllers
                 return new ObjectResult(result) { StatusCode = result.StatusCode };
             });
 
+        /// <summary>
+        /// Retorna o pedido conforme o número de pedido informado.
+        /// </summary>
+        /// <param name="pedido"></param>
+        /// <returns></returns>
         [HttpGet("{pedido}")]
         [ProducesResponseType(typeof(OrderResponse), StatusCodes.Status200OK)]
         public async Task<IActionResult> GetByCode(string pedido)
@@ -41,6 +50,11 @@ namespace ME.PurchaseOrder.API.Controllers
                 return new ObjectResult(result) { StatusCode = result.StatusCode };
             });
 
+        /// <summary>
+        /// Retorna o pedido conforme o Id informado.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("id/{id}")]
         [ProducesResponseType(typeof(IEnumerable<OrderSummaryResponse>), StatusCodes.Status200OK)]
         public async Task<IActionResult> Find(int id)
@@ -51,6 +65,11 @@ namespace ME.PurchaseOrder.API.Controllers
                 return new ObjectResult(result) { StatusCode = result.StatusCode };
             });
 
+        /// <summary>
+        /// Registra o pedido com os dados informados.
+        /// </summary>
+        /// <param name="request"><sealso cref="OrderRequest"></param>
+        /// <returns></returns>
         [HttpPost("")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create(OrderRequest request)
@@ -61,6 +80,11 @@ namespace ME.PurchaseOrder.API.Controllers
                 return new ObjectResult(result) { StatusCode = result.StatusCode };
             });
 
+        /// <summary>
+        /// Atualiza as informações de um pedido existe conforme informações passadas.
+        /// </summary>
+        /// <param name="request"><sealso cref="OrderRequest"></param>
+        /// <returns></returns>
         [HttpPut("")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Update(OrderRequest request)
@@ -73,6 +97,11 @@ namespace ME.PurchaseOrder.API.Controllers
                     : new NoContentResult();
             });
 
+        /// <summary>
+        /// Excluí o pedido conforme o número de pedido informado.
+        /// </summary>
+        /// <param name="pedido"></param>
+        /// <returns></returns>
         [HttpDelete("{pedido}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete(string pedido)
