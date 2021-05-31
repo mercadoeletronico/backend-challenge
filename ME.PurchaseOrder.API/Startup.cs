@@ -1,4 +1,6 @@
 using ME.PurchaseOrder.API.Configurations;
+using ME.PurchaseOrder.Domain.Configurations;
+using ME.PurchaseOrder.Infra.Configurations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -14,16 +16,24 @@ namespace ME.PurchaseOrder.API
     {
         private const string PolicyApi = "PolicyApi";
 
-        public Startup(IConfiguration configuration)
+        public Startup(IHostEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDependencies();
+            services.AddRepositoryDependencies();
+            services.AddDomainDependencies();
+            services.AddApplicationDependencies();
 
             services.ConfigurarHealthChecks();
 
