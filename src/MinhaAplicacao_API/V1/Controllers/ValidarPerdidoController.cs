@@ -30,7 +30,12 @@ namespace MinhaAplicacao_API.V1.Controllers
 
             var retorno = await this._pedidoServico.ValidarPedido(this._mapper.Map<StatusPedido>(modelo));
 
-            return retorno != null ? Ok(retorno) : this.BadRequest("Erro ao validar pedido!");
+            if (retorno == null)
+            {
+                return NotFound();
+            }
+
+            return this.Ok(retorno);
         }
     }
 }

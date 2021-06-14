@@ -25,20 +25,27 @@ namespace MinhaAplicacao_API.V1.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PedidoModel>>> ObterTodos()
         {
-            return this.Ok(this._mapper.Map<List<PedidoModel>>(await this._pedidoServico.SelecionarTodos(p => p.ItensPedidos)));
+            var pedidos = await this._pedidoServico.SelecionarTodos(p => p.ItensPedidos);
+
+            if (pedidos == null)
+            {
+                return NotFound();
+            }
+
+            return this.Ok(this._mapper.Map<List<PedidoModel>>(pedidos));
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Pedido>> ObterPorId(int id)
         {
-            var Pedido = await this._pedidoServico.SelecionarPorId(id, p => p.ItensPedidos);
+            var pedido = await this._pedidoServico.SelecionarPorId(id, p => p.ItensPedidos);
 
-            if (Pedido == null)
+            if (pedido == null)
             {
                 return NotFound();
             }
 
-            return Ok(this._mapper.Map<PedidoModel>(Pedido));
+            return Ok(this._mapper.Map<PedidoModel>(pedido));
         }
 
         [HttpPost]
@@ -68,14 +75,14 @@ namespace MinhaAplicacao_API.V1.Controllers
 
             try
             {
-                var Pedido = await this._pedidoServico.SelecionarPorId(modelo.Id, p => p.ItensPedidos);
+                var pedido = await this._pedidoServico.SelecionarPorId(modelo.Id, p => p.ItensPedidos);
 
-                if (Pedido == null)
+                if (pedido == null)
                 {
                     return NotFound();
                 }
 
-                await this._pedidoServico.Alterar(Pedido);
+                await this._pedidoServico.Alterar(pedido);
             }
             catch (DbUpdateConcurrencyException)
             {
