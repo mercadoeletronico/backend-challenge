@@ -12,6 +12,7 @@ namespace MinhaAplicacao.Infraestrutura
         public MinhaAplicacaoDbContext(DbContextOptions<MinhaAplicacaoDbContext> options)
             : base(options)
         {
+            this.Database.Migrate();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
