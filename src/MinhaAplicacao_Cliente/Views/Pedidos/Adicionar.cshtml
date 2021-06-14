@@ -1,0 +1,20 @@
+﻿@model MinhaAplicacao_Cliente.Models.PedidoModel
+
+<h4>Pedido - Novo</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Adicionar">
+            @await Html.PartialAsync("FormularioPedido")
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
