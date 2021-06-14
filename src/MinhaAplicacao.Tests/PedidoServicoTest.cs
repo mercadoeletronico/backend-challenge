@@ -41,10 +41,6 @@ namespace MinhaAplicacao.Tests
 
             // Assert
             Assert.Equal(retorno.Status, new EditableList<string> { "APROVADO" });
-            //Assert.Equal(retorno, new RetornoStatusPedido { Pedido = "123456", Status = new EditableList<string> { "REPROVADO" } });
-            //Assert.Equal(retorno, new RetornoStatusPedido { Pedido = "123456", Status = new EditableList<string> { "APROVADO_QTD_A_MENOR" } });
-            //Assert.Equal(retorno, new RetornoStatusPedido { Pedido = "123456", Status = new EditableList<string> { "APROVADO_VALOR_A_MAIOR", "APROVADO_QTD_A_MAIOR" } });
-            //Assert.Equal(retorno, new RetornoStatusPedido { Pedido = "123456", Status = new EditableList<string> { "APROVADO_VALOR_A_MENOR" } });
         }
 
         [Fact(DisplayName = "#2")]
@@ -67,8 +63,6 @@ namespace MinhaAplicacao.Tests
         }
 
         [Fact(DisplayName = "#3")]
-        //[InlineData("APROVADO", 2, 20, "123456")]
-        //[InlineData("REPROVADO", 0, 0, "123456")]
         public async Task Teste3()
         {
             // Arrange
@@ -88,7 +82,6 @@ namespace MinhaAplicacao.Tests
         }
 
         [Fact(DisplayName = "#4")]
-        //[InlineData("REPROVADO", 0, 0, "123456")]
         public async Task Teste4()
         {
             // Arrange
@@ -108,7 +101,6 @@ namespace MinhaAplicacao.Tests
         }
 
         [Fact(DisplayName = "#5")]
-        //[InlineData("REPROVADO", 0, 0, "123456")]
         public async Task Teste5()
         {
             // Arrange
