@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MercadoEletronico.Teste.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "10.2.3"
+        },
+        "runtime": {
+          "MercadoEletronico.Teste.Domain.dll": {}
+        }
+      },
+      "FluentValidation/10.2.3": {
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "10.2.3.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MercadoEletronico.Teste.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FluentValidation/10.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2w/E6jgg9RPSlg7JQSTHg6AWDwlOXARaV4ZUKrPJ1gi1e+oaBEcomxmo29j9BLZivkyQhOpAboJ9nKZS4/xYA==",
+      "path": "fluentvalidation/10.2.3",
+      "hashPath": "fluentvalidation.10.2.3.nupkg.sha512"
+    }
+  }
+}

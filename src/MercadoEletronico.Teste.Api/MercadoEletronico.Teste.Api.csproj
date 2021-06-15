@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.16" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronico.Teste.Application\MercadoEletronico.Teste.Application.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Teste.Domain\MercadoEletronico.Teste.Domain.csproj" />
+    <ProjectReference Include="..\MercadoEletronico.Teste.Infra\MercadoEletronico.Teste.Infra.csproj" />
+  </ItemGroup>
+
+
+</Project>

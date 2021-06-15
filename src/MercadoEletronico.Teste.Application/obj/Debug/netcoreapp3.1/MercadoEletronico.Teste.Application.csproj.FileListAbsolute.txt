@@ -1,0 +1,14 @@
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Domain.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.AssemblyInfoInputs.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.AssemblyInfo.cs
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.deps.json
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.pdb
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Domain.pdb
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.pdb
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.csprojAssemblyReference.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.csproj.CoreCompileInputs.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.csproj.CopyComplete
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Application\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Application.pdb

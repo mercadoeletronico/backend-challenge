@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "75DM3keMIXob4N1R+yoALdSdwHRXT4ARnQ+aikYIN7GJOZAA9Mt4ogyPGj8ha6ZhIIaveqZY+0dPDdxOLMeEvw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tinogueira\\.nuget\\packages\\fluentvalidation\\10.2.3\\fluentvalidation.10.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
