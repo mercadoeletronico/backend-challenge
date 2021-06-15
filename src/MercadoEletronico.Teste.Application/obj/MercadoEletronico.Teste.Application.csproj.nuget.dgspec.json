@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Application\\MercadoEletronico.Teste.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Application\\MercadoEletronico.Teste.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Application\\MercadoEletronico.Teste.Application.csproj",
+        "projectName": "MercadoEletronico.Teste.Application",
+        "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Application\\MercadoEletronico.Teste.Application.csproj",
+        "packagesPath": "C:\\Users\\tinogueira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tinogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://esppbr.pkgs.visualstudio.com/_packaging/ESPP-nuget-MASTER/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj": {
+                "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj"
+              },
+              "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\MercadoEletronico.Teste.Infra.csproj": {
+                "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\MercadoEletronico.Teste.Infra.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj",
+        "projectName": "MercadoEletronico.Teste.Domain",
+        "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj",
+        "packagesPath": "C:\\Users\\tinogueira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tinogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://esppbr.pkgs.visualstudio.com/_packaging/ESPP-nuget-MASTER/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\MercadoEletronico.Teste.Infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\MercadoEletronico.Teste.Infra.csproj",
+        "projectName": "MercadoEletronico.Teste.Infra",
+        "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\MercadoEletronico.Teste.Infra.csproj",
+        "packagesPath": "C:\\Users\\tinogueira\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tinogueira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://esppbr.pkgs.visualstudio.com/_packaging/ESPP-nuget-MASTER/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj": {
+                "projectPath": "C:\\Users\\tinogueira\\source\\repos\\MercadoEletronico.Teste\\src\\MercadoEletronico.Teste.Domain\\MercadoEletronico.Teste.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

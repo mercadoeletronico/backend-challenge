@@ -1,0 +1,12 @@
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.deps.json
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.pdb
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Domain.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\bin\Debug\netcoreapp3.1\MercadoEletronico.Teste.Domain.pdb
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.csprojAssemblyReference.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.AssemblyInfoInputs.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.AssemblyInfo.cs
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.csproj.CoreCompileInputs.cache
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.csproj.CopyComplete
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.dll
+C:\Users\tinogueira\source\repos\MercadoEletronico.Teste\src\MercadoEletronico.Teste.Infra\obj\Debug\netcoreapp3.1\MercadoEletronico.Teste.Infra.pdb
