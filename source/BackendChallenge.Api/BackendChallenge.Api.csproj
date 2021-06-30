@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BackendChallenge.Core\BackendChallenge.Core.csproj" />
+    <ProjectReference Include="..\BackendChallenge.Infrastructure\BackendChallenge.Infrastructure.csproj" />
+    <ProjectReference Include="..\BackendChallenge.Api.Model\BackendChallenge.Api.Model.csproj" />
+  </ItemGroup>
+
+</Project>
