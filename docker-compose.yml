@@ -9,26 +9,3 @@ services:
       - "15432:5432"
     environment:
       POSTGRES_PASSWORD: "postgres"
-
-  backend-challenge-pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "carlos.vernizze@outlook.com"
-      PGADMIN_DEFAULT_PASSWORD: "postgres"
-    ports:
-      - "16543:80"
-    depends_on:
-      - backend-challenge-postgres
-
-  backend-challenge-rabbitmq:
-    image: rabbitmq:3-management
-    container_name: "backend-challenge-rabbitmq"
-    ports:
-      - "15672:15672"
-      - "5672:5672"
-      - "5671:5671"
-    environment:
-      RABBITMQ_DEFAULT_PASS: rabbitmq
-      RABBITMQ_DEFAULT_USER: rabbitmq
-      RABBITMQ_DEFAULT_VHOST: /
-      RABBITMQ_ERLANG_COOKIE: secret_cookie

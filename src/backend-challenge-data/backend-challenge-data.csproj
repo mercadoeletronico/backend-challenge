@@ -13,15 +13,11 @@
     <PackageReference Include="FluentMigrator" Version="3.2.17" />
     <PackageReference Include="FluentMigrator.Runner.Postgres" Version="3.2.17" />
     <PackageReference Include="Npgsql" Version="5.0.7" />
-    <PackageReference Include="Vrnz2.Infra.Repository" Version="1.0.7" />
+    <PackageReference Include="Vrnz2.Infra.Repository" Version="1.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\backend_challenge_domain_datatypes\backend_challenge_domain_datatypes.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

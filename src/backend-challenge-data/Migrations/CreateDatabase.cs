@@ -46,23 +46,23 @@ namespace backend_challenge_data.Migrations
                 .Row(new NaturalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, Cpf = customerCpf.NumericValue.ToString(), Name = "José da Silva" });
 
 
-            //JuridicalPerson
+            //LegalPerson
             Cnpj seller01Cnpj = "26.070.359/0001-29";
             Cnpj seller02Cnpj = "85.980.128/0001-11";
             Create
-                .Table("JuridicalPerson")
+                .Table("LegalPerson")
                 .WithColumn("Id").AsGuid().PrimaryKey()
                 .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
-                .WithColumn("PersonId").AsGuid().ForeignKey("FK_JuridicalPerson_Person", "Person", "Id").NotNullable()
+                .WithColumn("PersonId").AsGuid().ForeignKey("FK_LegalPerson_Person", "Person", "Id").NotNullable()
                 .WithColumn("Cnpj").AsString(MigrationsConstants.LegalPerson_Field_Length_Cnpj).NotNullable()
                 .WithColumn("LegalName").AsString(MigrationsConstants.LegalPerson_Field_Length_LegalName).NotNullable();
 
             Insert
-                .IntoTable("JuridicalPerson")
-                .Row(new JuridicalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Cnpj = seller01Cnpj.NumericValue.ToString(), LegalName = "Giz de Cera Co." })
-                .Row(new JuridicalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Cnpj = seller02Cnpj.NumericValue.ToString(), LegalName = "Papelaria da Lucia Ltda." });
+                .IntoTable("LegalPerson")
+                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Cnpj = seller01Cnpj.NumericValue.ToString(), LegalName = "Giz de Cera Co." })
+                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Cnpj = seller02Cnpj.NumericValue.ToString(), LegalName = "Papelaria da Lucia Ltda." });
 
 
             //Phone
@@ -140,6 +140,9 @@ namespace backend_challenge_data.Migrations
 
 
             //Seller
+            var seller01Id = Guid.NewGuid();
+            var seller02Id = Guid.NewGuid();
+
             Create
                 .Table("Seller")
                 .WithColumn("Id").AsGuid().PrimaryKey()
@@ -151,70 +154,58 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("Seller")
-                .Row(new Seller { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Code = "SEL00001" })
-                .Row(new Seller { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Code = "SEL00002" });
+                .Row(new Seller { Id = seller01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Code = "SEL00001" })
+                .Row(new Seller { Id = seller02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Code = "SEL00002" });
 
 
             //Product
-            var customerProduct01Id = Guid.NewGuid();
-            var customerProduct02Id = Guid.NewGuid();
+            var product01Id = Guid.NewGuid();
+            var product02Id = Guid.NewGuid();
+            var product03Id = Guid.NewGuid();
+            var product04Id = Guid.NewGuid();
+            var product05Id = Guid.NewGuid();
 
-            var seller01Product01Id = Guid.NewGuid();
-            var seller01Product02Id = Guid.NewGuid();
-            var seller01Product03Id = Guid.NewGuid();
-            var seller01Product04Id = Guid.NewGuid();
-            var seller01Product05Id = Guid.NewGuid();
-
-            var seller02Product01Id = Guid.NewGuid();
-            var seller02Product02Id = Guid.NewGuid();
-            var seller02Product03Id = Guid.NewGuid();
-            var seller02Product04Id = Guid.NewGuid();
-            var seller02Product05Id = Guid.NewGuid();
             Create
                 .Table("Product")
                 .WithColumn("Id").AsGuid().PrimaryKey()
                 .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
-                .WithColumn("PersonId").AsGuid().ForeignKey("FK_Seller_Person", "Person", "Id").NotNullable()
                 .WithColumn("ReferenceCode").AsString(MigrationsConstants.Product_Field_Length_ReferenceCode).NotNullable().Indexed()
-                .WithColumn("Description").AsString(MigrationsConstants.Product_Field_Length_Description).NotNullable()
-                .WithColumn("UnitaryValue").AsCurrency().NotNullable();
+                .WithColumn("Description").AsString(MigrationsConstants.Product_Field_Length_Description).NotNullable();
 
             Insert
                 .IntoTable("Product")
-                .Row(new Product { Id = customerProduct01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, ReferenceCode = "LCVRD", Description = "Lápis Cera Verde", UnitaryValue = 0M })
-                .Row(new Product { Id = customerProduct02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, ReferenceCode = "LCBRC", Description = "Lápis Cera Branco", UnitaryValue = 0M })
-
-                .Row(new Product { Id = seller01Product01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ReferenceCode = "GC001", Description = "Giz de Cera Verde", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller01Product02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ReferenceCode = "GC002", Description = "Giz de Cera Branco", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller01Product03Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ReferenceCode = "GC003", Description = "Giz de Cera Azul", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller01Product04Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ReferenceCode = "GC004", Description = "Giz de Cera Amarelo", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller01Product05Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ReferenceCode = "GC005", Description = "Giz de Cera Preto", UnitaryValue = 1.7M })
-
-                .Row(new Product { Id = seller02Product01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ReferenceCode = "LC001", Description = "Lápis de Cera Verde", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller02Product02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ReferenceCode = "LC002", Description = "Lápis de Cera Branco", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller02Product03Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ReferenceCode = "LC003", Description = "Lápis de Cera Azul", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller02Product04Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ReferenceCode = "LC004", Description = "Lápis de Cera Amarelo", UnitaryValue = 1.5M })
-                .Row(new Product { Id = seller02Product05Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ReferenceCode = "LC005", Description = "Lápis de Cera Preto", UnitaryValue = 1.7M });
+                .Row(new Product { Id = product01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC001", Description = "Giz de Cera Verde" })
+                .Row(new Product { Id = product02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC002", Description = "Giz de Cera Branco" })
+                .Row(new Product { Id = product03Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC003", Description = "Giz de Cera Azul" })
+                .Row(new Product { Id = product04Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC004", Description = "Giz de Cera Amarelo" })
+                .Row(new Product { Id = product05Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC005", Description = "Giz de Cera Preto" });
 
 
-            //EquivalentProduct
+            //PriceList
             Create
-                .Table("EquivalentProduct")
+                .Table("PriceList")
                 .WithColumn("Id").AsGuid().PrimaryKey()
                 .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
-                .WithColumn("CustomerProductId").AsGuid().ForeignKey("FK_EquivalentProduct_CustomerProduct", "Product", "Id").NotNullable()
-                .WithColumn("SellerProductId").AsGuid().ForeignKey("FK_EquivalentProduct_SellerProduct", "Product", "Id").NotNullable();
+                .WithColumn("SellerId").AsGuid().ForeignKey("FK_PriceList_Seller", "Seller", "Id").NotNullable()
+                .WithColumn("ProductId").AsGuid().ForeignKey("FK_PriceList_Product", "Product", "Id").NotNullable()
+                .WithColumn("UnitaryValue").AsCurrency().NotNullable();
 
             Insert
-                .IntoTable("EquivalentProduct")
-                .Row(new EquivalentProduct { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, CustomerProductId = customerProduct01Id, SellerProductId = seller01Product01Id })
-                .Row(new EquivalentProduct { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, CustomerProductId = customerProduct01Id, SellerProductId = seller02Product01Id })
-                .Row(new EquivalentProduct { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, CustomerProductId = customerProduct02Id, SellerProductId = seller01Product02Id })
-                .Row(new EquivalentProduct { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, CustomerProductId = customerProduct02Id, SellerProductId = seller02Product02Id });
+                .IntoTable("PriceList")
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product01Id, SellerId = seller01Id, UnitaryValue = 1.0M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product02Id, SellerId = seller01Id, UnitaryValue = 1.1M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product03Id, SellerId = seller01Id, UnitaryValue = 1.2M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product04Id, SellerId = seller01Id, UnitaryValue = 1.3M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product05Id, SellerId = seller01Id, UnitaryValue = 1.4M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product01Id, SellerId = seller02Id, UnitaryValue = 1.1M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product02Id, SellerId = seller02Id, UnitaryValue = 1.0M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product03Id, SellerId = seller02Id, UnitaryValue = 1.5M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product04Id, SellerId = seller02Id, UnitaryValue = 1.4M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product05Id, SellerId = seller02Id, UnitaryValue = 0.9M });
 
 
             //Order
@@ -258,7 +249,7 @@ namespace backend_challenge_data.Migrations
         {
             Delete.Table("Person");
             Delete.Table("NaturalPerson");
-            Delete.Table("JuridicalPerson");
+            Delete.Table("LegalPerson");
             Delete.Table("Phone");
             Delete.Table("Email");
             Delete.Table("Address");

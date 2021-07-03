@@ -16,7 +16,6 @@
     <PackageReference Include="Vrnz2.BaseWebApi" Version="1.0.5" />
     <PackageReference Include="Vrnz2.Infra.Crosscutting" Version="1.0.25" />
     <PackageReference Include="Vrnz2.Infra.Data.Migrations" Version="1.0.8" />
-    <PackageReference Include="Vrnz2.Infra.Repository" Version="1.0.7" />
   </ItemGroup>
 
   <ItemGroup>

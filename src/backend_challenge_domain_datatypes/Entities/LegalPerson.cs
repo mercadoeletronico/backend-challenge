@@ -2,7 +2,7 @@
 
 namespace backend_challenge_domain_datatypes.Entities
 {
-    public class JuridicalPerson
+    public class LegalPerson
         : TransactionalEntityBase
     {
         public Guid PersonId { get; set; }

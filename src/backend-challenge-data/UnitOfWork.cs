@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Options;
+﻿using backend_challenge_data.Repositories;
+using backend_challenge_data.Repositories.Interfaces;
+using Microsoft.Extensions.Options;
 using Npgsql;
 using System.Linq;
 using Vrnz2.Infra.Repository.Abstract;
@@ -17,8 +19,13 @@ namespace backend_challenge_data
 
             _connection = new NpgsqlConnection(connectionString.Value);
 
-            AddRepository<IUserRepository, UserRepository>()
-            .AddRepository<IGetUserClaimsRepository, GetUserClaimsRepository>();
+            AddRepository<ICustomerRepository, CustomerRepository>()
+                .AddRepository<ISellerRepository, SellerRepository>()
+                .AddRepository<IPriceListRepository, PriceListRepository>()
+                .AddRepository<IProductRepository, ProductRepository>()
+                .AddRepository<IOrderRepository, OrderRepository>()
+                .AddRepository<IOrderItemRepository, OrderItemRepository>()
+                .AddRepository<IOrderItemApprovalRepository, OrderItemApprovalRepository>();
         }
 
         #endregion
