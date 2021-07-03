@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\backend_challenge_domain_datatypes\backend_challenge_domain_datatypes.csproj" />
+    <ProjectReference Include="..\backend_challenge_datatypes\backend_challenge_datatypes.csproj" />
   </ItemGroup>
 
 </Project>

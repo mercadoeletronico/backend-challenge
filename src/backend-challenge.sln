@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend-challenge-api", "ba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend-challenge-data", "backend-challenge-data\backend-challenge-data.csproj", "{45DD43B4-DA10-4758-A3F1-7E09E7C3C316}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend_challenge_domain_datatypes", "backend_challenge_domain_datatypes\backend_challenge_domain_datatypes.csproj", "{826090E9-A33B-4DB0-BDCA-31FEBB83DC36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend_challenge_datatypes", "backend_challenge_datatypes\backend_challenge_datatypes.csproj", "{826090E9-A33B-4DB0-BDCA-31FEBB83DC36}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "backend_challenge_crosscutting", "backend_challenge_crosscutting\backend_challenge_crosscutting.csproj", "{7CFB2660-5D56-4C0C-A6D6-977A92DD995A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "backend_challenge", "backend_challenge\backend_challenge.csproj", "{8CC97015-268C-45FD-8F0E-62BAC50C9387}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7CFB2660-5D56-4C0C-A6D6-977A92DD995A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CFB2660-5D56-4C0C-A6D6-977A92DD995A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CFB2660-5D56-4C0C-A6D6-977A92DD995A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC97015-268C-45FD-8F0E-62BAC50C9387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC97015-268C-45FD-8F0E-62BAC50C9387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC97015-268C-45FD-8F0E-62BAC50C9387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC97015-268C-45FD-8F0E-62BAC50C9387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

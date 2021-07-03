@@ -1,4 +1,4 @@
-﻿namespace backend_challenge_domain_datatypes.Entities
+﻿namespace backend_challenge_datatypes.Entities
 {
     public class TransactionalEntityBase
         : EntityBase

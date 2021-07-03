@@ -1,7 +1,7 @@
 ﻿using System;
 using Vrnz2.Infra.CrossCutting.Types;
 
-namespace backend_challenge_domain_datatypes.Entities
+namespace backend_challenge_datatypes.Entities
 {
     public class NaturalPerson
         : TransactionalEntityBase

@@ -1,5 +1,5 @@
 ﻿using backend_challenge_data.Repositories.Interfaces;
-using backend_challenge_domain_datatypes.Entities;
+using backend_challenge_datatypes.Entities;
 using Dapper;
 using System;
 using System.Collections.Generic;

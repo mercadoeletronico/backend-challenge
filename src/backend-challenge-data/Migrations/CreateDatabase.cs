@@ -1,4 +1,4 @@
-﻿using backend_challenge_domain_datatypes.Entities;
+﻿using backend_challenge_datatypes.Entities;
 using FluentMigrator;
 using System;
 using Vrnz2.Infra.CrossCutting.Types;
