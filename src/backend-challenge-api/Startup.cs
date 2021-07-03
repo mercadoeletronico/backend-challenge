@@ -1,5 +1,5 @@
+using backend_challenge_crosscutting.Settings;
 using backend_challenge_data.Migrations;
-using backend_challenge_infra.Settings;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

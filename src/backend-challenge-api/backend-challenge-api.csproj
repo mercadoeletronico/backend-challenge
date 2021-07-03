@@ -21,7 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\backend-challenge-data\backend-challenge-data.csproj" />
-    <ProjectReference Include="..\backend_challenge_infra\backend_challenge_infra.csproj" />
+    <ProjectReference Include="..\backend_challenge_crosscutting\backend_challenge_crosscutting.csproj" />
+    <ProjectReference Include="..\backend_challenge_infra\backend_challenge_crosscutting.csproj" />
   </ItemGroup>
 
 </Project>
