@@ -8,18 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.2.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.14" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
     <PackageReference Include="Vrnz2.BaseContracts" Version="1.0.3" />
     <PackageReference Include="Vrnz2.BaseInfra" Version="1.0.7" />
-    <PackageReference Include="Vrnz2.BaseWebApi" Version="1.0.5" />
     <PackageReference Include="Vrnz2.Infra.Crosscutting" Version="1.0.25" />
     <PackageReference Include="Vrnz2.Infra.Data.Migrations" Version="1.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\backend-challenge-data\backend-challenge-data.csproj" />
+    <ProjectReference Include="..\backend_challenge\backend_challenge.csproj" />
     <ProjectReference Include="..\backend_challenge_crosscutting\backend_challenge_crosscutting.csproj" />
     <ProjectReference Include="..\backend_challenge_infra\backend_challenge_crosscutting.csproj" />
   </ItemGroup>

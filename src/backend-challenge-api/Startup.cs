@@ -1,7 +1,10 @@
+using backend_challenge.UseCases.GetProducts;
+using backend_challenge_crosscutting.Helpers;
 using backend_challenge_crosscutting.Settings;
 using backend_challenge_data;
 using backend_challenge_data.Migrations;
 using FluentValidation.AspNetCore;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -11,10 +14,8 @@ using Microsoft.OpenApi.Models;
 using System.Linq;
 using Vrnz2.BaseInfra.Assemblies;
 using Vrnz2.BaseInfra.Logs;
+using Vrnz2.BaseInfra.ServiceCollection;
 using Vrnz2.BaseInfra.Settings;
-using Vrnz2.BaseInfra.Validations;
-using Vrnz2.BaseWebApi.Helpers;
-using Vrnz2.BaseWebApi.Validations;
 using Vrnz2.Infra.Data.Migrations;
 using Vrnz2.Infra.Repository.Interfaces.Base;
 using Vrnz2.Infra.Repository.Settings;
@@ -32,7 +33,7 @@ namespace backend_challenge
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {            
             services
                 .AddControllers()
                 .ConfigureApiBehaviorOptions(options => options.SuppressModelStateInvalidFilter = true)
@@ -40,18 +41,19 @@ namespace backend_challenge
 
             services
                 .AddSettings(out AppSettings appSettings)
-                .AddSettings<ConnectionStrings>("ConnectionStrings")
+                .AddSettings<ConnectionStrings>("ConnectionStrings")                
                 .AddLogs()
                 .CreatePostgresDatabase(Constants.DbName, GetOwnerConnectionString(appSettings))
-                .ConfigPostgresMigrations(AssembliesHelper.GetAssemblies<CreateDatabase>(), GetDefaultConnectionString(appSettings))                
-                .AddBaseValidations()
-                .AddValidation<Vrnz2.BaseContracts.DTOs.Ping.Request, PingRequestValidator>()
+                .ConfigPostgresMigrations(AssembliesHelper.GetAssemblies<CreateDatabase>(), GetDefaultConnectionString(appSettings))                                
+                .AddAutoMapper(AssembliesHelper.GetAssemblies<AppSettings>())
+                .AddMediatR(AssembliesHelper.GetAssemblies<GetProducts>())
                 .AddScoped<ControllerHelper>()
-                .AddScoped<IUnitOfWork, UnitOfWork>()   ;
+                .AddScoped<IUnitOfWork, UnitOfWork>()
+                .AddIServiceColletion();            
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "backend_challenge", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Backend Challenge", Version = "v1" });
             });
         }
 

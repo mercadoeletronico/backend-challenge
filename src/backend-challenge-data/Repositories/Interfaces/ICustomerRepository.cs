@@ -6,7 +6,7 @@ using Vrnz2.Infra.Repository.Interfaces.Base;
 
 namespace backend_challenge_data.Repositories.Interfaces
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
         : IBaseRepository
     {
         Task<IEnumerable<ViewCustomerFullData>> GetViewCustomerFullData();

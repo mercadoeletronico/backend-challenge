@@ -2,6 +2,7 @@
 using backend_challenge_datatypes.Entities;
 using Dapper;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 using Vrnz2.Infra.Repository.Abstract;
@@ -29,6 +30,17 @@ namespace backend_challenge_data.Repositories
 
         public override Task<bool> InsertAsync<Entity>(Entity value)
             => Task.FromResult(true);
+
+        public async Task<IEnumerable<Product>> GetAllAsync() 
+        {
+            var sql = @"SELECT 
+	                        ""Id"", 			""CreatedAt"", 		""UpdatedAt"", 
+	                        ""Deleted"", 		""ReferenceCode"", 	""Description""
+                        FROM 
+	                        public.""Product"";";
+
+            return await QueryAsync<Product>(sql);
+        }
 
         public async Task<Product> GetByIdAsync(Guid id)
         {

@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 using Vrnz2.BaseContracts.DTOs.Base;
 using Vrnz2.Infra.Repository.Interfaces.Base;
 
-namespace backend_challenge.UseCases.GetProducts
+namespace backend_challenge.UseCases.GetSellers
 {
-    public class GetProducts
+    public class GetSellers
     {
         public class Model
         {
@@ -24,7 +24,7 @@ namespace backend_challenge.UseCases.GetProducts
             }
 
             public class Output
-                : BaseDTO.Response<List<GetProductsResponse>>
+                : BaseDTO.Response<List<GetSellersResponse>>
             {
             }
         }
@@ -56,18 +56,18 @@ namespace backend_challenge.UseCases.GetProducts
             public async Task<Model.Output> Handle(Model.Input request, CancellationToken cancellationToken)
             {
                 var statusCode = HttpStatusCode.OK;
-                IEnumerable<Product> data;
+                IEnumerable<ViewSellerFullData> data;
 
                 using (var unitOfWork = _serviceColletion.BuildServiceProvider().GetService<IUnitOfWork>())
                 {
                     unitOfWork.OpenConnection();
 
-                    var repository = unitOfWork.GetRepository<IProductRepository>(nameof(Product));
+                    var repository = unitOfWork.GetRepository<ISellerRepository>(nameof(Seller));
 
-                    data = await repository.GetAllAsync();
+                    data = await repository.GetViewSellerFullData();
                 }
 
-                var content =  _mapper.Map<IEnumerable<GetProductsResponse>>(data);
+                var content = _mapper.Map<IEnumerable<GetSellersResponse>>(data);
 
                 return await Task.FromResult(new Model.Output { Success = true, StatusCode = (int)statusCode, Content = content.ToList() });
             }

@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using backend_challenge_crosscutting.Helpers;
+using Microsoft.AspNetCore.Mvc;
+using System.Net;
 using System.Threading.Tasks;
 using Vrnz2.BaseContracts.DTOs;
-using Vrnz2.BaseWebApi.Helpers;
 
 namespace backend_challenge.Controllers
 {
@@ -31,7 +32,7 @@ namespace backend_challenge.Controllers
         [HttpGet("ping")]
         [ProducesResponseType(typeof(PingResponse), 200)]
         public async Task<ObjectResult> Ping()
-            => await _controllerHelper.ReturnAsync((request) => Task.FromResult(new Ping.Response().Content), new Ping.Request());
+            => await _controllerHelper.ReturnAsync<Ping.Request, Ping.Response, PingResponse>((request) => Task.FromResult(new Ping.Response { Success = true, StatusCode = (int)HttpStatusCode.OK }), new Ping.Request());
 
         #endregion
     }
