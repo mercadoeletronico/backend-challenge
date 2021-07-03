@@ -38,8 +38,8 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_NaturalPerson_Person", "Person", "Id").NotNullable()
-                .WithColumn("Cpf").AsString(Constants.NaturalPerson_Field_Length_Cpf).NotNullable()
-                .WithColumn("Name").AsString(Constants.NaturalPerson_Field_Length_Name).NotNullable();
+                .WithColumn("Cpf").AsString(MigrationsConstants.NaturalPerson_Field_Length_Cpf).NotNullable()
+                .WithColumn("Name").AsString(MigrationsConstants.NaturalPerson_Field_Length_Name).NotNullable();
 
             Insert
                 .IntoTable("NaturalPerson")
@@ -56,8 +56,8 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_JuridicalPerson_Person", "Person", "Id").NotNullable()
-                .WithColumn("Cnpj").AsString(Constants.LegalPerson_Field_Length_Cnpj).NotNullable()
-                .WithColumn("LegalName").AsString(Constants.LegalPerson_Field_Length_LegalName).NotNullable();
+                .WithColumn("Cnpj").AsString(MigrationsConstants.LegalPerson_Field_Length_Cnpj).NotNullable()
+                .WithColumn("LegalName").AsString(MigrationsConstants.LegalPerson_Field_Length_LegalName).NotNullable();
 
             Insert
                 .IntoTable("JuridicalPerson")
@@ -73,9 +73,9 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Phone_Person", "Person", "Id").NotNullable()
-                .WithColumn("Ddi").AsString(Constants.Pherson_Field_Length_Ddi).NotNullable()
-                .WithColumn("Ddd").AsString(Constants.Pherson_Field_Length_Ddd).NotNullable()
-                .WithColumn("Number").AsString(Constants.Pherson_Field_Length_Number).NotNullable();
+                .WithColumn("Ddi").AsString(MigrationsConstants.Pherson_Field_Length_Ddi).NotNullable()
+                .WithColumn("Ddd").AsString(MigrationsConstants.Pherson_Field_Length_Ddd).NotNullable()
+                .WithColumn("Number").AsString(MigrationsConstants.Pherson_Field_Length_Number).NotNullable();
 
             Insert
                 .IntoTable("Phone")
@@ -92,7 +92,7 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Email_Person", "Person", "Id").NotNullable()
-                .WithColumn("Address").AsString(Constants.Email_Field_Length_Address).NotNullable();
+                .WithColumn("Address").AsString(MigrationsConstants.Email_Field_Length_Address).NotNullable();
 
             Insert
                 .IntoTable("Email")
@@ -109,12 +109,12 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Address_Person", "Person", "Id").NotNullable()
-                .WithColumn("ZipCode").AsString(Constants.Address_Field_Length_ZipCode).NotNullable()
-                .WithColumn("Street").AsString(Constants.Address_Field_Length_Street).NotNullable()
-                .WithColumn("Number").AsString(Constants.Address_Field_Length_Number).NotNullable()
-                .WithColumn("City").AsString(Constants.Address_Field_Length_City).NotNullable()
-                .WithColumn("State").AsString(Constants.Address_Field_Length_State).NotNullable()
-                .WithColumn("Country").AsString(Constants.Address_Field_Length_Country).NotNullable()
+                .WithColumn("ZipCode").AsString(MigrationsConstants.Address_Field_Length_ZipCode).NotNullable()
+                .WithColumn("Street").AsString(MigrationsConstants.Address_Field_Length_Street).NotNullable()
+                .WithColumn("Number").AsString(MigrationsConstants.Address_Field_Length_Number).NotNullable()
+                .WithColumn("City").AsString(MigrationsConstants.Address_Field_Length_City).NotNullable()
+                .WithColumn("State").AsString(MigrationsConstants.Address_Field_Length_State).NotNullable()
+                .WithColumn("Country").AsString(MigrationsConstants.Address_Field_Length_Country).NotNullable()
                 ;
 
             Insert
@@ -132,7 +132,7 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Customer_Person", "Person", "Id").NotNullable()
-                .WithColumn("Code").AsString(Constants.Customer_Field_Length_Code).NotNullable();
+                .WithColumn("Code").AsString(MigrationsConstants.Customer_Field_Length_Code).NotNullable();
 
             Insert
                 .IntoTable("Customer")
@@ -147,7 +147,7 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Seller_Person", "Person", "Id").NotNullable()
-                .WithColumn("Code").AsString(Constants.Seller_Field_Length_Code).NotNullable();
+                .WithColumn("Code").AsString(MigrationsConstants.Seller_Field_Length_Code).NotNullable();
 
             Insert
                 .IntoTable("Seller")
@@ -177,8 +177,8 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Seller_Person", "Person", "Id").NotNullable()
-                .WithColumn("ReferenceCode").AsString(Constants.Product_Field_Length_ReferenceCode).NotNullable().Indexed()
-                .WithColumn("Description").AsString(Constants.Product_Field_Length_Description).NotNullable()
+                .WithColumn("ReferenceCode").AsString(MigrationsConstants.Product_Field_Length_ReferenceCode).NotNullable().Indexed()
+                .WithColumn("Description").AsString(MigrationsConstants.Product_Field_Length_Description).NotNullable()
                 .WithColumn("UnitaryValue").AsCurrency().NotNullable();
 
             Insert
@@ -224,7 +224,7 @@ namespace backend_challenge_data.Migrations
                 .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
-                .WithColumn("Number").AsString(Constants.Order_Field_Length_Number).NotNullable()
+                .WithColumn("Number").AsString(MigrationsConstants.Order_Field_Length_Number).NotNullable()
                 .WithColumn("CustomerId").AsGuid().ForeignKey("FK_Order_Customer", "Customer", "Id").NotNullable()
                 .WithColumn("SellerId").AsGuid().ForeignKey("FK_Order_Seller", "Seller", "Id").NotNullable();
 

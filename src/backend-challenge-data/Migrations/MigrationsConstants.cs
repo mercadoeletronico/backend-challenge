@@ -1,10 +1,7 @@
 ﻿namespace backend_challenge_data.Migrations
 {
-    public class Constants
+    public class MigrationsConstants
     {
-        public const string OwnerConnectinStringName = "postgres_db";
-        public const string DbName = "backend_challenge_db";
-
         public const int NaturalPerson_Field_Length_Cpf = 11;
         public const int NaturalPerson_Field_Length_Name = 100;
 

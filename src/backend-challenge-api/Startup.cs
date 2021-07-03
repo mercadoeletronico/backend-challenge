@@ -1,4 +1,5 @@
 using backend_challenge_crosscutting.Settings;
+using backend_challenge_data;
 using backend_challenge_data.Migrations;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
@@ -15,6 +16,7 @@ using Vrnz2.BaseInfra.Validations;
 using Vrnz2.BaseWebApi.Helpers;
 using Vrnz2.BaseWebApi.Validations;
 using Vrnz2.Infra.Data.Migrations;
+using Vrnz2.Infra.Repository.Interfaces.Base;
 using Vrnz2.Infra.Repository.Settings;
 
 namespace backend_challenge
@@ -44,7 +46,8 @@ namespace backend_challenge
                 .ConfigPostgresMigrations(AssembliesHelper.GetAssemblies<CreateDatabase>(), GetDefaultConnectionString(appSettings))                
                 .AddBaseValidations()
                 .AddValidation<Vrnz2.BaseContracts.DTOs.Ping.Request, PingRequestValidator>()
-                .AddScoped<ControllerHelper>();
+                .AddScoped<ControllerHelper>()
+                .AddScoped<IUnitOfWork, UnitOfWork>()   ;
 
             services.AddSwaggerGen(c =>
             {
