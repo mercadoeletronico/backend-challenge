@@ -18,15 +18,15 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("Person")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable();
 
             Insert
                 .IntoTable("Person")
-                .Row(new Person { Id = customerPersonId, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false })
-                .Row(new Person { Id = seller01PersonId, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false })
-                .Row(new Person { Id = seller02PersonId, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false });
+                .Row(new Person { Id = customerPersonId, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false })
+                .Row(new Person { Id = seller01PersonId, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false })
+                .Row(new Person { Id = seller02PersonId, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false });
             
 
             //NaturalPerson
@@ -34,8 +34,8 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("NaturalPerson")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_NaturalPerson_Person", "Person", "Id").NotNullable()
                 .WithColumn("Cpf").AsString(MigrationsConstants.NaturalPerson_Field_Length_Cpf).NotNullable()
@@ -43,7 +43,7 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("NaturalPerson")
-                .Row(new NaturalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, Cpf = customerCpf.NumericValue.ToString(), Name = "José da Silva" });
+                .Row(new NaturalPerson { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = customerPersonId, Cpf = customerCpf.NumericValue.ToString(), Name = "José da Silva" });
 
 
             //LegalPerson
@@ -52,8 +52,8 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("LegalPerson")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_LegalPerson_Person", "Person", "Id").NotNullable()
                 .WithColumn("Cnpj").AsString(MigrationsConstants.LegalPerson_Field_Length_Cnpj).NotNullable()
@@ -61,16 +61,16 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("LegalPerson")
-                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Cnpj = seller01Cnpj.NumericValue.ToString(), LegalName = "Giz de Cera Co." })
-                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Cnpj = seller02Cnpj.NumericValue.ToString(), LegalName = "Papelaria da Lucia Ltda." });
+                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller01PersonId, Cnpj = seller01Cnpj.NumericValue.ToString(), LegalName = "Giz de Cera Co." })
+                .Row(new LegalPerson { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller02PersonId, Cnpj = seller02Cnpj.NumericValue.ToString(), LegalName = "Papelaria da Lucia Ltda." });
 
 
             //Phone
             Create
                 .Table("Phone")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Phone_Person", "Person", "Id").NotNullable()
                 .WithColumn("Ddi").AsString(MigrationsConstants.Pherson_Field_Length_Ddi).NotNullable()
@@ -79,34 +79,34 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("Phone")
-                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, Ddi = "55", Ddd = "41", Number = "42751884" })
-                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Ddi = "55", Ddd = "41", Number = "35871234" })
-                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Ddi = "55", Ddd = "41", Number = "39887855" });
+                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = customerPersonId, Ddi = "55", Ddd = "41", Number = "42751884" })
+                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller01PersonId, Ddi = "55", Ddd = "41", Number = "35871234" })
+                .Row(new Phone { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller02PersonId, Ddi = "55", Ddd = "41", Number = "39887855" });
 
 
             //Email
             Create
                 .Table("Email")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Email_Person", "Person", "Id").NotNullable()
                 .WithColumn("Address").AsString(MigrationsConstants.Email_Field_Length_Address).NotNullable();
 
             Insert
                 .IntoTable("Email")
-                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, Address = "jose.silva@internet.com" })
-                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Address = "comercial@gizdecera.co" })
-                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Address = "vendas@papelariadalucia.com.br" });
+                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = customerPersonId, Address = "jose.silva@internet.com" })
+                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller01PersonId, Address = "comercial@gizdecera.co" })
+                .Row(new Email { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller02PersonId, Address = "vendas@papelariadalucia.com.br" });
 
 
             //Address
             Create
                 .Table("Address")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Address_Person", "Person", "Id").NotNullable()
                 .WithColumn("ZipCode").AsString(MigrationsConstants.Address_Field_Length_ZipCode).NotNullable()
@@ -119,24 +119,24 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("Address")                                                                                                                                                  
-                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, ZipCode = "83.000-100", Street = "Rua XV de Novembro", Number = "10", City = "Curitiba", State = "PR", Country = "BR" })
-                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, ZipCode = "83.000-200", Street = "Av Marechal Deodoro", Number = "20", City = "Curitiba", State = "PR", Country = "BR" })
-                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, ZipCode = "83.000-300", Street = "Av Sete de Setembro", Number = "30", City = "Curitiba", State = "PR", Country = "BR" });
+                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = customerPersonId, ZipCode = "83.000-100", Street = "Rua XV de Novembro", Number = "10", City = "Curitiba", State = "PR", Country = "BR" })
+                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller01PersonId, ZipCode = "83.000-200", Street = "Av Marechal Deodoro", Number = "20", City = "Curitiba", State = "PR", Country = "BR" })
+                .Row(new Address { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller02PersonId, ZipCode = "83.000-300", Street = "Av Sete de Setembro", Number = "30", City = "Curitiba", State = "PR", Country = "BR" });
 
 
             //Customer
             Create
                 .Table("Customer")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Customer_Person", "Person", "Id").NotNullable()
                 .WithColumn("Code").AsString(MigrationsConstants.Customer_Field_Length_Code).NotNullable();
 
             Insert
                 .IntoTable("Customer")
-                .Row(new Customer { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = customerPersonId, Code = "CUST00001" });
+                .Row(new Customer { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = customerPersonId, Code = "CUST00001" });
 
 
             //Seller
@@ -146,16 +146,16 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("Seller")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("PersonId").AsGuid().ForeignKey("FK_Seller_Person", "Person", "Id").NotNullable()
                 .WithColumn("Code").AsString(MigrationsConstants.Seller_Field_Length_Code).NotNullable();
 
             Insert
                 .IntoTable("Seller")
-                .Row(new Seller { Id = seller01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller01PersonId, Code = "SEL00001" })
-                .Row(new Seller { Id = seller02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, PersonId = seller02PersonId, Code = "SEL00002" });
+                .Row(new Seller { Id = seller01Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller01PersonId, Code = "SEL00001" })
+                .Row(new Seller { Id = seller02Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, PersonId = seller02PersonId, Code = "SEL00002" });
 
 
             //Product
@@ -168,27 +168,27 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("Product")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("ReferenceCode").AsString(MigrationsConstants.Product_Field_Length_ReferenceCode).NotNullable().Indexed()
                 .WithColumn("Description").AsString(MigrationsConstants.Product_Field_Length_Description).NotNullable();
 
             Insert
                 .IntoTable("Product")
-                .Row(new Product { Id = product01Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC001", Description = "Giz de Cera Verde" })
-                .Row(new Product { Id = product02Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC002", Description = "Giz de Cera Branco" })
-                .Row(new Product { Id = product03Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC003", Description = "Giz de Cera Azul" })
-                .Row(new Product { Id = product04Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC004", Description = "Giz de Cera Amarelo" })
-                .Row(new Product { Id = product05Id, CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ReferenceCode = "GC005", Description = "Giz de Cera Preto" });
+                .Row(new Product { Id = product01Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ReferenceCode = "GC001", Description = "Giz de Cera Verde" })
+                .Row(new Product { Id = product02Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ReferenceCode = "GC002", Description = "Giz de Cera Branco" })
+                .Row(new Product { Id = product03Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ReferenceCode = "GC003", Description = "Giz de Cera Azul" })
+                .Row(new Product { Id = product04Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ReferenceCode = "GC004", Description = "Giz de Cera Amarelo" })
+                .Row(new Product { Id = product05Id, CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ReferenceCode = "GC005", Description = "Giz de Cera Preto" });
 
 
             //PriceList
             Create
                 .Table("PriceList")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("SellerId").AsGuid().ForeignKey("FK_PriceList_Seller", "Seller", "Id").NotNullable()
                 .WithColumn("ProductId").AsGuid().ForeignKey("FK_PriceList_Product", "Product", "Id").NotNullable()
@@ -196,24 +196,24 @@ namespace backend_challenge_data.Migrations
 
             Insert
                 .IntoTable("PriceList")
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product01Id, SellerId = seller01Id, UnitaryValue = 1.0M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product02Id, SellerId = seller01Id, UnitaryValue = 1.1M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product03Id, SellerId = seller01Id, UnitaryValue = 1.2M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product04Id, SellerId = seller01Id, UnitaryValue = 1.3M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product05Id, SellerId = seller01Id, UnitaryValue = 1.4M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product01Id, SellerId = seller02Id, UnitaryValue = 1.1M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product02Id, SellerId = seller02Id, UnitaryValue = 1.0M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product03Id, SellerId = seller02Id, UnitaryValue = 1.5M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product04Id, SellerId = seller02Id, UnitaryValue = 1.4M })
-                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTimeOffset.Now, UpdatedAt = DateTimeOffset.Now, Deleted = false, ProductId = product05Id, SellerId = seller02Id, UnitaryValue = 0.9M });
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product01Id, SellerId = seller01Id, UnitaryValue = 1.0M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product02Id, SellerId = seller01Id, UnitaryValue = 1.1M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product03Id, SellerId = seller01Id, UnitaryValue = 1.2M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product04Id, SellerId = seller01Id, UnitaryValue = 1.3M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product05Id, SellerId = seller01Id, UnitaryValue = 1.4M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product01Id, SellerId = seller02Id, UnitaryValue = 1.1M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product02Id, SellerId = seller02Id, UnitaryValue = 1.0M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product03Id, SellerId = seller02Id, UnitaryValue = 1.5M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product04Id, SellerId = seller02Id, UnitaryValue = 1.4M })
+                .Row(new PriceList { Id = Guid.NewGuid(), CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, Deleted = false, ProductId = product05Id, SellerId = seller02Id, UnitaryValue = 0.9M });
 
 
             //Order
             Create
                 .Table("Order")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("Number").AsString(MigrationsConstants.Order_Field_Length_Number).NotNullable()
                 .WithColumn("CustomerId").AsGuid().ForeignKey("FK_Order_Customer", "Customer", "Id").NotNullable()
@@ -224,8 +224,8 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("OrderItem")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("OrderId").AsGuid().ForeignKey("FK_OrderItem_Order", "Order", "Id").NotNullable()
                 .WithColumn("ProductId").AsGuid().ForeignKey("FK_OrderItem_Product", "Product", "Id").NotNullable()
@@ -237,8 +237,8 @@ namespace backend_challenge_data.Migrations
             Create
                 .Table("OrderItemApproval")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("CreatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
-                .WithColumn("UpdatedAt").AsDateTimeOffset().NotNullable().WithDefaultValue(DateTimeOffset.Now)
+                .WithColumn("CreatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
+                .WithColumn("UpdatedAt").AsDateTime().NotNullable().WithDefaultValue(DateTime.Now)
                 .WithColumn("Deleted").AsBoolean().NotNullable()
                 .WithColumn("OrderItemId").AsGuid().ForeignKey("FK_OrderItemApproval_Order", "OrderItem", "Id").NotNullable()
                 .WithColumn("Quantity").AsInt64().NotNullable()

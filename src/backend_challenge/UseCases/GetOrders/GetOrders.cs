@@ -5,7 +5,6 @@ using backend_challenge_datatypes.Responses;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -58,10 +57,6 @@ namespace backend_challenge.UseCases.GetOrders
                 var statusCode = HttpStatusCode.OK;
                 List<GetOrderResponse> content = new List<GetOrderResponse>();
 
-
-                IEnumerable<ViewOrderFullData> ordersData;
-                IEnumerable<ViewSellerFullData> ordersItemsData;
-
                 using (var unitOfWork = _serviceColletion.BuildServiceProvider().GetService<IUnitOfWork>())
                 {
                     unitOfWork.OpenConnection();
@@ -69,15 +64,15 @@ namespace backend_challenge.UseCases.GetOrders
                     var orderRepository = unitOfWork.GetRepository<IOrderRepository>(nameof(Order));
                     var orderItemRepository = unitOfWork.GetRepository<IOrderItemRepository>(nameof(OrderItem));
 
-                    ordersData = await orderRepository.GetViewOrderFullData();
+                    var ordersData = await orderRepository.GetViewOrderFullData();
 
                     foreach (var viewOrder in ordersData)
                     {
-                        var viewOrderITems = orderItemRepository.GetByOrderIdAsync(viewOrder.Id);
+                        var viewOrderItems = await orderItemRepository.GetByViewOrderItemOrderIdAsync(viewOrder.Id);
 
                         var order = _mapper.Map<GetOrderResponse>(viewOrder);
 
-                        var orderItems = _mapper.Map<List<GetOrderItemResponse>>(viewOrderITems);
+                        var orderItems = _mapper.Map<List<GetOrderItemResponse>>(viewOrderItems);
 
                         order.itens = orderItems;
 

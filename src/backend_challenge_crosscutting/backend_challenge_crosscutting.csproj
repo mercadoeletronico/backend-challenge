@@ -9,7 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
     <PackageReference Include="Vrnz2.BaseContracts" Version="1.0.3" />
-    <PackageReference Include="Vrnz2.Infra.Repository" Version="1.0.8" />
+    <PackageReference Include="Vrnz2.Infra.Repository" Version="1.0.11" />
   </ItemGroup>
 
   <ItemGroup>

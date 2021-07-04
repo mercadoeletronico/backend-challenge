@@ -28,9 +28,6 @@ namespace backend_challenge_data.Repositories
         public override void Init(IDbTransaction dbTransaction)
             => base.Init(dbTransaction);
 
-        public override Task<bool> InsertAsync<Entity>(Entity value)
-            => Task.FromResult(true);
-
         public async Task<IEnumerable<Product>> GetAllAsync() 
         {
             var sql = @"SELECT 
@@ -71,7 +68,7 @@ namespace backend_challenge_data.Repositories
                         FROM 
 	                        public.""Product""
                         WHERE
-	                        ""Id"" = @Id;";
+	                        ""ReferenceCode"" = @ReferenceCode;";
 
             return await QueryFirstOrDefaultAsync<Product>(sql, parameters);
         }

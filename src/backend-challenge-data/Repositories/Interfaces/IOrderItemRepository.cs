@@ -8,9 +8,10 @@ namespace backend_challenge_data.Repositories.Interfaces
 {
     public interface IOrderItemRepository
         : IBaseRepository
-    {        
-        Task<OrderItem> GetByIdAsync(Guid id);
+    {
+        Task<bool> InsertAsync(OrderItem orderItem);
 
+        Task<OrderItem> GetByIdAsync(Guid id);
         Task<IEnumerable<OrderItem>> GetByOrderIdAsync(Guid orderId);
         Task<IEnumerable<OrderItem>> GetByOrderNumberAsync(string orderNumber);
         Task<IEnumerable<ViewOrderItemFullData>> GetByViewOrderItemOrderIdAsync(Guid orderId);

@@ -28,9 +28,6 @@ namespace backend_challenge_data.Repositories
         public override void Init(IDbTransaction dbTransaction)
             => base.Init(dbTransaction);
 
-        public override Task<bool> InsertAsync<Entity>(Entity value)
-            => Task.FromResult(true);
-
         public async Task<IEnumerable<ViewSellerFullData>> GetViewSellerFullData()
         {
             var sql = @"SELECT 

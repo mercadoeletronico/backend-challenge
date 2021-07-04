@@ -29,18 +29,18 @@ namespace backend_challenge_data.Repositories
         public override void Init(IDbTransaction dbTransaction)
             => base.Init(dbTransaction);
 
-        public async override Task<bool> InsertAsync<Entity>(Entity value)
+        public async Task<bool> InsertAsync<Entity>(OrderItemApproval orderItemApproval)
         {
-            var order = value as OrderItemApproval;
+            orderItemApproval.ChargeToInsert();
 
             var parameters = new DynamicParameters()
-                .AddParameter("@Id", Guid.NewGuid(), DbType.Guid)
-                .AddParameter("@CreatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
-                .AddParameter("@UpdatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
-                .AddParameter("@Deleted", false, DbType.Boolean)
-                .AddParameter("@OrderItemId", order.OrderItemId, DbType.Guid)
-                .AddParameter("@Quantity", order.Quantity, DbType.Decimal)
-                .AddParameter("@UnitaryValue", order.UnitaryValue, DbType.Decimal);
+                .AddParameter("@Id", orderItemApproval.Id, DbType.Guid)
+                .AddParameter("@CreatedAt", orderItemApproval.CreatedAt, DbType.DateTime)
+                .AddParameter("@UpdatedAt", orderItemApproval.UpdatedAt, DbType.DateTime)
+                .AddParameter("@Deleted", orderItemApproval.Deleted, DbType.Boolean)
+                .AddParameter("@OrderItemId", orderItemApproval.OrderItemId, DbType.Guid)
+                .AddParameter("@Quantity", orderItemApproval.Quantity, DbType.Decimal)
+                .AddParameter("@UnitaryValue", orderItemApproval.UnitaryValue, DbType.Decimal);
 
             var sql = @"INSERT INTO 
 	                        public.""OrderItemApproval""(

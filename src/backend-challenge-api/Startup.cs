@@ -3,6 +3,7 @@ using backend_challenge_crosscutting.Helpers;
 using backend_challenge_crosscutting.Settings;
 using backend_challenge_data;
 using backend_challenge_data.Migrations;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -16,9 +17,11 @@ using Vrnz2.BaseInfra.Assemblies;
 using Vrnz2.BaseInfra.Logs;
 using Vrnz2.BaseInfra.ServiceCollection;
 using Vrnz2.BaseInfra.Settings;
+using Vrnz2.BaseInfra.Validations;
 using Vrnz2.Infra.Data.Migrations;
 using Vrnz2.Infra.Repository.Interfaces.Base;
 using Vrnz2.Infra.Repository.Settings;
+using static backend_challenge.UseCases.AddOrder.AddOrder;
 
 namespace backend_challenge
 {
@@ -49,12 +52,13 @@ namespace backend_challenge
                 .AddMediatR(AssembliesHelper.GetAssemblies<GetProducts>())
                 .AddScoped<ControllerHelper>()
                 .AddScoped<IUnitOfWork, UnitOfWork>()
-                .AddIServiceColletion();            
-
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Backend Challenge", Version = "v1" });
-            });
+                .AddScoped<IValidator<Model.Input>, AddOrderValidator>()
+                .AddBaseValidations()
+                .AddIServiceColletion()
+                .AddSwaggerGen(c =>
+                {
+                    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Backend Challenge", Version = "v1" });
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

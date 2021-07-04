@@ -28,29 +28,29 @@ namespace backend_challenge_data.Repositories
         public override void Init(IDbTransaction dbTransaction)
             => base.Init(dbTransaction);
 
-        public async override Task<bool> InsertAsync<Entity>(Entity value)
+        public async Task<bool> InsertAsync(OrderItem orderItem)
         {
-            var order = value as OrderItem;
+            orderItem.ChargeToInsert();
 
             var parameters = new DynamicParameters()
-                .AddParameter("@Id", Guid.NewGuid(), DbType.Guid)
-                .AddParameter("@CreatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
-                .AddParameter("@UpdatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
-                .AddParameter("@Deleted", false, DbType.Boolean)
-                .AddParameter("@OrderId", order.OrderId, DbType.Guid)
-                .AddParameter("@ProductId", order.ProductId, DbType.Guid)
-                .AddParameter("@Quantity", order.Quantity, DbType.Decimal)
-                .AddParameter("@UnitaryValue", order.UnitaryValue, DbType.Decimal);
+                .AddParameter("@Id", orderItem.Id, DbType.Guid)
+                .AddParameter("@CreatedAt", orderItem.CreatedAt, DbType.DateTime)
+                .AddParameter("@UpdatedAt", orderItem.CreatedAt, DbType.DateTime)
+                .AddParameter("@Deleted", orderItem.Deleted, DbType.Boolean)
+                .AddParameter("@OrderId", orderItem.OrderId, DbType.Guid)
+                .AddParameter("@ProductId", orderItem.ProductId, DbType.Guid)
+                .AddParameter("@Quantity", orderItem.Quantity, DbType.Decimal)
+                .AddParameter("@UnitaryValue", orderItem.UnitaryValue, DbType.Decimal);
 
             var sql = @"INSERT INTO 
-	                        public.""OrderItem""(
+	                        ""OrderItem""(
 	                        ""Id"", 			""CreatedAt"", 		    ""UpdatedAt"", 
 	                        ""Deleted"", 		""OrderId"", 			""ProductId"", 
 	                        ""Quantity"", 	    ""UnitaryValue"")
                         VALUES (
-	                        ""@Id"", 			""@CreatedAt"", 		""@UpdatedAt"", 
-	                        ""@Deleted"", 	    ""@OrderId"", 		    ""@ProductId"", 
-	                        ""@Quantity"", 	    ""@UnitaryValue"");";
+	                        @Id, 			    @CreatedAt, 		    @UpdatedAt, 
+	                        @Deleted, 	        @OrderId, 		        @ProductId, 
+	                        @Quantity, 	        @UnitaryValue);";
 
             var result = await ExecuteAsync(sql, parameters);
 
@@ -116,8 +116,8 @@ namespace backend_challenge_data.Repositories
                 .AddParameter("@Id", orderId, DbType.Guid);
 
             var sql = @"SELECT 
-	                        o_i.""Id"", 			            p.""ReferenceCode"", 		AS ProductReferenceCode,
-	                        p.""Description"", 		            AS ProductDescription,      o_i.""Quantity"",
+	                        o_i.""Id"", 			            p.""ReferenceCode"" 		AS ProductReferenceCode,
+	                        p.""Description"" 		            AS ProductDescription,      o_i.""Quantity"",
                             o_i.""UnitaryValue""
                         FROM 
 				                        public.""OrderItem""	AS o_i
@@ -130,6 +130,7 @@ namespace backend_challenge_data.Repositories
 
             return await QueryAsync<ViewOrderItemFullData>(sql, parameters);
         }
+
         #endregion
     }
 }

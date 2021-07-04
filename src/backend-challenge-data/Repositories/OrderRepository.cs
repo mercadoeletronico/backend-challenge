@@ -29,14 +29,14 @@ namespace backend_challenge_data.Repositories
         public override void Init(IDbTransaction dbTransaction)
             => base.Init(dbTransaction);
 
-        public async override Task<bool> InsertAsync<Entity>(Entity value)
+        public async Task<(bool Success, Order Order)> InsertAsync(Order order)
         {
-            var order = value as Order;
+            order.ChargeToInsert();
 
             var parameters = new DynamicParameters()
-                .AddParameter("@Id", Guid.NewGuid(), DbType.Guid)
-                .AddParameter("@CreatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
-                .AddParameter("@UpdatedAt", DateTimeOffset.UtcNow, DbType.DateTime)
+                .AddParameter("Id", order.Id, DbType.Guid)
+                .AddParameter("@CreatedAt", order.CreatedAt, DbType.DateTime)
+                .AddParameter("@UpdatedAt", order.UpdatedAt, DbType.DateTime)
                 .AddParameter("@Deleted", false, DbType.Boolean)
                 .AddParameter("@Number", order.Number, DbType.String)
                 .AddParameter("@CustomerId", order.CustomerId, DbType.Guid)
@@ -46,15 +46,18 @@ namespace backend_challenge_data.Repositories
 	                        public.""Order""(
 	                        ""Id"", 			""CreatedAt"", 	        ""UpdatedAt"", 
 	                        ""Deleted"", 		""Number"", 	        ""CustomerId"", 
-	                        ""SellerId"")
+	                        ""SellerId"")                        
                         VALUES (
-	                        ""@Id"", 			""@CreatedAt"", 	    ""@UpdatedAt"", 
-	                        ""@Deleted"", 	    ""@Number"", 		    ""@CustomerId"", 
-	                        ""@SellerId"");";
+	                        @Id, 			@CreatedAt, 	    @UpdatedAt, 
+	                        @Deleted, 	    @Number, 		    @CustomerId, 
+	                        @SellerId)
+                         RETURNING ""Id"";";
 
-            var result = await ExecuteAsync(sql, parameters);
+            var result = await ExecuteScalarAsync(sql, parameters);
 
-            return (result > 0);
+            order = await GetByIdAsync(Guid.Parse(result.ToString()));
+
+            return (order.IsNotNull(), order);
         }
 
         public async Task<IEnumerable<ViewOrderFullData>> GetViewOrderFullData()
@@ -73,7 +76,7 @@ namespace backend_challenge_data.Repositories
 	                        INNER JOIN 		public.""Customer"" 			AS c 		ON c.""Id"" = o.""CustomerId""
 	                        LEFT JOIN 		public.""LegalPerson"" 	        AS lp_c 	ON lp_c.""PersonId"" = c.""PersonId""
 	                        LEFT JOIN 		public.""NaturalPerson"" 		AS np_c 	ON np_c.""PersonId"" = c.""PersonId""
-	                        INNER JOIN 		public.""Seller"" 			    AS s 		ON s.""Id"" = o.""CustomerId""
+	                        INNER JOIN 		public.""Seller"" 			    AS s 		ON s.""Id"" = o.""SellerId""
 	                        LEFT JOIN 		public.""LegalPerson"" 	        AS lp_s 	ON lp_s.""PersonId"" = s.""PersonId""
 	                        LEFT JOIN 		public.""NaturalPerson"" 		AS np_s 	ON np_s.""PersonId"" = s.""PersonId"";";
 

@@ -44,7 +44,7 @@ namespace backend_challenge_crosscutting.Helpers
                     case HttpStatusCode.Forbidden:
                         return new ForbidenObjectResult(response);
                     default:
-                        return GetBadRequestObjectResult(new List<string> { $"Unexpected error!" });
+                        return GetBadRequestObjectResult(new List<string> { response.Message });
                 }
             }
             catch (Exception ex)
