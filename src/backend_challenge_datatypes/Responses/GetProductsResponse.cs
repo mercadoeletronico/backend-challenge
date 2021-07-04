@@ -2,7 +2,7 @@
 {
     public class GetProductsResponse
     {
-        public string ReferenceCode { get; set; }
-        public string Description { get; set; }
+        public string Codigo { get; set; }
+        public string Descricao { get; set; }
     }
 }

@@ -36,12 +36,21 @@ namespace backend_challenge_data.Repositories
             var sql = @"SELECT 
 	                        c.""Id"", 								    c.""CreatedAt"", 	c.""UpdatedAt"", 
 	                        c.""Deleted"", 							    c.""PersonId"", 	c.""Code"",
-	                        COALESCE(np.""Name"", lp.""LegalName"") 	AS Name
+	                        COALESCE(np.""Name"", lp.""LegalName"") 	AS Name,
+                            ph.""Ddd"",                                 ph.""Number""       AS PhoneNumer,
+                            em.""Address""                              AS EmailAddress,    ad.""ZipCode"",
+                            ad.""Street"",                              ad.""Number"",      ad.""City"",
+                            ad.""State""
                         FROM 
 				                        public.""Customer"" 			AS c
 	                        INNER JOIN 	public.""Person"" 			    AS p 				ON c.""PersonId"" = p.""Id""
 	                        LEFT JOIN 	public.""NaturalPerson"" 		AS np 			    ON np.""PersonId"" = p.""Id""
-	                        LEFT JOIN 	public.""LegalPerson"" 	        AS lp 				ON lp.""PersonId"" = p.""Id"";";
+	                        LEFT JOIN 	public.""LegalPerson"" 	        AS lp 				ON lp.""PersonId"" = p.""Id""
+                            LEFT JOIN 	public.""Phone"" 	            AS ph 				ON ph.""PersonId"" = p.""Id""
+                            LEFT JOIN 	public.""Email"" 	            AS em 				ON em.""PersonId"" = p.""Id""
+                            LEFT JOIN 	public.""Address"" 	            AS ad 				ON ad.""PersonId"" = p.""Id""
+                        WHERE
+                            c.""Deleted"" = false;";
 
             return await this.QueryAsync<ViewCustomerFullData>(sql);
         }

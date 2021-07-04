@@ -37,7 +37,9 @@ namespace backend_challenge_data.Repositories
 	                        ""Id"", 			""CreatedAt"", 		""UpdatedAt"", 
 	                        ""Deleted"", 		""ReferenceCode"", 	""Description""
                         FROM 
-	                        public.""Product"";";
+	                        public.""Product""
+                        WHERE
+                            ""Deleted"" = false;";
 
             return await QueryAsync<Product>(sql);
         }

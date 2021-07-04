@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using Vrnz2.BaseContracts.DTOs.Base;
 using static backend_challenge.UseCases.GetProducts.GetProducts;
 
 namespace backend_challenge.Controllers
@@ -15,7 +16,7 @@ namespace backend_challenge.Controllers
         : ControllerBase
     {
         [HttpGet]
-        //[ProducesResponseType(typeof(Model.Output), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(BaseDTO.Response<List<GetProductsResponse>>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Get([FromServices] ControllerHelper controllerHelper, [FromServices] IMediator mediator)
         {

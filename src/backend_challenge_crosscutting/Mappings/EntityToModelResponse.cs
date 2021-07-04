@@ -9,19 +9,33 @@ namespace backend_challenge_crosscutting.Mappings
     {
         public EntityToModelResponse()
         {
-            //var config = new MapperConfiguration(cfg => {
-            //    cfg.CreateMap<Payment, GetPaymentModel.ResponsePayments>();
-            //});
-
-            //var mapper = config.CreateMapper();
-
-            CreateMap<Product, GetProductsResponse>();
-            CreateMap<ViewCustomerFullData, GetCustomersResponse>();
-            CreateMap<ViewSellerFullData, GetSellersResponse>();
-            //CreateMap<List<Payment>, List<GetPaymentModel.ResponsePayments>>()
-            //    .ConvertUsing(ss => ss.Select(bs => mapper.Map<Payment, GetPaymentModel.ResponsePayments>(bs)).ToList());
-            //CreateMap<List<Payment>, GetPaymentModel.Response>()
-            //    .ForMember(d => d.Payments, orig => orig.MapFrom(src => src));
+            CreateMap<Product, GetProductsResponse>()
+                .ForMember(d => d.Codigo, orig => orig.MapFrom(src => src.ReferenceCode))
+                .ForMember(d => d.Descricao, orig => orig.MapFrom(src => src.Description));
+            CreateMap<ViewCustomerFullData, GetCustomersResponse>()
+                .ForMember(d => d.Codigo, orig => orig.MapFrom(src => src.Code))
+                .ForMember(d => d.Nome, orig => orig.MapFrom(src => src.Name))
+                .ForMember(d => d.Ddd, orig => orig.MapFrom(src => src.Ddd))
+                .ForMember(d => d.Telefone, orig => orig.MapFrom(src => src.PhoneNumer))
+                .ForMember(d => d.Email, orig => orig.MapFrom(src => src.EmailAddress))
+                .ForMember(d => d.Cep, orig => orig.MapFrom(src => src.ZipCode))
+                .ForMember(d => d.Rua, orig => orig.MapFrom(src => src.Street))
+                .ForMember(d => d.Numero, orig => orig.MapFrom(src => src.Number))
+                .ForMember(d => d.Cidade, orig => orig.MapFrom(src => src.City))
+                .ForMember(d => d.UF, orig => orig.MapFrom(src => src.State))
+                ;
+            CreateMap<ViewSellerFullData, GetSellersResponse>()
+                .ForMember(d => d.Codigo, orig => orig.MapFrom(src => src.Code))
+                .ForMember(d => d.Nome, orig => orig.MapFrom(src => src.Name))
+                .ForMember(d => d.Ddd, orig => orig.MapFrom(src => src.Ddd))
+                .ForMember(d => d.Telefone, orig => orig.MapFrom(src => src.PhoneNumer))
+                .ForMember(d => d.Email, orig => orig.MapFrom(src => src.EmailAddress))
+                .ForMember(d => d.Cep, orig => orig.MapFrom(src => src.ZipCode))
+                .ForMember(d => d.Rua, orig => orig.MapFrom(src => src.Street))
+                .ForMember(d => d.Numero, orig => orig.MapFrom(src => src.Number))
+                .ForMember(d => d.Cidade, orig => orig.MapFrom(src => src.City))
+                .ForMember(d => d.UF, orig => orig.MapFrom(src => src.State))
+                ;
         }
     }
 }
