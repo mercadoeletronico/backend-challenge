@@ -11,7 +11,8 @@ namespace backend_challenge_data.Repositories.Interfaces
     {        
         Task<OrderItem> GetByIdAsync(Guid id);
 
-        Task<IEnumerable<OrderItem>> GetByOrderIdAsync(Guid id);
+        Task<IEnumerable<OrderItem>> GetByOrderIdAsync(Guid orderId);
         Task<IEnumerable<OrderItem>> GetByOrderNumberAsync(string orderNumber);
+        Task<IEnumerable<ViewOrderItemFullData>> GetByViewOrderItemOrderIdAsync(Guid orderId);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace backend_challenge_datatypes.Responses
 {
-    public class GetCustomersResponse
+    public class GetSellerResponse
     {
         public string Codigo { get; set; }
         public string Nome { get; set; }

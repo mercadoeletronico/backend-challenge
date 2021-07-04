@@ -6,23 +6,23 @@ using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 using Vrnz2.BaseContracts.DTOs.Base;
-using static backend_challenge.UseCases.GetProducts.GetProducts;
+using static backend_challenge.UseCases.GetOrders.GetOrders;
 
 namespace backend_challenge.Controllers
 {
-    [Route("api/products")]
+    [Route("api/orders")]
     [ApiController]
-    public class ProductsController 
+    public class OrdersController 
         : ControllerBase
     {
         [HttpGet]
-        [ProducesResponseType(typeof(BaseDTO.Response<List<GetProductResponse>>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(BaseDTO.Response<List<GetOrderResponse>>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Get([FromServices] ControllerHelper controllerHelper, [FromServices] IMediator mediator)
         {
             var request = new Model.Input();
 
-            return await controllerHelper.ReturnAsync<Model.Input, Model.Output, List<GetProductResponse>>((request) => mediator.Send(new Model.Input()), request);
+            return await controllerHelper.ReturnAsync<Model.Input, Model.Output, List<GetOrderResponse>>((request) => mediator.Send(new Model.Input()), request);
         }
     }
 }

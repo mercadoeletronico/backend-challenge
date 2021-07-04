@@ -74,10 +74,10 @@ namespace backend_challenge_data.Repositories
             return await QueryFirstOrDefaultAsync<OrderItem>(sql, parameters);
         }
 
-        public async Task<IEnumerable<OrderItem>> GetByOrderIdAsync(Guid id)
+        public async Task<IEnumerable<OrderItem>> GetByOrderIdAsync(Guid orderId)
         {
             var parameters = new DynamicParameters()
-                .AddParameter("@Id", id, DbType.Guid);
+                .AddParameter("@Id", orderId, DbType.Guid);
 
             var sql = @"SELECT 
 	                        o_i.""Id"", 			            o_i.""CreatedAt"", 		    o_i.""UpdatedAt"", 
@@ -110,6 +110,26 @@ namespace backend_challenge_data.Repositories
             return await QueryAsync<OrderItem>(sql, parameters);
         }
 
+        public async Task<IEnumerable<ViewOrderItemFullData>> GetByViewOrderItemOrderIdAsync(Guid orderId)
+        {
+            var parameters = new DynamicParameters()
+                .AddParameter("@Id", orderId, DbType.Guid);
+
+            var sql = @"SELECT 
+	                        o_i.""Id"", 			            p.""ReferenceCode"", 		AS ProductReferenceCode,
+	                        p.""Description"", 		            AS ProductDescription,      o_i.""Quantity"",
+                            o_i.""UnitaryValue""
+                        FROM 
+				                        public.""OrderItem""	AS o_i
+	                        INNER JOIN 	public.""Order"" 		AS o 		                ON o.""Id"" = o_i.""OrderId""
+                            INNER JOIN 	public.""Product"" 		AS p 		                ON p.""Id"" = o_i.""ProductId""
+                        WHERE
+	                        o.""Id"" = @Id
+                            AND
+                            o.""Deleted"" = false;";                            
+
+            return await QueryAsync<ViewOrderItemFullData>(sql, parameters);
+        }
         #endregion
     }
 }

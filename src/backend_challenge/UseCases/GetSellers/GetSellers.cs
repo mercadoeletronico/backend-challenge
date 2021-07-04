@@ -24,7 +24,7 @@ namespace backend_challenge.UseCases.GetSellers
             }
 
             public class Output
-                : BaseDTO.Response<List<GetSellersResponse>>
+                : BaseDTO.Response<List<GetSellerResponse>>
             {
             }
         }
@@ -67,7 +67,7 @@ namespace backend_challenge.UseCases.GetSellers
                     data = await repository.GetViewSellerFullData();
                 }
 
-                var content = _mapper.Map<IEnumerable<GetSellersResponse>>(data);
+                var content = _mapper.Map<IEnumerable<GetSellerResponse>>(data);
 
                 return await Task.FromResult(new Model.Output { Success = true, StatusCode = (int)statusCode, Content = content.ToList() });
             }

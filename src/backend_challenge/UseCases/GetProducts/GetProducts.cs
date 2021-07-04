@@ -24,7 +24,7 @@ namespace backend_challenge.UseCases.GetProducts
             }
 
             public class Output
-                : BaseDTO.Response<List<GetProductsResponse>>
+                : BaseDTO.Response<List<GetProductResponse>>
             {
             }
         }
@@ -67,7 +67,7 @@ namespace backend_challenge.UseCases.GetProducts
                     data = await repository.GetAllAsync();
                 }
 
-                var content =  _mapper.Map<IEnumerable<GetProductsResponse>>(data);
+                var content =  _mapper.Map<IEnumerable<GetProductResponse>>(data);
 
                 return await Task.FromResult(new Model.Output { Success = true, StatusCode = (int)statusCode, Content = content.ToList() });
             }

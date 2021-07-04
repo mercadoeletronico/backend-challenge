@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 using Vrnz2.BaseContracts.DTOs.Base;
 using Vrnz2.Infra.Repository.Interfaces.Base;
 
-namespace backend_challenge.UseCases.GetCustomers
+namespace backend_challenge.UseCases.GetOrders
 {
-    public class GetCustomers
+    public class GetOrders
     {
         public class Model
         {
@@ -24,7 +24,7 @@ namespace backend_challenge.UseCases.GetCustomers
             }
 
             public class Output
-                : BaseDTO.Response<List<GetCustomerResponse>>
+                : BaseDTO.Response<List<GetOrderResponse>>
             {
             }
         }
@@ -56,20 +56,36 @@ namespace backend_challenge.UseCases.GetCustomers
             public async Task<Model.Output> Handle(Model.Input request, CancellationToken cancellationToken)
             {
                 var statusCode = HttpStatusCode.OK;
-                IEnumerable<ViewCustomerFullData> data;
+                List<GetOrderResponse> content = new List<GetOrderResponse>();
+
+
+                IEnumerable<ViewOrderFullData> ordersData;
+                IEnumerable<ViewSellerFullData> ordersItemsData;
 
                 using (var unitOfWork = _serviceColletion.BuildServiceProvider().GetService<IUnitOfWork>())
                 {
                     unitOfWork.OpenConnection();
 
-                    var repository = unitOfWork.GetRepository<ICustomerRepository>(nameof(Customer));
+                    var orderRepository = unitOfWork.GetRepository<IOrderRepository>(nameof(Order));
+                    var orderItemRepository = unitOfWork.GetRepository<IOrderItemRepository>(nameof(OrderItem));
 
-                    data = await repository.GetViewCustomerFullData();
+                    ordersData = await orderRepository.GetViewOrderFullData();
+
+                    foreach (var viewOrder in ordersData)
+                    {
+                        var viewOrderITems = orderItemRepository.GetByOrderIdAsync(viewOrder.Id);
+
+                        var order = _mapper.Map<GetOrderResponse>(viewOrder);
+
+                        var orderItems = _mapper.Map<List<GetOrderItemResponse>>(viewOrderITems);
+
+                        order.itens = orderItems;
+
+                        content.Add(order);
+                    }
                 }
 
-                var content = _mapper.Map<IEnumerable<GetCustomerResponse>>(data);
-
-                return await Task.FromResult(new Model.Output { Success = true, StatusCode = (int)statusCode, Content = content.ToList() });
+                return await Task.FromResult(new Model.Output { Success = true, StatusCode = (int)statusCode, Content = content });
             }
 
             #endregion

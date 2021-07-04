@@ -60,6 +60,7 @@ namespace backend_challenge_data.Repositories
         public async Task<IEnumerable<ViewOrderFullData>> GetViewOrderFullData()
         {
             var sql = @"SELECT 
+                            o.""Id"",
 	                        o.""Number"",
 	                        o.""CreatedAt"",
 	                        o.""UpdatedAt"", 

@@ -16,13 +16,13 @@ namespace backend_challenge.Controllers
         : ControllerBase
     {
         [HttpGet]
-        [ProducesResponseType(typeof(BaseDTO.Response<List<GetCustomersResponse>>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(BaseDTO.Response<List<GetCustomerResponse>>), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public async Task<IActionResult> Get([FromServices] ControllerHelper controllerHelper, [FromServices] IMediator mediator)
         {
             var request = new Model.Input();
 
-            return await controllerHelper.ReturnAsync<Model.Input, Model.Output, List<GetCustomersResponse>>((request) => mediator.Send(new Model.Input()), request);
+            return await controllerHelper.ReturnAsync<Model.Input, Model.Output, List<GetCustomerResponse>>((request) => mediator.Send(new Model.Input()), request);
         }
     }
 }
