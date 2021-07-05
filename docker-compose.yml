@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  backend-challenge-postgres:
+    image: postgres
+    hostname: "backend-challenge-postgres"
+    container_name: "backend-challenge-postgres"
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_PASSWORD: "postgres"
