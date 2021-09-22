@@ -1,18 +1,15 @@
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NerdVision;
 
 namespace MercadoEletronico.Challenge
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
+            NV.Start("nv-Wnl5r07YX2JHmiAUB3bj");
             CreateHostBuilder(args).Build().Run();
         }
 

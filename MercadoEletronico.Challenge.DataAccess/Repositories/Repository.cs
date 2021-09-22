@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.DataAccess.Repositories
 {
-    public abstract class Repository<T> : IRepository<T> where T : Entity
+    public abstract class Repository<T> : IRepository<T> where T : class, IEntity
     {
         protected readonly DatabaseContext _context;
 

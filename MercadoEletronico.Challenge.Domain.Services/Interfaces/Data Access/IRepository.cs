@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MercadoEletronico.Challenge.Domain.Models.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<T> where T : IEntity
     {
         Task AddAsync(T obj);
         Task AddRangeAsync(IEnumerable<T> objs);

@@ -21,6 +21,7 @@ namespace MercadoEletronico.Challenge
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSwaggerGenNewtonsoftSupport();
             services.AddControllers();
             RegisterProjectLayers(services);
 

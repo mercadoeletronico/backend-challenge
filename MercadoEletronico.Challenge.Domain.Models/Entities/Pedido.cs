@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MercadoEletronico.Challenge.Domain.Models.Entities
 {
-    public class Pedido : Entity
+    public class Pedido : IEntity
     {
         public Pedido()
         {
@@ -10,5 +11,8 @@ namespace MercadoEletronico.Challenge.Domain.Models.Entities
         }
 
         public List<PedidoItem> Itens { get; set; }
+
+        [JsonProperty("pedido")]
+        public string Id { get; set; }
     }
 }

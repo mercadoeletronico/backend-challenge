@@ -1,4 +1,5 @@
-﻿using MercadoEletronico.Challenge.Domain.Services.Interfaces;
+﻿using MercadoEletronico.Challenge.Domain.Models.Entities;
+using MercadoEletronico.Challenge.Domain.Services.Interfaces;
 using MercadoEletronico.Challenge.Domain.Services.Interfaces.Data_Access;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronico.Challenge.Domain.Services.Implementations
 {
-    public abstract class DomainService<T> : IDomainService<T> where T : class
+    public abstract class DomainService<T> : IDomainService<T> where T : IEntity
     {
         protected readonly IRepository<T> _repository;
 
@@ -18,6 +19,7 @@ namespace MercadoEletronico.Challenge.Domain.Services.Implementations
 
         public async Task AddAsync(T @object)
         {
+            @object.Id = Guid.NewGuid().ToString();
             await _repository.AddAsync(@object);
         }
 
