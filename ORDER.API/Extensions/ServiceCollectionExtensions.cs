@@ -1,4 +1,8 @@
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
+using ORDER.API.AutoMapper;
+using ORDER.Application.Services;
+using ORDER.Domain.IServices;
 
 namespace ORDER.API.Extensions
 {
@@ -17,11 +21,25 @@ namespace ORDER.API.Extensions
         }
         
         public static void AddServices(this IServiceCollection services){
-            // services.AddTransient<IItemService, ItemService>();
+            services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IStatusService, StatusService>();
         }
         
         public static void AddFactory(this IServiceCollection services){
             // services.AddTransient<ItemFactory>();
+        }
+        
+        public static void AddAutoMapper(this IServiceCollection services){
+            
+            var autoMapperConfig = new MapperConfiguration(cfg =>
+            {
+                cfg.AllowNullCollections = true;
+                cfg.AddProfile(new GenericMapper());
+            });
+
+            var mapper = autoMapperConfig.CreateMapper();
+            
+            services.AddSingleton(mapper);
         }
     }
 }

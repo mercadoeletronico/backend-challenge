@@ -15,4 +15,8 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.13" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ORDER.Domain\ORDER.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

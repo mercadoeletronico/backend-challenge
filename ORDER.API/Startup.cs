@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ORDER.API.Extensions;
 
 namespace ORDER.API
 {
@@ -27,7 +28,20 @@ namespace ORDER.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "ORDER.API", Version = "v1"}); });
+
+            #region injections
+
+            services.AddDbConnection("DB");
+
+            services.AddServices();
+
+            services.AddRepositories();
+
+            services.AddAutoMapper();
+
+            #endregion
+
+            services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "ORDER", Version = "v1"}); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +51,7 @@ namespace ORDER.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ORDER.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ORDER v1"));
             }
 
             app.UseHttpsRedirection();
