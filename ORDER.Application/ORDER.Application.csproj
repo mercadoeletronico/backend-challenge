@@ -5,8 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ORDER.Domain\ORDER.Domain.csproj" />
       <ProjectReference Include="..\ORDER.Infra\ORDER.Infra.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="11.0.0" />
     </ItemGroup>
 
 </Project>

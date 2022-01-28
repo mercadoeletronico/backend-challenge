@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace ORDER.Application.Dto
+namespace ORDER.Domain.Dto
 {
     public class StatusRequestDto
     {

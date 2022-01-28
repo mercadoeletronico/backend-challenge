@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Text.Json.Serialization;
 using ORDER.Domain.Entities.Base;
 
 namespace ORDER.Domain.Entities

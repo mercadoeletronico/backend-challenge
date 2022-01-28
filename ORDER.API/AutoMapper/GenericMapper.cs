@@ -1,5 +1,5 @@
 using AutoMapper;
-using ORDER.Application.Dto;
+using ORDER.Domain.Dto;
 using ORDER.Domain.Entities;
 
 namespace ORDER.API.AutoMapper

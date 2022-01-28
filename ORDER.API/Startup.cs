@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using ORDER.API.Extensions;
+using ORDER.API.Filters;
 
 namespace ORDER.API
 {
@@ -27,18 +21,23 @@ namespace ORDER.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(ExceptionFilter));
+                options.RespectBrowserAcceptHeader = true;
+            });
 
             #region injections
 
             services.AddDbConnection("DB");
+            
 
             services.AddServices();
 
             services.AddRepositories();
 
             services.AddAutoMapper();
-
+            
             #endregion
 
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo {Title = "ORDER", Version = "v1"}); });

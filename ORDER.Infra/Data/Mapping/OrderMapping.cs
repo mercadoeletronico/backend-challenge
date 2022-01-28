@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ORDER.Domain.Entities;
@@ -15,7 +14,7 @@ namespace ORDER.Infra.Data.Mapping
             entity.ToTable("ORDER");
 
             entity.Property(x => x.Id)
-                .HasDefaultValueSql("NEWID()");
+                .ValueGeneratedOnAdd();
 
             entity.Property(x => x.OrderId)
                 .IsRequired();

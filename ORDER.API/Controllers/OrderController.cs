@@ -1,59 +1,75 @@
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ORDER.Application.Dto;
+using Microsoft.EntityFrameworkCore;
+using ORDER.API.ViewModels;
+using ORDER.Domain.Dto;
+using ORDER.Domain.Exceptions;
+using ORDER.Domain.Services;
 
 namespace ORDER.API.Controllers
 {
     [ApiController]
-    [Route("[controller]/api/order")]
+    [Route("api/pedido")]
     public class OrderController : ControllerBase
     {
+        private readonly IOrderService _service;
 
-        public OrderController()
+        public OrderController(IOrderService orderService)
         {
-            
+            _service = orderService;
         }
-        
+
         [HttpGet]
-        public OrderDto Get()
+        [ProducesResponseType(typeof(List<OrderDto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public List<OrderDto> Get()
         {
-            return new OrderDto
-            {
-                OrderId = "123456",
-                Items = new List<ItemDto>()
-                {
-                    new ItemDto
-                    {
-                        Description = "Item A",
-                        UnitPrice = 10,
-                        Quantity = 1
-                    },
-                    new ItemDto
-                    {
-                        Description = "Item B",
-                        UnitPrice = 5,
-                        Quantity = 2
-                    }
-                }
-            };
+            return _service.GetOrders();
+        }
+
+
+        [HttpGet("{orderId}")]
+        [ProducesResponseType(typeof(OrderDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public OrderDto GetByOrderId(string orderId)
+        {
+            return _service.GetOrderById(orderId);
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(OrderDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public OrderDto Post([FromBody] OrderDto order)
         {
-            return new OrderDto();
+            return _service.CreateOrder(order);
         }
-        
+
         [HttpPut]
+        [ProducesResponseType(typeof(OrderDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public OrderDto Put([FromBody] OrderDto order)
         {
-            return new OrderDto();
+            return _service.UpdateOrder(order);
         }
-        
+
         [HttpDelete("{orderId}")]
-        public OrderDto Delete(string orderId)
+        [ProducesResponseType(typeof(StatusResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public StatusResponseDto Delete(string orderId)
         {
-            return new OrderDto();
+            var status = _service.DeleteOrder(orderId);
+
+            return new StatusResponseDto()
+            {
+                OrderId = status.OrderId,
+                Status = new List<string>() {"DELETADO"}
+            };
         }
     }
 }

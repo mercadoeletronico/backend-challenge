@@ -14,7 +14,17 @@ namespace ORDER.Infra.Data.Mapping
             entity.ToTable("ITEM");
 
             entity.Property(x => x.Id)
-                .HasDefaultValueSql("NEWID()");
+                .ValueGeneratedOnAdd();
+                // .HasValueGenerator<InMemoryIntegerValueGenerator<int>>();
+            
+            // modelBuilder.Entity<Order>(order =>
+            // {
+                // var orderNumber = order.Property(p => p.OrderNumber);
+                // orderNumber.ValueGeneratedOnAdd();
+                // only for in-memory
+                // if (Database.IsInMemory())
+                    // orderNumber.HasValueGenerator<InMemoryIntegerValueGenerator<int>>();
+            // });
 
             entity.Property(x => x.Description).IsRequired();
             entity.Property(x => x.UnitPrice).IsRequired();
