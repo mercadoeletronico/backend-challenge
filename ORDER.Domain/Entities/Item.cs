@@ -13,4 +13,3 @@ namespace ORDER.Domain.Entities
         public int Cost => UnitPrice * Quantity;
     }
 }
-

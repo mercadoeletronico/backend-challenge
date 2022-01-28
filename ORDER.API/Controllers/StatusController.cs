@@ -5,7 +5,7 @@ using ORDER.Domain.Services;
 namespace ORDER.API.Controllers
 {
     [ApiController]
-    [Route("[controller]/api/status")]
+    [Route("/api/status")]
     public class StatusController : ControllerBase
     {
         private readonly IStatusService _service;

@@ -15,16 +15,6 @@ namespace ORDER.Infra.Data.Mapping
 
             entity.Property(x => x.Id)
                 .ValueGeneratedOnAdd();
-                // .HasValueGenerator<InMemoryIntegerValueGenerator<int>>();
-            
-            // modelBuilder.Entity<Order>(order =>
-            // {
-                // var orderNumber = order.Property(p => p.OrderNumber);
-                // orderNumber.ValueGeneratedOnAdd();
-                // only for in-memory
-                // if (Database.IsInMemory())
-                    // orderNumber.HasValueGenerator<InMemoryIntegerValueGenerator<int>>();
-            // });
 
             entity.Property(x => x.Description).IsRequired();
             entity.Property(x => x.UnitPrice).IsRequired();

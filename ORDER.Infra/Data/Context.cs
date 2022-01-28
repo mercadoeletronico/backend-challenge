@@ -28,9 +28,5 @@ namespace ORDER.Infra.Data
 
         }
 
-        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        // {
-            // optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Username=myp;Password=batata123;Database=me-project;");
-        // }
     }
 }

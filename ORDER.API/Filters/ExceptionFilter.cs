@@ -26,9 +26,6 @@ namespace ORDER.API.Filters
                 case nameof(NotFoundOrderException):
                     code = HttpStatusCode.NotFound;
                     break;
-                case nameof(RequestNotValid):
-                    code = HttpStatusCode.UnprocessableEntity;
-                    break;
                 case nameof(UnauthorizedAccessException):
                     code = HttpStatusCode.Unauthorized;
                     break;

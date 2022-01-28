@@ -4,7 +4,7 @@ namespace ORDER.Domain.Exceptions
 {
     public class NotFoundOrderException : Exception
     {
-        private const string DefaultMessage = "Order not found";
+        private const string DefaultMessage = "CODIGO_PEDIDO_INVALIDO";
 
 
         public NotFoundOrderException() : this(DefaultMessage)
