@@ -33,7 +33,6 @@ namespace ORDER.Infra.Data.Seed
                     Quantity = 2,
                     OrderId = 2
                 }
-                
             };
         }
     }

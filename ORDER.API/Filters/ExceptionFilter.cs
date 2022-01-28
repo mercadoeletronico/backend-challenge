@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using ORDER.API.ViewModels;
 using ORDER.Domain.Exceptions;
+using ORDER.Domain.Exceptions.Handel.ZendeskModule.Exceptions;
 using ORDER.Infra.Extensions;
 
 namespace ORDER.API.Filters
@@ -25,6 +26,9 @@ namespace ORDER.API.Filters
             {
                 case nameof(NotFoundOrderException):
                     code = HttpStatusCode.NotFound;
+                    break;
+                case nameof(NotDeletedOrderException):
+                    code = HttpStatusCode.UnprocessableEntity;
                     break;
                 case nameof(UnauthorizedAccessException):
                     code = HttpStatusCode.Unauthorized;

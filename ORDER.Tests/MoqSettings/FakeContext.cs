@@ -34,7 +34,7 @@ namespace ORDER.Tests.MoqSettings
             fakeContext.Items.AddRange(SeedItem.ItemSeed());
             fakeContext.SaveChanges();
         }
-        
+
         private static void AddOrder(Context fakeContext)
         {
             fakeContext.Orders.AddRange(SeedOrder.OrderSeed());

@@ -8,13 +8,11 @@ namespace ORDER.Domain.Dto
         [Required]
         [JsonPropertyName("descricao")]
         public string Description { get; set; }
-        
+
         [Required]
         [JsonPropertyName("precoUnitario")]
         public int UnitPrice { get; set; }
-        
-        [Required]
-        [JsonPropertyName("qtd")]
-        public int Quantity { get; set; }
+
+        [Required] [JsonPropertyName("qtd")] public int Quantity { get; set; }
     }
 }

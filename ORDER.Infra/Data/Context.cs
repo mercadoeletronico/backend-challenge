@@ -21,8 +21,8 @@ namespace ORDER.Infra.Data
         {
             builder.Entity<Order>().MappingOrder();
             builder.Entity<Item>().MappingItem();
-            builder.Entity<Order>().HasData(SeedOrder.OrderSeed());
-            builder.Entity<Item>().HasData(SeedItem.ItemSeed());
+            // builder.Entity<Order>().HasData(SeedOrder.OrderSeed());
+            // builder.Entity<Item>().HasData(SeedItem.ItemSeed());
        
             base.OnModelCreating(builder);
 

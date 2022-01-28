@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ORDER.Application.Utils;
 using ORDER.Domain.Dto;
+using ORDER.Domain.Entities;
 using ORDER.Domain.Exceptions;
 using ORDER.Domain.Repositories;
 using ORDER.Domain.Services;
@@ -24,25 +25,34 @@ namespace ORDER.Application.Services
 
             if (NotApprovedStatus(request)) return ReturnStatus(request.OrderId, StatusTypes.Reproved);
 
-            var status = CreateStatusResponse(request.OrderId);
+            var statusResponse = CreateStatusResponse(request.OrderId);
 
-            // ReSharper disable once PossibleNullReferenceException
-            if (order.ItemsValue() > request.ApprovedValue)
-                status.Status.Add(StatusTypes.ApprovedValueLower);
+            ItemValueStatus(request, order, statusResponse);
 
-            if (order.ItemsValue() < request.ApprovedValue)
-                status.Status.Add(StatusTypes.ApprovedValueGreater);
+            ItemQtyStatus(request, order, statusResponse);
 
+            if (statusResponse.Status.Count == 0)
+                statusResponse.Status.Add(StatusTypes.Approved);
+
+            return statusResponse;
+        }
+
+        private static void ItemQtyStatus(StatusRequestDto request, Order order, StatusResponseDto status)
+        {
             if (order.ItemsCount() > request.ApprovedItems)
                 status.Status.Add(StatusTypes.ApprovedQtyLower);
 
             if (order.ItemsCount() < request.ApprovedItems)
                 status.Status.Add(StatusTypes.ApprovedQtyGreater);
+        }
 
-            if (status.Status.Count == 0)
-                status.Status.Add(StatusTypes.Approved);
+        private static void ItemValueStatus(StatusRequestDto request, Order order, StatusResponseDto status)
+        {
+            if (order.ItemsValue() > request.ApprovedValue)
+                status.Status.Add(StatusTypes.ApprovedValueLower);
 
-            return status;
+            if (order.ItemsValue() < request.ApprovedValue)
+                status.Status.Add(StatusTypes.ApprovedValueGreater);
         }
 
         private static bool NotApprovedStatus(StatusRequestDto request)
@@ -64,7 +74,7 @@ namespace ORDER.Application.Services
             return new StatusResponseDto
             {
                 OrderId = orderId,
-                Status = new List<string>() {status.ToString()}
+                Status = new List<string>() {status}
             };
         }
     }

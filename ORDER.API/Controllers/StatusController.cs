@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ORDER.API.ViewModels;
 using ORDER.Domain.Dto;
 using ORDER.Domain.Services;
 
@@ -16,6 +18,9 @@ namespace ORDER.API.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(typeof(StatusResponseDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public StatusResponseDto Post([FromBody] StatusRequestDto request)
         {
             return _service.ApprovedStatus(request);

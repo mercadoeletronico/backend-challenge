@@ -5,7 +5,6 @@ namespace ORDER.Infra.Data.Seed
 {
     public static class SeedOrder
     {
-
         public static IEnumerable<Order> OrderSeed()
         {
             return new List<Order>()

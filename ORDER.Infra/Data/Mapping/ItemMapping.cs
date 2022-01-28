@@ -10,7 +10,7 @@ namespace ORDER.Infra.Data.Mapping
         {
             entity.HasKey(x => x.Id)
                 .HasName("PK_ITEM");
-            
+
             entity.ToTable("ITEM");
 
             entity.Property(x => x.Id)
@@ -25,7 +25,6 @@ namespace ORDER.Infra.Data.Mapping
                 .HasForeignKey(z => z.OrderId)
                 .OnDelete(DeleteBehavior.Restrict)
                 .HasConstraintName("FK_ITEM_ODER");
-            
         }
     }
 }

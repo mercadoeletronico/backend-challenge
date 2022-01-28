@@ -10,7 +10,7 @@ namespace ORDER.Infra.Data.Mapping
         {
             entity.HasKey(x => x.Id)
                 .HasName("PK_ORDER");
-            
+
             entity.ToTable("ORDER");
 
             entity.Property(x => x.Id)
@@ -18,7 +18,6 @@ namespace ORDER.Infra.Data.Mapping
 
             entity.Property(x => x.OrderId)
                 .IsRequired();
-
         }
     }
 }
