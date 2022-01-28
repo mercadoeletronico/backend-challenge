@@ -18,7 +18,7 @@ namespace ORDER.Domain.Exceptions
             {
             }
 
-            public static void When(bool condition, string message, Exception innerException = null)
+            public static void When(bool condition, string message = null, Exception innerException = null)
             {
                 if (condition)
                     throw new NotDeletedOrderException(message, innerException);

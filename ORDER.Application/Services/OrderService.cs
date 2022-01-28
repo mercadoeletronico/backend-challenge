@@ -20,6 +20,7 @@ namespace ORDER.Application.Services
             _repository = orderRepository;
             _mapper = mapper;
         }
+
         public OrderDto CreateOrder(OrderDto order)
         {
             var mapped = _mapper.Map<Order>(order);
@@ -39,39 +40,37 @@ namespace ORDER.Application.Services
         public OrderDto GetOrderById(string orderId)
         {
             var order = _repository.GetOrderById(orderId);
-            
-            NotFoundOrderException.When(order == null, "CODIGO_PEDIDO_INVALIDO");
-            
+
+            NotFoundOrderException.When(order == null);
+
             return _mapper.Map<OrderDto>(order);
         }
 
         public OrderDto DeleteOrder(string orderId)
         {
             var order = _repository.GetOrderById(orderId);
-            
-            NotFoundOrderException.When(order == null, "CODIGO_PEDIDO_INVALIDO");
+
+            NotFoundOrderException.When(order == null);
 
             var deleted = _repository.DeleteOrder(order);
-            
-            NotDeletedOrderException.When(deleted < 1, "PEDIDO_NAO_DELETADO");
-            
+
+            NotDeletedOrderException.When(deleted < 1);
+
             return _mapper.Map<OrderDto>(deleted);
         }
 
         public OrderDto UpdateOrder(OrderDto order)
         {
             var toUpdate = _repository.GetOrderById(order.OrderId);
-            
+
             NotFoundOrderException.When(toUpdate == null);
 
             // ReSharper disable once PossibleNullReferenceException
             toUpdate.Items = _mapper.Map<List<Item>>(order.Items);
 
             _repository.UpdateOrder(toUpdate);
-            
+
             return _mapper.Map<OrderDto>(toUpdate);
-
-
         }
     }
 }

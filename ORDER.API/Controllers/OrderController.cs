@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ORDER.API.ViewModels;
 using ORDER.Domain.Dto;
-using ORDER.Domain.Exceptions;
 using ORDER.Domain.Services;
 
 namespace ORDER.API.Controllers

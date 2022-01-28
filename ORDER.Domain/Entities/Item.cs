@@ -9,6 +9,8 @@ namespace ORDER.Domain.Entities
         public int Quantity { get; set; }
         public virtual Order Order { get; set; }
         public int OrderId { get; set; }
+
+        public int Cost => UnitPrice * Quantity;
     }
 }
 

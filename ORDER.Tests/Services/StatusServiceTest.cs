@@ -5,6 +5,7 @@ using ORDER.Tests.MoqSettings;
 using NUnit.Framework;
 using ORDER.Application.Services;
 using ORDER.Domain.Dto;
+using ORDER.Domain.Exceptions;
 using ORDER.Domain.Services;
 
 namespace ORDER.Tests.Services
@@ -23,7 +24,7 @@ namespace ORDER.Tests.Services
             _repo = new OrderRepository(_context);
             _service = new StatusService(_repo);
         }
-        
+
         [TearDown]
         public void TearDown()
         {
@@ -45,14 +46,121 @@ namespace ORDER.Tests.Services
             var response = new StatusResponseDto
             {
                 OrderId = "123456",
-                Status = new List<string>(){"APROVADO"}
+                Status = new List<string>() {"APROVADO"}
             };
             // Act
+            var requestResponse = _service.ApprovedStatus(request);
 
             // Assert
+            Assert.AreEqual(expected: response, requestResponse);
+        }
 
+        [Test]
+        public void SecondTest()
+        {
+            // Arrange
+            var request = new StatusRequestDto
+            {
+                Status = "APROVADO",
+                ApprovedItems = 3,
+                ApprovedValue = 10,
+                OrderId = "123456"
+            };
+            var response = new StatusResponseDto
+            {
+                OrderId = "123456",
+                Status = new List<string>() {"APROVADO_VALOR_A_MENOR"}
+            };
+            // Act
+            var requestResponse = _service.ApprovedStatus(request);
 
+            // Assert
+            Assert.AreEqual(expected: response, requestResponse);
+        }
 
+        [Test]
+        public void ThirdTest()
+        {
+            // Arrange
+            var request = new StatusRequestDto
+            {
+                Status = "APROVADO",
+                ApprovedItems = 4,
+                ApprovedValue = 21,
+                OrderId = "123456"
+            };
+            var response = new StatusResponseDto
+            {
+                OrderId = "123456",
+                Status = new List<string>() {"APROVADO_VALOR_A_MAIOR", "APROVADO_QTD_A_MAIOR"}
+            };
+            // Act
+            var requestResponse = _service.ApprovedStatus(request);
+
+            // Assert
+            Assert.AreEqual(expected: response, requestResponse);
+        }
+
+        [Test]
+        public void FourthTest()
+        {
+            // Arrange
+            var request = new StatusRequestDto
+            {
+                Status = "REPROVADO",
+                ApprovedItems = 0,
+                ApprovedValue = 0,
+                OrderId = "123456"
+            };
+            var response = new StatusResponseDto
+            {
+                OrderId = "123456",
+                Status = new List<string>() {"REPROVADO"}
+            };
+            // Act
+            var requestResponse = _service.ApprovedStatus(request);
+
+            // Assert
+            Assert.AreEqual(expected: response, requestResponse);
+        }
+
+        [Test]
+        public void FifthTest()
+        {
+            // Arrange
+            var request = new StatusRequestDto
+            {
+                Status = "REPROVADO",
+                ApprovedItems = 0,
+                ApprovedValue = 0,
+                OrderId = "123456"
+            };
+            var response = new StatusResponseDto
+            {
+                OrderId = "123456",
+                Status = new List<string>() {"REPROVADO"}
+            };
+            // Act
+            var requestResponse = _service.ApprovedStatus(request);
+
+            // Assert
+            Assert.AreEqual(expected: response, requestResponse);
+        }
+
+        [Test]
+        public void SixthTest()
+        {
+            // Arrange
+            var request = new StatusRequestDto
+            {
+                Status = "APROVADO",
+                ApprovedItems = 3,
+                ApprovedValue = 20,
+                OrderId = "123456-N"
+            };
+            // Act
+            // Assert
+            Assert.Throws<NotFoundOrderException>(() => _service.ApprovedStatus(request));
         }
     }
 }
