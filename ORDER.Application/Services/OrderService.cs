@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using AutoMapper;
-using ORDER.Domain.Dto;
+using ORDER.Application.Dto;
+using ORDER.Application.Services.Interfaces;
 using ORDER.Domain.Entities;
 using ORDER.Domain.Exceptions;
 using ORDER.Domain.Exceptions.Handel.ZendeskModule.Exceptions;
 using ORDER.Domain.Repositories;
-using ORDER.Domain.Services;
 
 namespace ORDER.Application.Services
 {

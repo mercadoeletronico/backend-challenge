@@ -4,8 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ORDER.API.AutoMapper;
 using ORDER.Application.Services;
+using ORDER.Application.Services.Interfaces;
 using ORDER.Domain.Repositories;
-using ORDER.Domain.Services;
 using ORDER.Infra.Data;
 using ORDER.Infra.Repositories;
 

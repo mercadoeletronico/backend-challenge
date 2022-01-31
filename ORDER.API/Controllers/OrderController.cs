@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ORDER.API.ViewModels;
-using ORDER.Domain.Dto;
-using ORDER.Domain.Services;
+using ORDER.Application.Dto;
+using ORDER.Application.Services.Interfaces;
 
 namespace ORDER.API.Controllers
 {

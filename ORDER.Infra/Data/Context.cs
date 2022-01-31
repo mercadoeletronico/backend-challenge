@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ORDER.Domain.Entities;
 using ORDER.Infra.Data.Mapping;
-using ORDER.Infra.Data.Seed;
 
 namespace ORDER.Infra.Data
 {

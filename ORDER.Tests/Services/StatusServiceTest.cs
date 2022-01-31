@@ -3,10 +3,10 @@ using ORDER.Infra.Data;
 using ORDER.Infra.Repositories;
 using ORDER.Tests.MoqSettings;
 using NUnit.Framework;
+using ORDER.Application.Dto;
 using ORDER.Application.Services;
-using ORDER.Domain.Dto;
+using ORDER.Application.Services.Interfaces;
 using ORDER.Domain.Exceptions;
-using ORDER.Domain.Services;
 
 namespace ORDER.Tests.Services
 {

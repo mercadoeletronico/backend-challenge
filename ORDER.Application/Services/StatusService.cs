@@ -1,10 +1,10 @@
 using System.Collections.Generic;
+using ORDER.Application.Dto;
+using ORDER.Application.Services.Interfaces;
 using ORDER.Application.Utils;
-using ORDER.Domain.Dto;
 using ORDER.Domain.Entities;
 using ORDER.Domain.Exceptions;
 using ORDER.Domain.Repositories;
-using ORDER.Domain.Services;
 
 namespace ORDER.Application.Services
 {

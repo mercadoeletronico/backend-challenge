@@ -1,6 +1,6 @@
-using ORDER.Domain.Dto;
+using ORDER.Application.Dto;
 
-namespace ORDER.Domain.Services
+namespace ORDER.Application.Services.Interfaces
 {
     public interface IStatusService
     {
