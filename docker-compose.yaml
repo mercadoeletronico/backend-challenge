@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  me-teste:
+    container_name: me-teste
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "${PORT}:80"
