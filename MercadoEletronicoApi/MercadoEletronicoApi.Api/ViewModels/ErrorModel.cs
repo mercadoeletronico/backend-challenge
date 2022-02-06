@@ -14,4 +14,5 @@ namespace MercadoEletronicoApi.Api.ViewModels
         public string? StackTrace { get; set; }
 
     }
+
 }

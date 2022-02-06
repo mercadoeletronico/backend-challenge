@@ -27,7 +27,8 @@ namespace MercadoEletronicoApi.Infra.Data.EntitiesConfiguration
             builder
                 .HasOne(p => p.Pedido)
                 .WithMany(i => i.Items)
-                .HasForeignKey(p => p.PedidoId);
+                .HasForeignKey(p => p.PedidoId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
     }

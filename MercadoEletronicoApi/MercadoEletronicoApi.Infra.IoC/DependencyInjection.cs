@@ -15,9 +15,11 @@ namespace MercadoEletronicoApi.Infra.IoC
         public static IServiceCollection AddInfraStructure(this IServiceCollection services,
            IConfiguration configuration)
         {
-            services.AddDbContext<MercadoEletronicoDbContext>(options =>
-            options.UseInMemoryDatabase("MeDbContextInMemory"));
-
+            services.AddDbContext<MercadoEletronicoDbContext>(options => {
+                options.UseInMemoryDatabase("MeDbContextInMemory");
+                options.EnableSensitiveDataLogging();
+            });
+            
             services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
 

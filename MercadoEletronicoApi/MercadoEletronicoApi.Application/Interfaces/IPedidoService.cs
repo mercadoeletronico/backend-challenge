@@ -11,6 +11,6 @@ namespace MercadoEletronicoApi.Application.Interfaces
 
         Task<PedidoDTO> CreatePedidoAsync(PedidoDTO pedido);
         Task<PedidoDTO> UpdatePedidoAsync(PedidoDTO pedido);
-        Task<PedidoDTO> RemovePedidoAsync(PedidoDTO pedido);
+        Task<PedidoDTO> RemovePedidoAsync(int id);
     }
 }

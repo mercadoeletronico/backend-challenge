@@ -2,6 +2,7 @@
 using System.Net;
 using MercadoEletronicoApi.Api.ViewModels;
 using MercadoEletronicoApi.Domain.Exceptions;
+using MercadoEletronicoApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -12,10 +13,6 @@ namespace MercadoEletronicoApi.Api.Filters
     {
         private const string MediaType = "application/json";
 
-        /// <summary>
-        /// OnException
-        /// </summary>
-        /// <param name="context"></param>
         public override void OnException(ExceptionContext context)
         {
             var content = context.Exception.Message;
@@ -51,5 +48,7 @@ namespace MercadoEletronicoApi.Api.Filters
                 Content = response.ToJson()
             };
         }
+
     }
+
 }

@@ -11,5 +11,6 @@ namespace MercadoEletronicoApi.Infra.Data.EntitiesConfiguration
             builder
                 .HasKey(i => i.Id);
         }
+
     }
 }

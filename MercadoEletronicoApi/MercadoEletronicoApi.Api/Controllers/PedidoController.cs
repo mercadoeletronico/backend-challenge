@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿using MercadoEletronicoApi.Api.ViewModels;
 using MercadoEletronicoApi.Application.DTOs;
 using MercadoEletronicoApi.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -14,7 +14,6 @@ namespace MercadoEletronicoApi.Api.Controllers
     {
         private readonly IPedidoService _pedidoService;
         
-
         public PedidoController(IPedidoService pedidoService)
         {
             _pedidoService = pedidoService;
@@ -22,6 +21,8 @@ namespace MercadoEletronicoApi.Api.Controllers
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<PedidoDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<IEnumerable<PedidoDTO>> GetPedidos()
         {
             return await _pedidoService.GetPedidosAsync();
@@ -29,22 +30,38 @@ namespace MercadoEletronicoApi.Api.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(PedidoDTO), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<PedidoDTO> GetPedidoById(int id) 
         {
             return await _pedidoService.GetPedidoByIdAsync(id);
         } 
 
-
         [HttpPost]
         [ProducesResponseType(typeof(IEnumerable<PedidoDTO>), StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<PedidoDTO>> CreateProduct([FromBody] PedidoDTO pedidoDTO)
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<PedidoDTO> CreatePedido([FromBody] PedidoDTO pedidoDTO)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            return await _pedidoService.CreatePedidoAsync(pedidoDTO);
+        }
 
-            return Ok(await _pedidoService.CreatePedidoAsync(pedidoDTO));
+        [HttpPut]
+        [ProducesResponseType(typeof(PedidoDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<PedidoDTO> Put([FromBody] PedidoDTO pedido)
+        {
+            return await _pedidoService.UpdatePedidoAsync(pedido);
+        }
+
+        [HttpDelete("{pedidoId}")]
+        [ProducesResponseType(typeof(PedidoDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
+        public async Task<PedidoDTO> Remove(int pedidoId)
+        {
+            return await _pedidoService.RemovePedidoAsync(pedidoId);
         }
 
     }

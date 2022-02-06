@@ -53,10 +53,22 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<Pedido> RemoveAsync(Pedido pedido)
         {
-            _context.Pedidos.Remove(pedido);
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Pedidos.Remove(pedido);
+                await _context.SaveChangesAsync();
 
-            return pedido;
+                return pedido;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+
+            
         }
 
     }

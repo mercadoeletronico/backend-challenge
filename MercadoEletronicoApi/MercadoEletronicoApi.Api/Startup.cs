@@ -1,3 +1,4 @@
+using MercadoEletronicoApi.Api.Filters;
 using MercadoEletronicoApi.Infra.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +7,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System.Linq;
-using System.Text.Json.Serialization;
 
 namespace MercadoEletronicoApi.Api
 {
@@ -21,10 +21,11 @@ namespace MercadoEletronicoApi.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
-
-            //services.AddControllers().AddJsonOptions(options =>
-            //options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(ExceptionFilter));
+                options.RespectBrowserAcceptHeader = true;
+            });
 
             services.AddInfraStructure(Configuration);
 

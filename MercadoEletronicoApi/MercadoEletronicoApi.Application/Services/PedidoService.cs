@@ -1,13 +1,10 @@
 ﻿using AutoMapper;
 using MercadoEletronicoApi.Application.DTOs;
-using MercadoEletronicoApi.Application.ExtensionMethods;
 using MercadoEletronicoApi.Application.Interfaces;
 using MercadoEletronicoApi.Domain.Entities;
 using MercadoEletronicoApi.Domain.Exceptions;
 using MercadoEletronicoApi.Domain.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MercadoEletronicoApi.Application.Services
@@ -41,23 +38,37 @@ namespace MercadoEletronicoApi.Application.Services
 
         public async Task<PedidoDTO> CreatePedidoAsync(PedidoDTO pedidoDTO)
         {
-            var pedido = pedidoDTO.ToPedido();
+            var pedido = _mapper.Map<Pedido>(pedidoDTO);
 
-            return (await _pedidoRepository.CreateAsync(pedido)).ToPedidoDTO();
+            await _pedidoRepository.CreateAsync(pedido);
+            
+            return _mapper.Map<PedidoDTO>(pedido);
         }
 
         public async Task<PedidoDTO> UpdatePedidoAsync(PedidoDTO pedidoDTO)
         {
-            var pedido = pedidoDTO.ToPedido();
+            var pedido = await _pedidoRepository.GetByIdAsync(pedidoDTO.Id);  
 
-            return(await _pedidoRepository.UpdateAsync(pedido)).ToPedidoDTO();
+            NotFoundPedidoException.When(pedido == null);
+
+            pedido.Items = _mapper.Map<List<Item>>(pedidoDTO.Items);
+
+            await _pedidoRepository.UpdateAsync(pedido);
+
+            return _mapper.Map<PedidoDTO>(pedido);
         }
 
-        public async Task<PedidoDTO> RemovePedidoAsync(PedidoDTO pedidoDTO)
+        public async Task<PedidoDTO> RemovePedidoAsync(int id)
         {
-            var pedido = pedidoDTO.ToPedido();
+            var pedido = await _pedidoRepository.GetByIdAsync(id);
 
-            return (await _pedidoRepository.RemoveAsync(pedido)).ToPedidoDTO();
+            NotFoundPedidoException.When(pedido is null);
+
+            await _pedidoRepository.RemoveAsync(pedido);
+
+            NotDeletedPedidoException.When(pedido is null);
+
+            return _mapper.Map<PedidoDTO>(pedido);
         }
 
     }
