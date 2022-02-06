@@ -1,0 +1,15 @@
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\MercadoEletronicoApi.Infra.Data.deps.json
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\MercadoEletronicoApi.Infra.Data.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\ref\MercadoEletronicoApi.Infra.Data.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\MercadoEletronicoApi.Infra.Data.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\bin\Debug\net5.0\MercadoEletronicoApi.Domain.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.csprojAssemblyReference.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.AssemblyInfo.cs
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.csproj.CopyComplete
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\ref\MercadoEletronicoApi.Infra.Data.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Infra.Data\obj\Debug\net5.0\MercadoEletronicoApi.Infra.Data.pdb

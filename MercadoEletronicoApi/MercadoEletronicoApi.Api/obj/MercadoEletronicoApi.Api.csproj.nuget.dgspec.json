@@ -1,0 +1,366 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Api\\MercadoEletronicoApi.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Api\\MercadoEletronicoApi.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Api\\MercadoEletronicoApi.Api.csproj",
+        "projectName": "MercadoEletronicoApi.Api",
+        "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Api\\MercadoEletronicoApi.Api.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Desenvolvimento\\Repositorios\\GrupoSym\\Converse\\Converse\\packages": {},
+          "https://app.lifesys.com.br/nuget/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\MercadoEletronicoApi.Infra.IoC.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\MercadoEletronicoApi.Infra.IoC.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj",
+        "projectName": "MercadoEletronicoApi.Application",
+        "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Desenvolvimento\\Repositorios\\GrupoSym\\Converse\\Converse\\packages": {},
+          "https://app.lifesys.com.br/nuget/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj",
+        "projectName": "MercadoEletronicoApi.Domain",
+        "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Desenvolvimento\\Repositorios\\GrupoSym\\Converse\\Converse\\packages": {},
+          "https://app.lifesys.com.br/nuget/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\MercadoEletronicoApi.Infra.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\MercadoEletronicoApi.Infra.Data.csproj",
+        "projectName": "MercadoEletronicoApi.Infra.Data",
+        "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\MercadoEletronicoApi.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Desenvolvimento\\Repositorios\\GrupoSym\\Converse\\Converse\\packages": {},
+          "https://app.lifesys.com.br/nuget/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\MercadoEletronicoApi.Infra.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\MercadoEletronicoApi.Infra.IoC.csproj",
+        "projectName": "MercadoEletronicoApi.Infra.IoC",
+        "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\MercadoEletronicoApi.Infra.IoC.csproj",
+        "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+        "outputPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Desenvolvimento\\Repositorios\\GrupoSym\\Converse\\Converse\\packages": {},
+          "https://app.lifesys.com.br/nuget/nuget": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj"
+              },
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Domain\\MercadoEletronicoApi.Domain.csproj"
+              },
+              "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\MercadoEletronicoApi.Infra.Data.csproj": {
+                "projectPath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Infra.Data\\MercadoEletronicoApi.Infra.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jF8z112+M7z/9YdOrazD/DocDia2liDIvemZBroIx0qtQ1awq9A4ICeD7I9UIUn9z4tN2V9ICe+1FAV2Hd9VwQ==",
+  "success": true,
+  "projectFilePath": "D:\\Desenvolvimento\\Desafios\\backend-challenge\\MercadoEletronicoApi\\MercadoEletronicoApi.Application\\MercadoEletronicoApi.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

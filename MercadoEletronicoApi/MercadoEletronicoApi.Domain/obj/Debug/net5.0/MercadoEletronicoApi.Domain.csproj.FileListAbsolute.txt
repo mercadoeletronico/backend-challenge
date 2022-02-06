@@ -1,0 +1,12 @@
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\bin\Debug\net5.0\MercadoEletronicoApi.Domain.deps.json
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\bin\Debug\net5.0\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\bin\Debug\net5.0\ref\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\bin\Debug\net5.0\MercadoEletronicoApi.Domain.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.AssemblyInfo.cs
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\ref\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Domain\obj\Debug\net5.0\MercadoEletronicoApi.Domain.csprojAssemblyReference.cache

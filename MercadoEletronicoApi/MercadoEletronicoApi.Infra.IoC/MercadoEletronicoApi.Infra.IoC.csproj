@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronicoApi.Application\MercadoEletronicoApi.Application.csproj" />
+    <ProjectReference Include="..\MercadoEletronicoApi.Domain\MercadoEletronicoApi.Domain.csproj" />
+    <ProjectReference Include="..\MercadoEletronicoApi.Infra.Data\MercadoEletronicoApi.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

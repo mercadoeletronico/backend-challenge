@@ -1,0 +1,15 @@
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\MercadoEletronicoApi.Application.deps.json
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\MercadoEletronicoApi.Application.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\ref\MercadoEletronicoApi.Application.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\MercadoEletronicoApi.Application.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\MercadoEletronicoApi.Domain.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\bin\Debug\net5.0\MercadoEletronicoApi.Domain.pdb
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.csprojAssemblyReference.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.AssemblyInfoInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.AssemblyInfo.cs
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.csproj.CoreCompileInputs.cache
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.csproj.CopyComplete
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\ref\MercadoEletronicoApi.Application.dll
+D:\Desenvolvimento\Desafios\backend-challenge\MercadoEletronicoApi\MercadoEletronicoApi.Application\obj\Debug\net5.0\MercadoEletronicoApi.Application.pdb
