@@ -20,11 +20,11 @@ namespace MercadoEletronicoApi.Infra.IoC
                 options.EnableSensitiveDataLogging();
             });
             
-            services.AddScoped<IItemRepository, ItemRepository>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
 
             services.AddScoped<IPedidoService, PedidoService>();
             services.AddScoped<IItemService, ItemService>();
+            services.AddScoped<IStatusService, StatusService>();
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 

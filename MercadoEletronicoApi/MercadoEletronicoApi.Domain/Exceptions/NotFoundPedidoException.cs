@@ -20,5 +20,6 @@ namespace MercadoEletronicoApi.Domain.Exceptions
             if (condition)
                 throw new NotFoundPedidoException(message, innerException);
         }
+
     }
 }

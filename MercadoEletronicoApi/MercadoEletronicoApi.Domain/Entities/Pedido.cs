@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace MercadoEletronicoApi.Domain.Entities
 {
@@ -8,6 +9,16 @@ namespace MercadoEletronicoApi.Domain.Entities
 
         public IList<Item> Items { get; set; }
 
+        public int TotalItens() 
+        {
+            return Items.Sum(x => x.Quantidade);
+        }
+
+        public decimal ValorTotal() 
+        {
+            return Items.Sum(x => x.Custo);
+        }
+       
     }
 
 }
