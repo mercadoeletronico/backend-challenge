@@ -7,18 +7,14 @@ namespace MercadoEletronicoApi.Domain.Entities
     {
         public int Id { get; set; }
 
+        public string CodPedido { get; set; }
+
         public IList<Item> Items { get; set; }
 
-        public int TotalItens() 
-        {
-            return Items.Sum(x => x.Quantidade);
-        }
+        public int TotalItens() => Items.Sum(x => x.Quantidade);
 
-        public decimal ValorTotal() 
-        {
-            return Items.Sum(x => x.Custo);
-        }
-       
+        public decimal ValorTotal() => Items.Sum(x => x.Custo);
+
     }
 
 }

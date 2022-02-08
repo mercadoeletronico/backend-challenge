@@ -25,16 +25,16 @@ namespace MercadoEletronicoApi.Api.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<IEnumerable<PedidoDTO>> GetPedidos()
         {
-            return await _pedidoService.GetPedidosAsync();
+            return await _pedidoService.GetOrderAsync();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{pedidoId}")]
         [ProducesResponseType(typeof(PedidoDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<PedidoDTO> GetPedidoById(int id) 
+        public async Task<PedidoDTO> GetPedidoById(string pedidoId) 
         {
-            return await _pedidoService.GetPedidoByIdAsync(id);
+            return await _pedidoService.GetOrderByOrderCodeAsync(pedidoId);
         } 
 
         [HttpPost]
@@ -43,7 +43,7 @@ namespace MercadoEletronicoApi.Api.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<PedidoDTO> CreatePedido([FromBody] PedidoDTO pedidoDTO)
         {
-            return await _pedidoService.CreatePedidoAsync(pedidoDTO);
+            return await _pedidoService.CreateOrderAsync(pedidoDTO);
         }
 
         [HttpPut]
@@ -52,16 +52,16 @@ namespace MercadoEletronicoApi.Api.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<PedidoDTO> Put([FromBody] PedidoDTO pedido)
         {
-            return await _pedidoService.UpdatePedidoAsync(pedido);
+            return await _pedidoService.UpdateOrderAsync(pedido);
         }
 
         [HttpDelete("{pedidoId}")]
         [ProducesResponseType(typeof(PedidoDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status404NotFound)]
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
-        public async Task<PedidoDTO> Remove(int pedidoId)
+        public async Task<PedidoDTO> Remove(string pedidoId)
         {
-            return await _pedidoService.RemovePedidoAsync(pedidoId);
+            return await _pedidoService.RemoveOrderAsync(pedidoId);
         }
 
     }

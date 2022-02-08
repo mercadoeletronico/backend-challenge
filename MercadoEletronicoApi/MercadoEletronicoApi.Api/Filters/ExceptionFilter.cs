@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using MercadoEletronicoApi.Api.ViewModels;
+using MercadoEletronicoApi.Application.Utils;
 using MercadoEletronicoApi.Domain.Exceptions;
 using MercadoEletronicoApi.Extensions;
 using Microsoft.AspNetCore.Mvc;
@@ -17,24 +18,27 @@ namespace MercadoEletronicoApi.Api.Filters
         {
             var content = context.Exception.Message;
             HttpStatusCode code;
-            
+
             switch (context.Exception.GetType().Name)
             {
                 case nameof(NotFoundPedidoException):
                     code = HttpStatusCode.NotFound;
                     break;
-                case nameof(NotDeletedPedidoException):
+                case nameof(NotDeletedOrderException):
+                    code = HttpStatusCode.UnprocessableEntity;
+                    break;
+                case nameof(OrderAlreadyExistsException):
                     code = HttpStatusCode.UnprocessableEntity;
                     break;
                 default:
                     code = HttpStatusCode.BadRequest;
-                    content = "Não foi possível processar sua solicitação.";
+                    content = Constantes.UnprocessedRequest;
                     break;
             }
 
             context.HttpContext.Response.ContentType = MediaType;
             context.HttpContext.Response.StatusCode = (int)code;
-            
+
             var response = new ErrorModel
             {
                 Code = (int)code,

@@ -35,6 +35,15 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
             return pedido;
         }
 
+        public async Task<Pedido> GetOrderByOrderCodeAsync(string codPedido) 
+        {
+            var pedido = await _context.Pedidos
+                .Include(p => p.Items)
+                .FirstOrDefaultAsync(p => p.CodPedido == codPedido);
+
+            return pedido;
+        }
+
         public async Task<Pedido> CreateAsync(Pedido pedido)
         {
             _context.Pedidos.Add(pedido);

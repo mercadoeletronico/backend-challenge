@@ -6,11 +6,11 @@ namespace MercadoEletronicoApi.Application.Interfaces
 {
     public interface IPedidoService
     {
-        Task<IList<PedidoDTO>> GetPedidosAsync();
-        Task<PedidoDTO> GetPedidoByIdAsync(int id);
-
-        Task<PedidoDTO> CreatePedidoAsync(PedidoDTO pedido);
-        Task<PedidoDTO> UpdatePedidoAsync(PedidoDTO pedido);
-        Task<PedidoDTO> RemovePedidoAsync(int id);
+        Task<IList<PedidoDTO>> GetOrderAsync();
+        Task<PedidoDTO> GetOrderByIdAsync(int id);
+        Task<PedidoDTO> GetOrderByOrderCodeAsync(string codPedido);
+        Task<PedidoDTO> CreateOrderAsync(PedidoDTO pedido);
+        Task<PedidoDTO> UpdateOrderAsync(PedidoDTO pedido);
+        Task<PedidoDTO> RemoveOrderAsync(string codPedido);
     }
 }

@@ -9,7 +9,11 @@ namespace MercadoEletronicoApi.Infra.Data.EntitiesConfiguration
         public void Configure(EntityTypeBuilder<Pedido> builder)
         {
             builder
-                .HasKey(i => i.Id);
+                .HasKey(p => p.Id);
+
+            builder
+                .Property(p => p.CodPedido)
+                .IsRequired();
         }
 
     }

@@ -19,16 +19,16 @@ namespace MercadoEletronicoApi.Application.Services
 
         public async Task<StatusResponseDTO> AtualizarStatus(StatusRequestDTO statusRequestDTO)
         {
-            var pedido = await _pedidoRepository.GetByIdAsync(int.Parse(statusRequestDTO.PedidoId));
+            var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(statusRequestDTO.PedidoId);
 
             if (pedido is null)
-                return PedidoNaoEncontrado(statusRequestDTO.PedidoId.ToString(), Constantes.CodigoPedidoInvalido);
+                return PedidoNaoEncontrado(statusRequestDTO.PedidoId.ToString(), Constantes.InvalidOrderCode);
 
             if (StatusNaoAprovadoNaRequisicao(statusRequestDTO))
-                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.Reprovado);
+                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.DisapprovedStatus);
 
             if (RequisicaoIgualAoPedido(statusRequestDTO, pedido))
-                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.Aprovado);
+                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.AprovedStatus);
 
             var statusResponse = CreateStatusResponse(statusRequestDTO.PedidoId);
 
@@ -48,12 +48,12 @@ namespace MercadoEletronicoApi.Application.Services
 
         private static bool StatusNaoAprovadoNaRequisicao(StatusRequestDTO request)
         {
-            return request.Status!= StatusTypes.Aprovado;
+            return request.Status!= StatusTypes.AprovedStatus;
         }
 
         private bool RequisicaoIgualAoPedido(StatusRequestDTO request, Pedido pedido)
         {
-            return request.Status.Equals(StatusTypes.Aprovado) && 
+            return request.Status.Equals(StatusTypes.AprovedStatus) && 
                 pedido.ValorTotal() == request.ValorAprovado && 
                 pedido.TotalItens() == request.ItensAprovados;
         }
@@ -69,23 +69,23 @@ namespace MercadoEletronicoApi.Application.Services
 
         private static void RetornarStatus(StatusRequestDTO request, Pedido pedido, StatusResponseDTO status)
         {
-            if (request.ValorAprovado < pedido.ValorTotal() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.AprovadoValorMenor);
+            if (request.ValorAprovado < pedido.ValorTotal() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.ApprovedValueLower);
 
-            if (request.ValorAprovado == pedido.ValorTotal() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.Aprovado);
+            if (request.ValorAprovado == pedido.ValorTotal() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.AprovedStatus);
 
-            if (request.ValorAprovado > pedido.ValorTotal() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.AprovadoValorMaior);
+            if (request.ValorAprovado > pedido.ValorTotal() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.ApprovedValueGreater);
 
-            if (request.ItensAprovados < pedido.TotalItens() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.AprovadoQuantidadeMenor);
+            if (request.ItensAprovados < pedido.TotalItens() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.ApprovedQuantityLower);
 
-            if (request.ItensAprovados == pedido.TotalItens() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.Aprovado);
+            if (request.ItensAprovados == pedido.TotalItens() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.AprovedStatus);
 
-            if (request.ItensAprovados > pedido.TotalItens() && request.Status == StatusTypes.Aprovado)
-                status.Status.Add(StatusTypes.AprovadoQuantidadeMaior);
+            if (request.ItensAprovados > pedido.TotalItens() && request.Status == StatusTypes.AprovedStatus)
+                status.Status.Add(StatusTypes.ApprovedQuantityGreater);
         }
 
     }
