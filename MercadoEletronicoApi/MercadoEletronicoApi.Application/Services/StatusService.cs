@@ -19,18 +19,18 @@ namespace MercadoEletronicoApi.Application.Services
 
         public async Task<StatusResponseDTO> AtualizarStatus(StatusRequestDTO statusRequestDTO)
         {
-            var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(statusRequestDTO.PedidoId);
+            var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(statusRequestDTO.OrderId);
 
             if (pedido is null)
-                return PedidoNaoEncontrado(statusRequestDTO.PedidoId.ToString(), Constantes.InvalidOrderCode);
+                return PedidoNaoEncontrado(statusRequestDTO.OrderId.ToString(), Constantes.InvalidOrderCode);
 
             if (StatusNaoAprovadoNaRequisicao(statusRequestDTO))
-                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.DisapprovedStatus);
+                return CreateStatusResponse(statusRequestDTO.OrderId, StatusTypes.DisapprovedStatus);
 
             if (RequisicaoIgualAoPedido(statusRequestDTO, pedido))
-                return CreateStatusResponse(statusRequestDTO.PedidoId, StatusTypes.AprovedStatus);
+                return CreateStatusResponse(statusRequestDTO.OrderId, StatusTypes.AprovedStatus);
 
-            var statusResponse = CreateStatusResponse(statusRequestDTO.PedidoId);
+            var statusResponse = CreateStatusResponse(statusRequestDTO.OrderId);
 
             RetornarStatus(statusRequestDTO, pedido, statusResponse);
 
@@ -41,7 +41,7 @@ namespace MercadoEletronicoApi.Application.Services
         {
             return new StatusResponseDTO
             {
-                PedidoId = pedidoId,
+                OrderId = pedidoId,
                 Status = new List<string>() { status }
             };
         }
@@ -54,37 +54,37 @@ namespace MercadoEletronicoApi.Application.Services
         private bool RequisicaoIgualAoPedido(StatusRequestDTO request, Order pedido)
         {
             return request.Status.Equals(StatusTypes.AprovedStatus) && 
-                pedido.GetTotalOrderAmount() == request.ValorAprovado && 
-                pedido.GetTotalOrderItems() == request.ItensAprovados;
+                pedido.GetTotalOrderAmount() == request.ApprovedValue && 
+                pedido.GetTotalOrderItems() == request.ApprovedItens;
         }
 
         private StatusResponseDTO CreateStatusResponse(string pedidoId, string status = "")
         {
             return new StatusResponseDTO
             {
-                PedidoId = pedidoId,
+                OrderId = pedidoId,
                 Status = new List<string>() { status }
             };
         }
 
         private static void RetornarStatus(StatusRequestDTO request, Order pedido, StatusResponseDTO status)
         {
-            if (request.ValorAprovado < pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedValue < pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.ApprovedValueLower);
 
-            if (request.ValorAprovado == pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedValue == pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.AprovedStatus);
 
-            if (request.ValorAprovado > pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedValue > pedido.GetTotalOrderAmount() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.ApprovedValueGreater);
 
-            if (request.ItensAprovados < pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedItens < pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.ApprovedQuantityLower);
 
-            if (request.ItensAprovados == pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedItens == pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.AprovedStatus);
 
-            if (request.ItensAprovados > pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
+            if (request.ApprovedItens > pedido.GetTotalOrderItems() && request.Status == StatusTypes.AprovedStatus)
                 status.Status.Add(StatusTypes.ApprovedQuantityGreater);
         }
 

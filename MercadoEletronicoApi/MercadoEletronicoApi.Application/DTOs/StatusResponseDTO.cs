@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace MercadoEletronicoApi.Application.DTOs
@@ -10,6 +9,6 @@ namespace MercadoEletronicoApi.Application.DTOs
         public List<string> Status { get; set; }
 
         [JsonPropertyName("pedido")]
-        public string PedidoId { get; set; }
+        public string OrderId { get; set; }
     }
 }

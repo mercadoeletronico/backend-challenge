@@ -11,14 +11,14 @@ namespace MercadoEletronicoApi.Application.DTOs
 
         [Required]
         [JsonPropertyName("itensAprovados")]
-        public int ItensAprovados { get; set; }
+        public int ApprovedItens { get; set; }
 
         [Required]
         [JsonPropertyName("valorAprovado")]
-        public decimal ValorAprovado { get; set; }
+        public decimal ApprovedValue { get; set; }
 
         [Required]
         [JsonPropertyName("pedido")]
-        public string PedidoId { get; set; }
+        public string OrderId { get; set; }
     }
 }
