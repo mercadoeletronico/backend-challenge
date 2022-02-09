@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronicoApi.Domain.Interfaces
 {
-    public interface IPedidoRepository : IInterfaceBase<Pedido>
+    public interface IOrderRepository : IInterfaceBase<Order>
     {
-        Task<Pedido> GetOrderByOrderCodeAsync(string codPedido);
+        Task<Order> GetOrderByOrderCodeAsync(string codPedido);
     }
 
 }

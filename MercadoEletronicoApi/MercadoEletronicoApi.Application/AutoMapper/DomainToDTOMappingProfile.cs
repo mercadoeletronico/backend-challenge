@@ -8,7 +8,7 @@ namespace MercadoEletronicoApi.Application.AutoMapper
     {
         public DomainToDTOMappingProfile()
         {
-            CreateMap<Pedido, PedidoDTO>().ReverseMap();
+            CreateMap<Order, OrderDTO>().ReverseMap();
             CreateMap<Item, ItemDTO>().ReverseMap();
         }
     }

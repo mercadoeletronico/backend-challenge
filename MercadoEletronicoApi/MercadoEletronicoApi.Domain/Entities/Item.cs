@@ -8,7 +8,7 @@
         public int Quantidade { get; set; }
 
         public int? PedidoId { get; set; }
-        public Pedido Pedido { get; set; }
+        public Order Pedido { get; set; }
 
         public decimal Custo => PrecoUnitario * Quantidade;
 

@@ -4,13 +4,13 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronicoApi.Application.Interfaces
 {
-    public interface IPedidoService
+    public interface IOrderService
     {
-        Task<IList<PedidoDTO>> GetOrderAsync();
-        Task<PedidoDTO> GetOrderByIdAsync(int id);
-        Task<PedidoDTO> GetOrderByOrderCodeAsync(string codPedido);
-        Task<PedidoDTO> CreateOrderAsync(PedidoDTO pedido);
-        Task<PedidoDTO> UpdateOrderAsync(PedidoDTO pedido);
-        Task<PedidoDTO> RemoveOrderAsync(string codPedido);
+        Task<IList<OrderDTO>> GetOrderAsync();
+        Task<OrderDTO> GetOrderByIdAsync(int id);
+        Task<OrderDTO> GetOrderByOrderCodeAsync(string codPedido);
+        Task<OrderDTO> CreateOrderAsync(OrderDTO pedido);
+        Task<OrderDTO> UpdateOrderAsync(OrderDTO pedido);
+        Task<OrderDTO> RemoveOrderAsync(string codPedido);
     }
 }

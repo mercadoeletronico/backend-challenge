@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace MercadoEletronicoApi.Infra.Data.EntitiesConfiguration
 {
-    public class PedidoConfiguration : IEntityTypeConfiguration<Pedido>
+    public class OrderConfiguration : IEntityTypeConfiguration<Order>
     {
-        public void Configure(EntityTypeBuilder<Pedido> builder)
+        public void Configure(EntityTypeBuilder<Order> builder)
         {
             builder
                 .HasKey(p => p.Id);
 
             builder
-                .Property(p => p.CodPedido)
+                .Property(p => p.OrderCode)
                 .IsRequired();
         }
 

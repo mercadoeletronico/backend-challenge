@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace MercadoEletronicoApi.Application.DTOs
 {
-    public class PedidoDTO
+    public class OrderDTO
     {
         [Required]
         [JsonPropertyName("pedido")]

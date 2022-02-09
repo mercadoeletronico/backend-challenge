@@ -6,7 +6,7 @@ namespace MercadoEletronicoApi.Infra.Data.Context
 {
     public class MercadoEletronicoDbContext : DbContext
     {
-        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<Order> Pedidos { get; set; }
         public DbSet<Item> Itens { get; set; }
 
         public MercadoEletronicoDbContext(DbContextOptions<MercadoEletronicoDbContext> options) : base(options)
@@ -17,7 +17,7 @@ namespace MercadoEletronicoApi.Infra.Data.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfiguration(new PedidoConfiguration());
+            builder.ApplyConfiguration(new OrderConfiguration());
             builder.ApplyConfiguration(new ItemConfiguration());
         }
 

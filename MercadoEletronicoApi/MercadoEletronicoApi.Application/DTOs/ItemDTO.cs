@@ -7,14 +7,14 @@ namespace MercadoEletronicoApi.Application.DTOs
     {
         [Required]
         [JsonPropertyName("descricao")]
-        public string Descricao { get; set; }
+        public string Description { get; set; }
 
         [Required]
         [JsonPropertyName("precoUnitario")]
-        public decimal PrecoUnitario { get; set; }
+        public decimal UnitPrice { get; set; }
 
         [Required()]
         [JsonPropertyName("qtd")]
-        public int Quantidade { get; set; }
+        public int Quantity { get; set; }
     }
 }

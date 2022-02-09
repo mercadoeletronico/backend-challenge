@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronicoApi.Infra.Data.Repositories
 {
-    public class PedidoRepository : IPedidoRepository
+    public class OrderRepository : IOrderRepository
     {
         private readonly MercadoEletronicoDbContext _context;
 
-        public PedidoRepository(MercadoEletronicoDbContext context)
+        public OrderRepository(MercadoEletronicoDbContext context)
         {
             _context = context;
         }
 
-        public async Task<IList<Pedido>> GetAsync()
+        public async Task<IList<Order>> GetAsync()
         {
             var pedidos = await _context.Pedidos
                 .Include(i => i.Items)
@@ -26,7 +26,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
             return pedidos;
         }
 
-        public async Task<Pedido> GetByIdAsync(int id)
+        public async Task<Order> GetByIdAsync(int id)
         {
             var pedido = await _context.Pedidos
                 .Include(p => p.Items)
@@ -35,16 +35,16 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
             return pedido;
         }
 
-        public async Task<Pedido> GetOrderByOrderCodeAsync(string codPedido) 
+        public async Task<Order> GetOrderByOrderCodeAsync(string codPedido) 
         {
             var pedido = await _context.Pedidos
                 .Include(p => p.Items)
-                .FirstOrDefaultAsync(p => p.CodPedido == codPedido);
+                .FirstOrDefaultAsync(p => p.OrderCode == codPedido);
 
             return pedido;
         }
 
-        public async Task<Pedido> CreateAsync(Pedido pedido)
+        public async Task<Order> CreateAsync(Order pedido)
         {
             _context.Pedidos.Add(pedido);
             await _context.SaveChangesAsync();
@@ -52,7 +52,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
             return pedido;
         }
 
-        public async Task<Pedido> UpdateAsync(Pedido pedido)
+        public async Task<Order> UpdateAsync(Order pedido)
         {
             _context.Pedidos.Update(pedido);
             await _context.SaveChangesAsync();
@@ -60,7 +60,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
             return pedido;
         }
 
-        public async Task<Pedido> RemoveAsync(Pedido pedido)
+        public async Task<Order> RemoveAsync(Order pedido)
         {
             try
             {

@@ -3,7 +3,7 @@
     public static class Constantes
     {
         public static string InvalidOrderCode = "CODIGO_PEDIDO_INVALIDO";
-        public static string UnprocessedRequest = "Não foi possível processar sua solicitação.";
+        public static string UnprocessedRequest = "Could not process your request.";
     }
 
     public static class StatusTypes 

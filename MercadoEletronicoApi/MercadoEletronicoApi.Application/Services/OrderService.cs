@@ -9,56 +9,56 @@ using System.Threading.Tasks;
 
 namespace MercadoEletronicoApi.Application.Services
 {
-    public class PedidoService : IPedidoService
+    public class OrderService : IOrderService
     {
-        private IPedidoRepository _pedidoRepository;
+        private IOrderRepository _pedidoRepository;
         private readonly IMapper _mapper;
 
-        public PedidoService(IPedidoRepository pedidoRepository, IMapper mapper)
+        public OrderService(IOrderRepository pedidoRepository, IMapper mapper)
         {
             _pedidoRepository = pedidoRepository;
             _mapper = mapper;
         }
 
-        public async Task<IList<PedidoDTO>> GetOrderAsync()
+        public async Task<IList<OrderDTO>> GetOrderAsync()
         {
             var pedidos = await _pedidoRepository.GetAsync();
 
-            return _mapper.Map<List<PedidoDTO>>(pedidos);
+            return _mapper.Map<List<OrderDTO>>(pedidos);
         }
 
-        public async Task<PedidoDTO> GetOrderByIdAsync(int id)
+        public async Task<OrderDTO> GetOrderByIdAsync(int id)
         {
             var pedido = await _pedidoRepository.GetByIdAsync(id);
 
             NotFoundPedidoException.When(pedido is null);
 
-            return _mapper.Map<PedidoDTO>(pedido);
+            return _mapper.Map<OrderDTO>(pedido);
         }
 
-        public async Task<PedidoDTO> GetOrderByOrderCodeAsync(string codPedido)
+        public async Task<OrderDTO> GetOrderByOrderCodeAsync(string codPedido)
         {
             var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(codPedido);
 
             NotFoundPedidoException.When(pedido is null);
 
-            return _mapper.Map<PedidoDTO>(pedido);
+            return _mapper.Map<OrderDTO>(pedido);
         }
 
-        public async Task<PedidoDTO> CreateOrderAsync(PedidoDTO pedidoDTO)
+        public async Task<OrderDTO> CreateOrderAsync(OrderDTO pedidoDTO)
         {
             var existingOrder = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.CodPedido);
 
             OrderAlreadyExistsException.When(existingOrder is not null);
             
-            var pedido = _mapper.Map<Pedido>(pedidoDTO);
+            var pedido = _mapper.Map<Order>(pedidoDTO);
 
             await _pedidoRepository.CreateAsync(pedido);
 
-            return _mapper.Map<PedidoDTO>(pedido);
+            return _mapper.Map<OrderDTO>(pedido);
         }
 
-        public async Task<PedidoDTO> UpdateOrderAsync(PedidoDTO pedidoDTO)
+        public async Task<OrderDTO> UpdateOrderAsync(OrderDTO pedidoDTO)
         {
             var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.CodPedido);  
 
@@ -68,10 +68,10 @@ namespace MercadoEletronicoApi.Application.Services
 
             await _pedidoRepository.UpdateAsync(pedido);
 
-            return _mapper.Map<PedidoDTO>(pedido);
+            return _mapper.Map<OrderDTO>(pedido);
         }
 
-        public async Task<PedidoDTO> RemoveOrderAsync(string codPedido)
+        public async Task<OrderDTO> RemoveOrderAsync(string codPedido)
         {
             var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(codPedido);
 
@@ -81,7 +81,7 @@ namespace MercadoEletronicoApi.Application.Services
 
             NotDeletedOrderException.When(pedido is null);
 
-            return _mapper.Map<PedidoDTO>(pedido);
+            return _mapper.Map<OrderDTO>(pedido);
         }
 
     }
