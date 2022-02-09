@@ -8,7 +8,7 @@ namespace MercadoEletronicoApi.Application.DTOs
     {
         [Required]
         [JsonPropertyName("pedido")]
-        public string CodPedido { get; set; }
+        public string OrderCode { get; set; }
 
         [Required]
         [JsonPropertyName("itens")]

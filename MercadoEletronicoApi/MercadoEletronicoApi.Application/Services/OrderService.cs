@@ -47,7 +47,7 @@ namespace MercadoEletronicoApi.Application.Services
 
         public async Task<OrderDTO> CreateOrderAsync(OrderDTO pedidoDTO)
         {
-            var existingOrder = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.CodPedido);
+            var existingOrder = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.OrderCode);
 
             OrderAlreadyExistsException.When(existingOrder is not null);
             
@@ -60,7 +60,7 @@ namespace MercadoEletronicoApi.Application.Services
 
         public async Task<OrderDTO> UpdateOrderAsync(OrderDTO pedidoDTO)
         {
-            var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.CodPedido);  
+            var pedido = await _pedidoRepository.GetOrderByOrderCodeAsync(pedidoDTO.OrderCode);  
 
             NotFoundPedidoException.When(pedido == null);
 

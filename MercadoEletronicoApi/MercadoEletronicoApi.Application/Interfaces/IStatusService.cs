@@ -5,6 +5,6 @@ namespace MercadoEletronicoApi.Application.Interfaces
 {
     public interface IStatusService
     {
-        Task<StatusResponseDTO> AtualizarStatus(StatusRequestDTO request);
+        Task<StatusResponseDTO> UpdateStatus(StatusRequestDTO request);
     }
 }

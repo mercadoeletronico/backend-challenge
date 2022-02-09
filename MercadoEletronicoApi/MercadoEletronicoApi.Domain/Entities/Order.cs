@@ -27,13 +27,13 @@ namespace MercadoEletronicoApi.Domain.Entities
         public int GetTotalOrderItems() 
         {
             OrderException.When(Items is null, "Order without items.");
-            return Items.Sum(x => x.Quantidade);
+            return Items.Sum(x => x.Quantity);
         }
 
         public decimal GetTotalOrderAmount()
         {
             OrderException.When(!Items.Any(), "Unable to calculate total amount: order without items.");
-            return Items.Sum(x => x.Custo);
+            return Items.Sum(x => x.Cost);
         }
 
     }

@@ -19,7 +19,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<IList<Order>> GetAsync()
         {
-            var pedidos = await _context.Pedidos
+            var pedidos = await _context.Orders
                 .Include(i => i.Items)
                 .ToListAsync();
 
@@ -28,7 +28,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<Order> GetByIdAsync(int id)
         {
-            var pedido = await _context.Pedidos
+            var pedido = await _context.Orders
                 .Include(p => p.Items)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
@@ -37,7 +37,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<Order> GetOrderByOrderCodeAsync(string codPedido) 
         {
-            var pedido = await _context.Pedidos
+            var pedido = await _context.Orders
                 .Include(p => p.Items)
                 .FirstOrDefaultAsync(p => p.OrderCode == codPedido);
 
@@ -46,7 +46,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<Order> CreateAsync(Order pedido)
         {
-            _context.Pedidos.Add(pedido);
+            _context.Orders.Add(pedido);
             await _context.SaveChangesAsync();
 
             return pedido;
@@ -54,7 +54,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
 
         public async Task<Order> UpdateAsync(Order pedido)
         {
-            _context.Pedidos.Update(pedido);
+            _context.Orders.Update(pedido);
             await _context.SaveChangesAsync();
 
             return pedido;
@@ -64,7 +64,7 @@ namespace MercadoEletronicoApi.Infra.Data.Repositories
         {
             try
             {
-                _context.Pedidos.Remove(pedido);
+                _context.Orders.Remove(pedido);
                 await _context.SaveChangesAsync();
 
                 return pedido;

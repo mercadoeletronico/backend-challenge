@@ -25,7 +25,7 @@ namespace MercadoEletronicoApi.Api.Controllers
         [ProducesResponseType(typeof(ErrorModel), StatusCodes.Status400BadRequest)]
         public async Task<StatusResponseDTO> Post([FromBody] StatusRequestDTO request)
         {
-            return await _statusService.AtualizarStatus(request);
+            return await _statusService.UpdateStatus(request);
         }
 
     }
