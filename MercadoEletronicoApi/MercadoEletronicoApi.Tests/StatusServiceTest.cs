@@ -15,9 +15,9 @@ namespace MercadoEletronicoApi.Tests
 {
     public class StatusServiceTest : IDisposable
     {
-        private IStatusService _statusService;
-        private MercadoEletronicoDbContext _context;
-        private OrderRepository _orderRepository;
+        private readonly IStatusService _statusService;
+        private readonly MercadoEletronicoDbContext _context;
+        private readonly OrderRepository _orderRepository;
 
         public StatusServiceTest()
         {
