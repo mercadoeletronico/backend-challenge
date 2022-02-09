@@ -19,4 +19,4 @@ Todos os itens de lógica de negócio solicitados no desafio foram implementados
 
 Alguns testes unitários também foram implementados para a entidade Order (pedido) e estão disponíveis na classe OrderUnitTest.
 
-Ao executar a aplicação, o próprio sistema insere alguns pedidos e itens fictícios no banco de dados em memória para facilitar os testes e consumo dos endpoints. Esta inserção ocorre na classe FakeContext.cs.
+Ao executar os testes, o próprio sistema insere alguns pedidos e itens fictícios no banco de dados em memória para facilitar os testes e consumo dos endpoints. Esta inserção ocorre na classe FakeContext.cs.
