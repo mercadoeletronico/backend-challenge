@@ -9,13 +9,16 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.4.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MercadoEletronicoApi.Application\MercadoEletronicoApi.Application.csproj" />
     <ProjectReference Include="..\MercadoEletronicoApi.Domain\MercadoEletronicoApi.Domain.csproj" />
+    <ProjectReference Include="..\MercadoEletronicoApi.Infra.Data\MercadoEletronicoApi.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

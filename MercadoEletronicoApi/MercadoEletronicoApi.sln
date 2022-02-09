@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoEletronicoApi.Applic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoEletronicoApi.Infra.IoC", "MercadoEletronicoApi.Infra.IoC\MercadoEletronicoApi.Infra.IoC.csproj", "{338119D1-A1A6-4105-A282-20AACE8A0835}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoEletronicoApi.Api", "MercadoEletronicoApi.Api\MercadoEletronicoApi.Api.csproj", "{119915EA-4F44-4DE4-BAAE-FAB16CD0C13A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MercadoEletronicoApi.Api", "MercadoEletronicoApi.Api\MercadoEletronicoApi.Api.csproj", "{119915EA-4F44-4DE4-BAAE-FAB16CD0C13A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MercadoEletronicoApi.Tests", "MercadoEletronicoApi.Tests\MercadoEletronicoApi.Tests.csproj", "{1EBB588C-0D41-49D6-97D6-4EA6BF05FDEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{119915EA-4F44-4DE4-BAAE-FAB16CD0C13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{119915EA-4F44-4DE4-BAAE-FAB16CD0C13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{119915EA-4F44-4DE4-BAAE-FAB16CD0C13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EBB588C-0D41-49D6-97D6-4EA6BF05FDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EBB588C-0D41-49D6-97D6-4EA6BF05FDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EBB588C-0D41-49D6-97D6-4EA6BF05FDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EBB588C-0D41-49D6-97D6-4EA6BF05FDEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

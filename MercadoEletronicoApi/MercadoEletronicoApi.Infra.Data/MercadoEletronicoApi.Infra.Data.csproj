@@ -12,8 +12,4 @@
     <ProjectReference Include="..\MercadoEletronicoApi.Domain\MercadoEletronicoApi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
-
 </Project>
